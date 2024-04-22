@@ -1,0 +1,28 @@
+
+# Introduction
+
+Since I was a kid, I knew that I was a curious person. I always wanted to learn something new, something interesting, something that really makes me happy. For all this reasons I’ve have various experiences and works where I develop multiples skills and knowledge.  
+
+I am currently studying Life Sciences: Medische en Biologische Onderzoek at Hogeschool Utrecht, during which I’ve found a blend of personal interests and professional goals of mine. I enjoy learning about how the human system works and different research methods and articles, as well as the practice lessons where I learned various techniques and skills that are relevant in the medical research world.
+
+In the past year, I have found that one of my many passions is programming.  At the start of the current school year, I started the minor “Big Data & Design”. During this minor I learned to programming in python to communicate statistical information over the impact of data in our world. I also learned various Machine Learning techniques such as Computer Vision, Classification algorithms and Generative AI and I develop multiple design skills in programs such as Figma where I learned the basic concepts of UI/UX design and the importance of design behind the development of applications and start-up ideas. After this minor I choose to specialise in Data Science, where I learn to programming in R and Bash to communicate statistical information about medical and scientific researches. During this specialization I developed skills such as Next Generation Sequencing techniques, RNA-sequencing, and metagenomics. 
+
+Besides my academic journey I’ve made some experience as Volunteer Social Worker by The Mall Jongerenwerk Gorinchem, where I mastered skills such as communication and presentation of  obtain results to parents and schools, organization of multiple activities, projects and events. I also have learned how to solve complex problems and situations. I also learn how to react to complex emotional situations. 
+
+# Portfolio
+
+## [Data Story](https://github.com/JorgeVC17/Data_story)
+
+-   To test the Python skills I learned during my minor, I challenged myself to develop a Streamlit app where I tell a story using public data. I chose to focus on how climate change affects the increasing prevalence of diseases such as malaria. Developing this data story marked my initial step in my data analysis career. Here is the link to the Streamlit app containing this data story.
+
+## [Classification Algorithms](https://github.com/JorgeVC17/Classification-algorithm)
+
+-   Over the past year, I have developed my startup idea with two classmates, Pim Theunisse and Marloes Ettikhoven. For this startup idea, we have developed the design and algorithm for an app with the main goal of predicting various diseases. The name of this app was Medipredict.
+
+## YOLOv8 Tutorial
+
+
+## RNA sequencing
+
+
+## Metagenomics

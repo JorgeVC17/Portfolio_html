@@ -1,0 +1,7 @@
+introduction
+portfolio
+data-story
+classification-algorithms
+yolov8-tutorial
+rna-sequencing
+metagenomics
