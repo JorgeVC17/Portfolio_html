@@ -1,8 +1,0 @@
----
-title: "Portfolio"
-author: "Jorge Vargas Centeno"
-output: 
-site: bookdown::bookdown_site
----
-
-# Welcome to my portfolio
