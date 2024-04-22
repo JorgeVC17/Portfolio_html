@@ -8,8 +8,10 @@
 
 -   Over the past year, I have developed my startup idea with two classmates, Pim Theunisse and Marloes Ettikhoven. For this startup idea, we have developed the design and algorithm for an app with the main goal of predicting various diseases. The name of this app was Medipredict.
 
-## RNA Sequencing
+## [RNA Sequencing](https://github.com/JorgeVC17/RNA-Sequencing)
 
+-   For this assignment, I used published data in which fibroblasts from a subject were treated with a control transcription factor (BCLXL) or the transcription factor (ONECUT2). ONECUT2 is suspected of being able to convert fibroblasts into brain cells.
 
+## [Metagenomics](https://github.com/JorgeVC17/Metagenomics)
 
-## Metagenomics
+-   The collection of DNA for sequence analysis can be a challenging task. For bacterial DNA, it is necessary to culture the bacteria and open their cell walls, while human DNA is often collected from non-vital material or surgically obtained material. One solution to this problem is the metagenomics method.
