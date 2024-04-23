@@ -1,0 +1,11 @@
+introduction
+portfolio
+data-story
+app-development-medipredict
+rna-sequencing
+metagenomics
+c.-elegans-plate-experiment
+inspect-file
+inspect-datavariabels
+changing-type-of-data
+making-a-scatterplot

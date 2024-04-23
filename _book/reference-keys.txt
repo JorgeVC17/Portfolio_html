@@ -1,6 +1,0 @@
-introduction
-portfolio
-data-story
-app-development-medipredict
-rna-sequencing
-metagenomics
