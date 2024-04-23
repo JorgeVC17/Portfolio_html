@@ -65,4 +65,6 @@ experiment %>% ggplot(aes(x=log10(compConcentration), y=RawData,
   
 ```
 
-Positive control = 
+The positive control for this experiments is **Ethanol.**
+
+ The negative control for this experiment is  **Naphthalene.**
