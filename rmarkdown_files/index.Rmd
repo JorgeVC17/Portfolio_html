@@ -2,7 +2,9 @@
 title: 'Portfolio'
 author: "Jorge Vargas Centeno"
 site: bookdown::bookdown_site
-output: bookdown::gitbook(number_sections = FALSE)
+output: 
+  bookdown::gitbook:
+    number_sections: FALSE
 documentclass: book
 link-citations: yes
 new_session: yes
