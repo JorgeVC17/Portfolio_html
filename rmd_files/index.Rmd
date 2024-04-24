@@ -10,10 +10,9 @@ link-citations: yes
 new_session: yes
 description: "Welcome to my portfolio"
 ---
-```{r}
+```{r setup index, echo=FALSE, message=FALSE, warning=FALSE}
 library(bookdown)
 ```
-
 
 
 # Introduction
@@ -25,5 +24,3 @@ I am currently studying Life Sciences: Medische en Biologische Onderzoek at Hoge
 At the start of the current school year, I started the minor “Big Data & Design”. During this minor I learned to programming in python to communicate statistical information over the impact of data in our world. I also learned various Machine Learning techniques such as Computer Vision, Classification algorithms and Generative AI and I develop multiple design skills in programs such as Figma where I learned the basic concepts of UI/UX design and the importance of design behind the development of applications and start-up ideas. After this minor I choose to specialise in Data Science, where I learn to programming in R and Bash to communicate statistical information about medical and scientific researches. During this specialization I developed skills such as Next Generation Sequencing techniques, RNA-sequencing, and metagenomics. 
 
 Besides my academic journey I’ve made some experience as Volunteer Social Worker by The Mall Jongerenwerk Gorinchem, where I mastered skills such as communication and presentation of  obtain results to parents and schools, organization of multiple activities, projects and events. I also have learned how to solve complex problems and situations. I also learn how to react to complex emotional situations.
-
-
