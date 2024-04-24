@@ -5,13 +5,13 @@ library(readxl)
 library(toolboxr)
 ```
 
-# **C. elegans plate experiment**
+# C. elegans plate experiment
 
 The data for this exercise was kindly supplied by J. Louter (INT/ILC) and was derived from an experiment in which adult C.elegans nematodes were exposed to varying concentrations of different compounds. The variables **RawData** (the outcome - number of offspring counted as an integer value, after incubation time), **compName** (the generic name of the compound/chemical), the **compConcentration** (the concentration of the compound), and the **expType** are the most important variables in this dataset.
 
 A typical analysis with this data would be to run a dose-response analysis using a log-logistic model with estimates for the maximal, the minimal, the IC50 concentration and the slope at IC50.
 
-## **Inspect file**
+## Inspect file
 
 ```{r Open file, echo=TRUE, message=FALSE}
 experiment <- read_excel(here::here("rmarkdown_files/rmarkdown_data/CE.LIQ.FLOW.062_Tidydata.xlsx"))
@@ -21,7 +21,7 @@ knitr::kable(head(experiment))
 
 ```
 
-### *Inspect data/variabels*
+### Inspect data/variabels
 
 **Raw Data**
 
@@ -41,7 +41,7 @@ knitr::kable(head(experiment))
 
   - Type of data = **`r typeof(experiment$compConcentration)`**
 
-#### *Changing type of data*
+#### Changing type of data
 
 ```{r, echo=TRUE, message=FALSE}
 
@@ -51,7 +51,7 @@ experiment$compConcentration <- as.numeric(experiment$compConcentration)
 
 Type of data now = **`r typeof(experiment$compConcentration)`**
 
-## **Making a scatterplot**
+## Making a scatterplot
 
 ```{r, echo=TRUE, message=FALSE}
 experiment %>% ggplot(aes(x=log10(compConcentration), y=RawData, 

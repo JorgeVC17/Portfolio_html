@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Welcome to my portfolio" />
   
 
-<meta name="author" content="Jorge Vargas Centeno" />
+<meta name="author" content="Hello there! I’m Jorge Vargas Centeno and this is my portfolio where you can explore and visualize my multiple projects in R, Python and multiple machine learning techniques." />
 
 
 
@@ -137,13 +137,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html"><i class="fa fa-check"></i>What are my plans for the future?</a></li>
-<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html"><i class="fa fa-check"></i><strong>C. elegans plate experiment</strong></a>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html"><i class="fa fa-check"></i>C. elegans plate experiment</a>
 <ul>
-<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-file"><i class="fa fa-check"></i><strong>Inspect file</strong></a>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-file"><i class="fa fa-check"></i>Inspect file</a>
 <ul>
-<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-datavariabels"><i class="fa fa-check"></i><em>Inspect data/variabels</em></a></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-datavariabels"><i class="fa fa-check"></i>Inspect data/variabels</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#making-a-scatterplot"><i class="fa fa-check"></i><strong>Making a scatterplot</strong></a></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#making-a-scatterplot"><i class="fa fa-check"></i>Making a scatterplot</a></li>
 </ul></li>
 </ul>
 
@@ -163,11 +163,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="c.-elegans-plate-experiment" class="section level1 hasAnchor">
-<h1><strong>C. elegans plate experiment</strong><a href="c.-elegans-plate-experiment.html#c.-elegans-plate-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1>C. elegans plate experiment<a href="c.-elegans-plate-experiment.html#c.-elegans-plate-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The data for this exercise was kindly supplied by J. Louter (INT/ILC) and was derived from an experiment in which adult C.elegans nematodes were exposed to varying concentrations of different compounds. The variables <strong>RawData</strong> (the outcome - number of offspring counted as an integer value, after incubation time), <strong>compName</strong> (the generic name of the compound/chemical), the <strong>compConcentration</strong> (the concentration of the compound), and the <strong>expType</strong> are the most important variables in this dataset.</p>
 <p>A typical analysis with this data would be to run a dose-response analysis using a log-logistic model with estimates for the maximal, the minimal, the IC50 concentration and the slope at IC50.</p>
 <div id="inspect-file" class="section level2 hasAnchor">
-<h2><strong>Inspect file</strong><a href="c.-elegans-plate-experiment.html#inspect-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Inspect file<a href="c.-elegans-plate-experiment.html#inspect-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="c.-elegans-plate-experiment.html#cb2-1" tabindex="-1"></a>experiment <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;rmarkdown_files/rmarkdown_data/CE.LIQ.FLOW.062_Tidydata.xlsx&quot;</span>))</span>
 <span id="cb2-2"><a href="c.-elegans-plate-experiment.html#cb2-2" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="c.-elegans-plate-experiment.html#cb2-3" tabindex="-1"></a></span>
@@ -467,7 +467,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <div id="inspect-datavariabels" class="section level3 hasAnchor">
-<h3><em>Inspect data/variabels</em><a href="c.-elegans-plate-experiment.html#inspect-datavariabels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Inspect data/variabels<a href="c.-elegans-plate-experiment.html#inspect-datavariabels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Raw Data</strong></p>
 <ul>
 <li><p>Expected type of data = <strong>Numeric (Integer)</strong></p></li>
@@ -484,7 +484,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Type of data = <strong>character</strong></p></li>
 </ul>
 <div id="changing-type-of-data" class="section level4 hasAnchor">
-<h4><em>Changing type of data</em><a href="c.-elegans-plate-experiment.html#changing-type-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4>Changing type of data<a href="c.-elegans-plate-experiment.html#changing-type-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="c.-elegans-plate-experiment.html#cb3-1" tabindex="-1"></a>experiment<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(experiment<span class="sc">$</span>compConcentration)</span></code></pre></div>
 <pre><code>## Warning: NAs introduced by coercion</code></pre>
 <p>Type of data now = <strong>double</strong></p>
@@ -492,7 +492,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div id="making-a-scatterplot" class="section level2 hasAnchor">
-<h2><strong>Making a scatterplot</strong><a href="c.-elegans-plate-experiment.html#making-a-scatterplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Making a scatterplot<a href="c.-elegans-plate-experiment.html#making-a-scatterplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="c.-elegans-plate-experiment.html#cb5-1" tabindex="-1"></a>experiment <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fu">log10</span>(compConcentration), <span class="at">y=</span>RawData, </span>
 <span id="cb5-2"><a href="c.-elegans-plate-experiment.html#cb5-2" tabindex="-1"></a>                          <span class="at">group =</span> compName, <span class="at">colour =</span> compName, </span>
 <span id="cb5-3"><a href="c.-elegans-plate-experiment.html#cb5-3" tabindex="-1"></a>                          <span class="at">shape =</span> expType), na.rm) <span class="sc">+</span></span>
