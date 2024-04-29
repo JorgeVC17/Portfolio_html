@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>RNA Sequencing | Portfolio</title>
+  <meta name="description" content="Welcome to my portfolio" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="RNA Sequencing | Portfolio" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Welcome to my portfolio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="RNA Sequencing | Portfolio" />
+  
+  <meta name="twitter:description" content="Welcome to my portfolio" />
+  
+
+<meta name="author" content="Hello there! I’m Jorge Vargas Centeno and this is my portfolio where you can explore and visualize my multiple projects in R, Python and multiple machine learning techniques." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="what-are-my-plans-for-the-future.html"/>
+<link rel="next" href="metagenomics.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html"><i class="fa fa-check"></i>What are my plans for the future?</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html"><i class="fa fa-check"></i>RNA Sequencing</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#data-structure"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-1"><i class="fa fa-check"></i>Onderdeel 1:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#introductie"><i class="fa fa-check"></i>Introductie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#experiment"><i class="fa fa-check"></i>Experiment</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#resultaten-van-de-fastqc-html-rapporten"><i class="fa fa-check"></i>Resultaten van de fastQC html rapporten</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-2"><i class="fa fa-check"></i>Onderdeel 2:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#count-table"><i class="fa fa-check"></i>Count table</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#deseq2-analyse"><i class="fa fa-check"></i>DESeq2 analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#omzetten-van-de-count-tabel-naar-een-deseq-object"><i class="fa fa-check"></i>Omzetten van de “count tabel” naar een DESeq object</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#rnaseq-data-normaliseren"><i class="fa fa-check"></i>RNASeq data normaliseren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-3"><i class="fa fa-check"></i>Onderdeel 3:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#kwaliteitscontrole"><i class="fa fa-check"></i>Kwaliteitscontrole</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#differential-gene-expression-analysis"><i class="fa fa-check"></i>Differential gene expression analysis</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoering-van-dge-analyse"><i class="fa fa-check"></i>Uitvoering van DGE analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#visualisatie-van-de-dge-resultaten."><i class="fa fa-check"></i>Visualisatie van de DGE resultaten.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-4"><i class="fa fa-check"></i>Onderdeel 4:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#ontdekt-welke-genen-veranderen"><i class="fa fa-check"></i>Ontdekt welke genen veranderen</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#cytogenetische-band-functie"><i class="fa fa-check"></i>Cytogenetische band functie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoer-go-term-enrichment-analyse"><i class="fa fa-check"></i>Uitvoer GO term enrichment analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#conclusie"><i class="fa fa-check"></i>Conclusie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#discussie"><i class="fa fa-check"></i>Discussie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html"><i class="fa fa-check"></i>Metagenomics</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#data-structure-1"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-1-1"><i class="fa fa-check"></i>Onderdeel 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#fastqc-genereren"><i class="fa fa-check"></i>FastQC genereren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#per-base-sequencing-quality"><i class="fa fa-check"></i>Per base sequencing quality</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-2-1"><i class="fa fa-check"></i>Onderdeel 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken2-uitvoeren"><i class="fa fa-check"></i>Kraken2 uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#bracken-uitvoeren"><i class="fa fa-check"></i>Bracken uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken-biom-uitvoeren"><i class="fa fa-check"></i>Kraken-biom uitvoeren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-3-1"><i class="fa fa-check"></i>Onderdeel 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#read-count-visualisatie-per-kingdom"><i class="fa fa-check"></i>Read count visualisatie per kingdom</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#visualiseren-van-geïdentificeerde-soorten"><i class="fa fa-check"></i>Visualiseren van geïdentificeerde soorten</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#optimalisatie-door-verwijdering-van-soorten-met-lage-read-counts"><i class="fa fa-check"></i>Optimalisatie door verwijdering van soorten met lage read counts</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#normalisatie"><i class="fa fa-check"></i>Normalisatie</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-4-1"><i class="fa fa-check"></i>Onderdeel 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#verkrijgen-van-compositie-data"><i class="fa fa-check"></i>Verkrijgen van compositie data</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#vergelijking-van-resultaten-met-compositie"><i class="fa fa-check"></i>Vergelijking van resultaten met compositie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html"><i class="fa fa-check"></i>C. elegans plate experiment</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-file"><i class="fa fa-check"></i>Inspect file</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-datavariabels"><i class="fa fa-check"></i>Inspect data/variabels</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#making-a-scatterplot"><i class="fa fa-check"></i>Making a scatterplot</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rna-sequencing" class="section level1 hasAnchor">
+<h1>RNA Sequencing<a href="rna-sequencing.html#rna-sequencing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="data-structure" class="section level2 hasAnchor">
+<h2>Data Structure:<a href="rna-sequencing.html#data-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data structure of this project is the next one:</p>
+<div class="float">
+<img src="data_trees/rna.png" alt="Datatree of the “RNA-sequencing” projects" />
+<div class="figcaption">Datatree of the “RNA-sequencing” projects</div>
+</div>
+<p><strong>Note 1:</strong> The data need it for this project is property of <strong>“Hogeschool Utrecht</strong>, thus due copyright and privacy laws I’m not avaible to share most of data used for this experiment.But you can still read the documentation and code of this experiment.</p>
+<p><strong>Note 2:</strong> The language used in this is project is <strong>Dutch</strong></p>
+</div>
+<div id="onderdeel-1" class="section level2 hasAnchor">
+<h2>Onderdeel 1:<a href="rna-sequencing.html#onderdeel-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introductie" class="section level3 hasAnchor">
+<h3>Introductie<a href="rna-sequencing.html#introductie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Autoren:</strong> Carissa Eijking en Jorge Vargas Centeno</p>
+<p><strong>Hersenziekten</strong>, zoals bijvoorbeeld de ziekte van Parkinson, worden veroorzaakt door verstoorde functie van hersencellen. De exacte moleculaire mechanismen zijn vaak onbekend, waardoor het heel waardevol zou zijn om deze cellen in een laboratorium te kunnen onderzoeken. Echter is het niet mogelijk om het hersenweefsel van een levend persoon te bestuderen. Als oplossing kunnen hersencellen gemaakt worden uit <strong>fibroblasten</strong>.</p>
+<p>Fibroblasten kunnen worden omgezet naar geïnduceerde pluripotente stamcellen (iPSCs) en vervolgens kunnen deze differentiëren naar hersencellen. Dit kost echter veel tijd. Hierdoor is een alternatieve methode het direct omzetten van fibroblasten naar hersencellen door overexpressie van bepaalde transcriptiefactoren. Dit heet <em>transdifferentiatie</em>.</p>
+<p>Voor deze opdracht maken we gebruik van gepubliceerde data waarin fibroblasten van een proefpersoon werden behandeld met een <em>controle transcriptiefactor (BCLXL)</em> of de <em>transcriptiefactor (ONECUT2)</em>. Van ONECUT2 wordt vermoed dat het fibroblasten naar hersencellen kan omzetten. Er werden verschillende RNA-seq datasets voor elke fibroblast gegenereerd, waarbij elke conditie <em>(celtype)</em> in duplo werd gemeten.</p>
+</div>
+<div id="experiment" class="section level3 hasAnchor">
+<h3>Experiment<a href="rna-sequencing.html#experiment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="onderzoeksvraag" class="section level4 hasAnchor">
+<h4>Onderzoeksvraag<a href="rna-sequencing.html#onderzoeksvraag" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Wat zijn de verschillen in genexpressie tussen BCLXL behandelde fibroblasten en ONECUT2 behandelde fibroblasten?</strong></p>
+</div>
+<div id="informatie-over-het-experiment" class="section level4 hasAnchor">
+<h4>Informatie over het experiment<a href="rna-sequencing.html#informatie-over-het-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Cel type:</strong> <strong>Fibroblasten uit de huid van de proef persoon</strong></p>
+<p><strong>Genome:</strong> Homo sapiens (h38)</p>
+<p><strong>DNA type:</strong> Paired end sequencing DNA</p>
+<p><strong>Sequencing machine:</strong> Illumina NextSeq 500</p>
+</div>
+<div id="samples" class="section level4 hasAnchor">
+<h4>Samples<a href="rna-sequencing.html#samples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+<div id="resultaten-van-de-fastqc-html-rapporten" class="section level3 hasAnchor">
+<h3>Resultaten van de fastQC html rapporten<a href="rna-sequencing.html#resultaten-van-de-fastqc-html-rapporten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure">
+<img src="_main_files/figure-html/fastQC%20html%20rapporten-1.png" alt="Fig. 1: Kwaliteit distributie: links is de per base quality zichtbaar van de forward read en rechts van de Reverse read. De Phred scores gaan van 0 tot 36." width="100%" />
+<p class="caption">
+(#fig:fastQC html rapporten)Fig. 1: Kwaliteit distributie: links is de per base quality zichtbaar van de forward read en rechts van de Reverse read. De Phred scores gaan van 0 tot 36.
+</p>
+</div>
+<p><strong>Conclusie:</strong> De forward en reverse reads bevatten gemiddelde Phred scores, blauwe lijn, van &gt;30 en geen sequences van slechte kwaliteit. Dit indiceert dat de kans waarop een verkeerde nucleotide is weergegeven kleiner is dan 99,9%. De reads zijn dus van <strong>voldoende kwaliteit</strong> en een alignment kan worden uitgevoerd.</p>
+</div>
+</div>
+<div id="onderdeel-2" class="section level2 hasAnchor">
+<h2>Onderdeel 2:<a href="rna-sequencing.html#onderdeel-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="count-table" class="section level3 hasAnchor">
+<h3>Count table<a href="rna-sequencing.html#count-table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>De alignment van de dataset met het referentiegenoom is al uitgevoerd. De ontstane bam-bestanden geven voor alle RNA-seq fragmenten de genomische locatie in het referentie genoom weer en bevatten de alignment scores en kunnen hierdoor gebruikt worden om te bepalen welke genen tot expressie zijn gebracht.
+Door gebruik van de bam-bestanden, willen we tellen voor elk gen hoeveel fragmenten uitlijnen tegenover dat gen in het BCLXL behandelde monster of ONECUT behandelde monster. Dit is belangrijk voor de <strong>differentiële expressieanalyse</strong>, aangezien dit zal dienen als input.</p>
+<p>We kunnen deze “count” tabel maken m.b.v het Rsubread-pakket: <strong>featureCounts().</strong></p>
+<div id="count-tabel" class="section level4 hasAnchor">
+<h4>Count tabel<a href="rna-sequencing.html#count-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rna-sequencing.html#cb1-1" tabindex="-1"></a><span class="co"># Maak een object met de directory van bam bestanden</span></span>
+<span id="cb1-2"><a href="rna-sequencing.html#cb1-2" tabindex="-1"></a>bam_dir <span class="ot">&lt;-</span> <span class="st">&quot;/home/daur2/rnaseq/rnaseq_onecut/bam&quot;</span></span>
+<span id="cb1-3"><a href="rna-sequencing.html#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="rna-sequencing.html#cb1-4" tabindex="-1"></a><span class="co"># Maak een object met output dir voor count tables</span></span>
+<span id="cb1-5"><a href="rna-sequencing.html#cb1-5" tabindex="-1"></a>counts_dir <span class="ot">&lt;-</span> <span class="st">&quot;projects/rna_sequencing/data/count_tables&quot;</span></span>
+<span id="cb1-6"><a href="rna-sequencing.html#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="rna-sequencing.html#cb1-7" tabindex="-1"></a><span class="co"># Create vector with names of bam files</span></span>
+<span id="cb1-8"><a href="rna-sequencing.html#cb1-8" tabindex="-1"></a>bam_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(bam_dir, <span class="at">pattern =</span> <span class="st">&quot;SRR7866[6,7]{1}[09]{1}[034]{1}</span><span class="sc">\\</span><span class="st">.bam$&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-9"><a href="rna-sequencing.html#cb1-9" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="rna-sequencing.html#cb1-10" tabindex="-1"></a><span class="co"># Count the reads per gene using the in-built NCBI RefSeq annotations</span></span>
+<span id="cb1-11"><a href="rna-sequencing.html#cb1-11" tabindex="-1"></a>read_counts <span class="ot">&lt;-</span> <span class="fu">featureCounts</span>(</span>
+<span id="cb1-12"><a href="rna-sequencing.html#cb1-12" tabindex="-1"></a>  </span>
+<span id="cb1-13"><a href="rna-sequencing.html#cb1-13" tabindex="-1"></a>  <span class="at">files =</span> bam_files,</span>
+<span id="cb1-14"><a href="rna-sequencing.html#cb1-14" tabindex="-1"></a>  <span class="at">annot.inbuilt =</span> <span class="st">&quot;hg38&quot;</span>,</span>
+<span id="cb1-15"><a href="rna-sequencing.html#cb1-15" tabindex="-1"></a>  <span class="at">useMetaFeatures =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-16"><a href="rna-sequencing.html#cb1-16" tabindex="-1"></a>  <span class="at">strandSpecific =</span> <span class="dv">0</span>,</span>
+<span id="cb1-17"><a href="rna-sequencing.html#cb1-17" tabindex="-1"></a>  <span class="at">isPairedEnd =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb1-18"><a href="rna-sequencing.html#cb1-18" tabindex="-1"></a>  <span class="at">countReadPairs =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb1-19"><a href="rna-sequencing.html#cb1-19" tabindex="-1"></a>  <span class="at">nthreads =</span> <span class="dv">10</span></span>
+<span id="cb1-20"><a href="rna-sequencing.html#cb1-20" tabindex="-1"></a>)</span></code></pre></div>
+<p>Nu dat de count tabel is gemaakt, kan de statistieke analyse worden uitgevoerd.</p>
+</div>
+<div id="count-tabel-statistieken" class="section level4 hasAnchor">
+<h4>Count tabel (statistieken)<a href="rna-sequencing.html#count-tabel-statistieken" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="rna-sequencing.html#cb2-1" tabindex="-1"></a><span class="co">#Load read counts</span></span>
+<span id="cb2-2"><a href="rna-sequencing.html#cb2-2" tabindex="-1"></a>counts <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;projects/rna_sequencing/count_tables/read_counts_OC2.rds&quot;</span>)</span>
+<span id="cb2-3"><a href="rna-sequencing.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="rna-sequencing.html#cb2-4" tabindex="-1"></a><span class="co">#Inspect count table</span></span>
+<span id="cb2-5"><a href="rna-sequencing.html#cb2-5" tabindex="-1"></a><span class="fu">str</span>(counts)</span>
+<span id="cb2-6"><a href="rna-sequencing.html#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="rna-sequencing.html#cb2-7" tabindex="-1"></a><span class="co">#Pakt de statieken van de lijst af.</span></span>
+<span id="cb2-8"><a href="rna-sequencing.html#cb2-8" tabindex="-1"></a>counts_stats <span class="ot">&lt;-</span> counts<span class="sc">$</span>stat</span>
+<span id="cb2-9"><a href="rna-sequencing.html#cb2-9" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="rna-sequencing.html#cb2-10" tabindex="-1"></a><span class="co">#Verwijderd status kolom</span></span>
+<span id="cb2-11"><a href="rna-sequencing.html#cb2-11" tabindex="-1"></a><span class="do">##convert first column to rownames</span></span>
+<span id="cb2-12"><a href="rna-sequencing.html#cb2-12" tabindex="-1"></a><span class="fu">rownames</span>(counts_stats) <span class="ot">&lt;-</span> counts_stats<span class="sc">$</span>Status</span>
+<span id="cb2-13"><a href="rna-sequencing.html#cb2-13" tabindex="-1"></a><span class="do">##Zet de status kolom naar NULL</span></span>
+<span id="cb2-14"><a href="rna-sequencing.html#cb2-14" tabindex="-1"></a>counts_stats<span class="sc">$</span>Status <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb2-15"><a href="rna-sequencing.html#cb2-15" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="rna-sequencing.html#cb2-16" tabindex="-1"></a><span class="co">#Tidy maken</span></span>
+<span id="cb2-17"><a href="rna-sequencing.html#cb2-17" tabindex="-1"></a>counts_stats_t <span class="ot">&lt;-</span> counts_stats <span class="sc">%&gt;%</span></span>
+<span id="cb2-18"><a href="rna-sequencing.html#cb2-18" tabindex="-1"></a>  t <span class="sc">%&gt;%</span></span>
+<span id="cb2-19"><a href="rna-sequencing.html#cb2-19" tabindex="-1"></a>  <span class="fu">as.tibble</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-20"><a href="rna-sequencing.html#cb2-20" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bamfile=</span><span class="fu">colnames</span>(counts_stats),</span>
+<span id="cb2-21"><a href="rna-sequencing.html#cb2-21" tabindex="-1"></a>         <span class="at">totaal=</span><span class="fu">colSums</span>(counts_stats),</span>
+<span id="cb2-22"><a href="rna-sequencing.html#cb2-22" tabindex="-1"></a>         <span class="at">perc_assign_frags=</span>Assigned<span class="sc">/</span>totaal<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb2-23"><a href="rna-sequencing.html#cb2-23" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="rna-sequencing.html#cb2-24" tabindex="-1"></a><span class="co">#Plot de percentage assign reads</span></span>
+<span id="cb2-25"><a href="rna-sequencing.html#cb2-25" tabindex="-1"></a>counts_stats_t <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>bamfile, <span class="at">y=</span>perc_assign_frags,</span>
+<span id="cb2-26"><a href="rna-sequencing.html#cb2-26" tabindex="-1"></a>                              <span class="at">group=</span>bamfile, <span class="at">fill=</span>bamfile)) <span class="sc">+</span></span>
+<span id="cb2-27"><a href="rna-sequencing.html#cb2-27" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb2-28"><a href="rna-sequencing.html#cb2-28" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">60</span>, <span class="at">linetype=</span> <span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb2-29"><a href="rna-sequencing.html#cb2-29" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">40</span>, <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb2-30"><a href="rna-sequencing.html#cb2-30" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb2-31"><a href="rna-sequencing.html#cb2-31" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>)) <span class="sc">+</span> <span class="co">#Zet de naam van de het bestand in verticaal</span></span>
+<span id="cb2-32"><a href="rna-sequencing.html#cb2-32" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(<span class="dv">100</span>), <span class="at">by =</span> <span class="dv">10</span>)) <span class="sc">+</span> <span class="co">#Veranderd de stappen van de y-axis</span></span>
+<span id="cb2-33"><a href="rna-sequencing.html#cb2-33" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>))<span class="sc">+</span> </span>
+<span id="cb2-34"><a href="rna-sequencing.html#cb2-34" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-35"><a href="rna-sequencing.html#cb2-35" tabindex="-1"></a>    <span class="at">title=</span><span class="st">&quot;Fig 2: Percentage toegewezen fragmenten per sample&quot;</span>,</span>
+<span id="cb2-36"><a href="rna-sequencing.html#cb2-36" tabindex="-1"></a>    <span class="at">x=</span><span class="st">&quot;Sample&quot;</span>,</span>
+<span id="cb2-37"><a href="rna-sequencing.html#cb2-37" tabindex="-1"></a>    <span class="at">y=</span><span class="st">&quot;Percentage toegewezen fragmenten per sample.&quot;</span></span>
+<span id="cb2-38"><a href="rna-sequencing.html#cb2-38" tabindex="-1"></a>  )</span></code></pre></div>
+<p><strong>Conclusie:</strong> Op basis van de resultaten van figuur 2 kunnen we concluderen dat 40% - 60% van de fragmenten aan een gen kunnen worden toegewezen. <strong>Deze percentages zijn vrij laag</strong>. Dit kan een impact hebben op de komende analyses van dit experiment, omdat het lage aantal “toegewezen” fragmenten aangeeft dat een aantal fragmenten zich op andere locaties hebben gebonden of niet zijn gebonden. Dit kan leiden tot een onjuiste interpretatie van het verschil in genexpressie tussen de behandelde fibroblasten of verkeerde interpretatie van upgereguleerde of downgereguleerde genen.</p>
+<p><strong>Discussie:</strong> Een mogelijk reden voor deze lage percentages gebonden fragmenten, is een mogelijke contaminatie van DNA in de monsters tijdens de uitvoering van dit experiment. Dit zal zorgen dat een redelijke aantal RNA fragmenten aan dit contaminatie DNA binden, waardoor ze niet correct kunnen worden geïnterpreteerd als <em>toegewezen fragmenten.</em> Ook kan het zijn dat dit DNA juist gezien wordt als RNA dat zich niet kon uitlijnen tegenover het referentie genoom. Dit verlaagt dan ook het percentage toegewezen fragmenten.</p>
+</div>
+</div>
+<div id="deseq2-analyse" class="section level3 hasAnchor">
+<h3>DESeq2 analyse<a href="rna-sequencing.html#deseq2-analyse" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="omzetten-van-de-count-tabel-naar-een-deseq-object" class="section level3 hasAnchor">
+<h3>Omzetten van de “count tabel” naar een DESeq object<a href="rna-sequencing.html#omzetten-van-de-count-tabel-naar-een-deseq-object" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Voordat de functies in het DESeq2-pakket gebruikt kunnen worden, moet eerst de “count tabel” omgezet worden naar een DESeq-object.</p>
+<p>Hiervoor zijn de volgende “inputs” nodig:</p>
+<ol style="list-style-type: decimal">
+<li><p>Een matrix met het aantal fragmenten voor elk gen per monster (the count table).</p></li>
+<li><p>Een dataframe waarin voor elk monster in de matrix (kolommen in de matrix) de experimentele details worden gedetailleerd.</p></li>
+<li><p>Een formule die de experimentele opzet gedetailleerd.(Dus welke monsters moeten worden vergeleken om het verschil in genexpressieniveaus te vinden).</p></li>
+</ol>
+<div id="count-matrix-verkrijgen" class="section level4 hasAnchor">
+<h4>1. “Count matrix” verkrijgen<a href="rna-sequencing.html#count-matrix-verkrijgen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rna-sequencing.html#cb3-1" tabindex="-1"></a><span class="co"># Count matrix</span></span>
+<span id="cb3-2"><a href="rna-sequencing.html#cb3-2" tabindex="-1"></a>count_matrix <span class="ot">&lt;-</span> counts<span class="sc">$</span>counts</span></code></pre></div>
+</div>
+<div id="creëren-van-een-datafram-met-metadata" class="section level4 hasAnchor">
+<h4>2. Creëren van een datafram met metadata<a href="rna-sequencing.html#creëren-van-een-datafram-met-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rna-sequencing.html#cb4-1" tabindex="-1"></a><span class="co">#Import sample data</span></span>
+<span id="cb4-2"><a href="rna-sequencing.html#cb4-2" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;/home/daur2/rnaseq/rnaseq_onecut/onecut_sampledata_OC2.csv&quot;</span>)</span>
+<span id="cb4-3"><a href="rna-sequencing.html#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="rna-sequencing.html#cb4-4" tabindex="-1"></a><span class="co">#Omzet de metadata naar een dataframe</span></span>
+<span id="cb4-5"><a href="rna-sequencing.html#cb4-5" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(metadata)</span>
+<span id="cb4-6"><a href="rna-sequencing.html#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="rna-sequencing.html#cb4-7" tabindex="-1"></a><span class="co">#Voeg rijnamen naar de metadata dataframe</span></span>
+<span id="cb4-8"><a href="rna-sequencing.html#cb4-8" tabindex="-1"></a><span class="fu">rownames</span>(metadata) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(metadata<span class="sc">$</span>Run, <span class="st">&quot;.bam&quot;</span>)</span>
+<span id="cb4-9"><a href="rna-sequencing.html#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="rna-sequencing.html#cb4-10" tabindex="-1"></a><span class="co">#Check de eerste lijnen van de metadata object</span></span>
+<span id="cb4-11"><a href="rna-sequencing.html#cb4-11" tabindex="-1"></a><span class="fu">head</span>(metadata)</span>
+<span id="cb4-12"><a href="rna-sequencing.html#cb4-12" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="rna-sequencing.html#cb4-13" tabindex="-1"></a><span class="co">#Controleert dat de kolommen van de count matrix en rijen van de metadata dezelfde namen hebben.</span></span>
+<span id="cb4-14"><a href="rna-sequencing.html#cb4-14" tabindex="-1"></a><span class="fu">colnames</span>(count_matrix) <span class="sc">==</span> <span class="fu">rownames</span>(metadata)</span></code></pre></div>
+</div>
+<div id="creëren-van-een-formule-met-experimentele-opzet" class="section level4 hasAnchor">
+<h4>3. Creëren van een formule met experimentele opzet<a href="rna-sequencing.html#creëren-van-een-formule-met-experimentele-opzet" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="rna-sequencing.html#cb5-1" tabindex="-1"></a><span class="co">#Creëert een kolom met de test conditie</span></span>
+<span id="cb5-2"><a href="rna-sequencing.html#cb5-2" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> metadata <span class="sc">%&gt;%</span>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">str_replace</span>(Cell_type, <span class="st">&quot;Skin derived fibroblast overexpressing Bclxl&quot;</span>, <span class="st">&quot;BCLXL&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="rna-sequencing.html#cb5-3" tabindex="-1"></a>           <span class="fu">str_replace</span>(<span class="st">&quot;2 days after induction of OC2 in skin derived fibroblasts&quot;</span>, <span class="st">&quot;ONECUT2&quot;</span>))</span>
+<span id="cb5-4"><a href="rna-sequencing.html#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="rna-sequencing.html#cb5-5" tabindex="-1"></a>metadata<span class="sc">$</span>treatment <span class="ot">&lt;-</span> metadata<span class="sc">$</span>treatment <span class="sc">%&gt;%</span> <span class="fu">factor</span>(<span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;BCLXL&quot;</span>, <span class="st">&quot;ONECUT2&quot;</span>))</span></code></pre></div>
+<p>Alle “inputs” zijn gegenereerd, waardoor het DESeqDataset object gemaakt kan worden.</p>
+</div>
+<div id="maak-een-deseq-object" class="section level4 hasAnchor">
+<h4>Maak een DESeq object<a href="rna-sequencing.html#maak-een-deseq-object" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rna-sequencing.html#cb6-1" tabindex="-1"></a><span class="co">#Creëert een DESeqDataset object</span></span>
+<span id="cb6-2"><a href="rna-sequencing.html#cb6-2" tabindex="-1"></a>dds <span class="ot">&lt;-</span> <span class="fu">DESeqDataSetFromMatrix</span>(</span>
+<span id="cb6-3"><a href="rna-sequencing.html#cb6-3" tabindex="-1"></a>  <span class="at">countData =</span> count_matrix,</span>
+<span id="cb6-4"><a href="rna-sequencing.html#cb6-4" tabindex="-1"></a>  <span class="at">colData =</span> metadata,</span>
+<span id="cb6-5"><a href="rna-sequencing.html#cb6-5" tabindex="-1"></a>  <span class="at">design =</span> <span class="sc">~</span> treatment</span>
+<span id="cb6-6"><a href="rna-sequencing.html#cb6-6" tabindex="-1"></a>)</span></code></pre></div>
+</div>
+</div>
+<div id="rnaseq-data-normaliseren" class="section level3 hasAnchor">
+<h3>RNASeq data normaliseren<a href="rna-sequencing.html#rnaseq-data-normaliseren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Voordat de kwaliteit van RNA-sequencing data gecontroleerd kan worden, moet de data genormaliseerd worden. Normalisatie van data is belangrijk, omdat het helpt om de variabiliteit in de data te corrigeren en ervoor te zorgen dat de analyses juist zijn. Het maakt het ook makkelijker om te zien welke genen upgereguleerd of downgereguleerd worden na de verschillende behandelingen, in dit geval: <em>“Fibroblasten behandeld met BCLXL”</em> en <em>“Fibroblasten behandeld met ONECUT2”</em></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rna-sequencing.html#cb7-1" tabindex="-1"></a>dds_normalized <span class="ot">&lt;-</span> <span class="fu">rlog</span>(dds)</span></code></pre></div>
+</div>
+</div>
+<div id="onderdeel-3" class="section level2 hasAnchor">
+<h2>Onderdeel 3:<a href="rna-sequencing.html#onderdeel-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="kwaliteitscontrole" class="section level3 hasAnchor">
+<h3>Kwaliteitscontrole<a href="rna-sequencing.html#kwaliteitscontrole" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="principal-component-analysis" class="section level4 hasAnchor">
+<h4>Principal component analysis<a href="rna-sequencing.html#principal-component-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Het aantal genen in deze dataset is 28.395. Dit is vrij lastig weer te geven en te analyseren. Hierdoor wordt principal component analysis <em>(PCA)</em> uitgevoerd. Het is een methode die het aantal variabelen, in dit geval de genen, te verkleinen door middel van een aantal lineaire combinaties. De grootste spreiding genen wordt dan gevangen in een eerste variabele, principal component 1 (PC1). Dit gaat dan door tot alle genen zijn samengevat. Zo kan de scheiding van de genen gebaseerd op genexpressie duidelijker weergegeven worden.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rna-sequencing.html#cb8-1" tabindex="-1"></a><span class="co">#Uitvoert PCA methode met de genormaliseerd data</span></span>
+<span id="cb8-2"><a href="rna-sequencing.html#cb8-2" tabindex="-1"></a>pca <span class="ot">&lt;-</span> dds_normalized <span class="sc">%&gt;%</span> <span class="fu">assay</span>() <span class="sc">%&gt;%</span> <span class="fu">t</span>() <span class="sc">%&gt;%</span> <span class="fu">prcomp</span>()</span></code></pre></div>
+<p>De PCA analyse geeft in dit geval 4 nieuwe variabelen. Om te bekijken hoeveel van data elke PC representeert wordt de <em>summary()</em> function gebruikt.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rna-sequencing.html#cb9-1" tabindex="-1"></a>pca_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(pca)<span class="sc">$</span>importance</span>
+<span id="cb9-2"><a href="rna-sequencing.html#cb9-2" tabindex="-1"></a>pca_summary</span></code></pre></div>
+<ul>
+<li><p>PC1 representeert 94.6% van de variatie.</p></li>
+<li><p>PC2 representeert 3,1% van de variatie.</p></li>
+<li><p>PC3 representeert 2.3% van de variatie.</p></li>
+<li><p>PC4 representeert afgerond 0% van de variatie.</p></li>
+</ul>
+</div>
+<div id="hypothese" class="section level4 hasAnchor">
+<h4>Hypothese<a href="rna-sequencing.html#hypothese" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p>Er wordt verwacht dat er een verschil is in genexpressie tussen de <strong>fibroblasten behandeld met BCLXL</strong> en de <strong>fibroblasten behandeld met ONECUT2</strong>. Dit zal zorgen voor een grotere afstand op de x-as tussen deze genen.</p></li>
+<li><p>Aangezien de gebruikte cellijn voor elke behandeling hetzelfde is, zullen er geen verschillen zijn genexpressie afkomstig door verschillende cellijnen. De afstand op de y-as zal dan klein zijn.</p></li>
+</ol>
+</div>
+<div id="plot-de-principal-components" class="section level4 hasAnchor">
+<h4>Plot de principal components<a href="rna-sequencing.html#plot-de-principal-components" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rna-sequencing.html#cb10-1" tabindex="-1"></a><span class="co">#Maak een data frame met metadata en PCA waardes</span></span>
+<span id="cb10-2"><a href="rna-sequencing.html#cb10-2" tabindex="-1"></a>pca_plotting <span class="ot">&lt;-</span> <span class="fu">cbind</span>(metadata, pca<span class="sc">$</span>x)</span>
+<span id="cb10-3"><a href="rna-sequencing.html#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="rna-sequencing.html#cb10-4" tabindex="-1"></a><span class="co"># Verkrijg de percentages van PCs</span></span>
+<span id="cb10-5"><a href="rna-sequencing.html#cb10-5" tabindex="-1"></a>PC1_var <span class="ot">&lt;-</span> <span class="fu">round</span>(pca_summary[<span class="st">&quot;Proportion of Variance&quot;</span>, <span class="st">&quot;PC1&quot;</span>]<span class="sc">*</span><span class="dv">100</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span>
+<span id="cb10-6"><a href="rna-sequencing.html#cb10-6" tabindex="-1"></a>PC2_var <span class="ot">&lt;-</span> <span class="fu">round</span>(pca_summary[<span class="st">&quot;Proportion of Variance&quot;</span>, <span class="st">&quot;PC2&quot;</span>]<span class="sc">*</span><span class="dv">100</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span>
+<span id="cb10-7"><a href="rna-sequencing.html#cb10-7" tabindex="-1"></a>PC3_var <span class="ot">&lt;-</span> <span class="fu">round</span>(pca_summary[<span class="st">&quot;Proportion of Variance&quot;</span>, <span class="st">&quot;PC3&quot;</span>]<span class="sc">*</span><span class="dv">100</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span>
+<span id="cb10-8"><a href="rna-sequencing.html#cb10-8" tabindex="-1"></a>PC4_var <span class="ot">&lt;-</span> <span class="fu">round</span>(pca_summary[<span class="st">&quot;Proportion of Variance&quot;</span>, <span class="st">&quot;PC4&quot;</span>]<span class="sc">*</span><span class="dv">100</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span>
+<span id="cb10-9"><a href="rna-sequencing.html#cb10-9" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="rna-sequencing.html#cb10-10" tabindex="-1"></a><span class="co"># Voeg de percentages toe aan de data frame</span></span>
+<span id="cb10-11"><a href="rna-sequencing.html#cb10-11" tabindex="-1"></a>percentages <span class="ot">&lt;-</span> <span class="fu">c</span>(PC1_var, PC2_var, PC3_var, PC4_var)</span>
+<span id="cb10-12"><a href="rna-sequencing.html#cb10-12" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">PC =</span> <span class="fu">c</span>(<span class="st">&quot;PC1&quot;</span>,<span class="st">&quot;PC2&quot;</span>,<span class="st">&quot;PC3&quot;</span>,<span class="st">&quot;PC4&quot;</span>), <span class="at">Percentage=</span>percentages)</span>
+<span id="cb10-13"><a href="rna-sequencing.html#cb10-13" tabindex="-1"></a>pca_plotting2 <span class="ot">&lt;-</span> <span class="fu">merge</span>(pca_plotting, df)</span>
+<span id="cb10-14"><a href="rna-sequencing.html#cb10-14" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="rna-sequencing.html#cb10-15" tabindex="-1"></a><span class="co"># Plot de PC variabelen in een staafdiagram</span></span>
+<span id="cb10-16"><a href="rna-sequencing.html#cb10-16" tabindex="-1"></a><span class="fu">ggplot</span>(pca_plotting2) <span class="sc">+</span> </span>
+<span id="cb10-17"><a href="rna-sequencing.html#cb10-17" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">x=</span>PC, <span class="at">y=</span>Percentage, <span class="at">fill =</span> PC)) <span class="sc">+</span></span>
+<span id="cb10-18"><a href="rna-sequencing.html#cb10-18" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Fig 3: PC percentages van de PCA voor </span><span class="sc">\n</span><span class="st"> fibroblasten transdifferentiatie onderzoek&quot;</span>) <span class="sc">+</span></span>
+<span id="cb10-19"><a href="rna-sequencing.html#cb10-19" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;PC&quot;</span>) <span class="sc">+</span></span>
+<span id="cb10-20"><a href="rna-sequencing.html#cb10-20" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Proportie van Variatie (%)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb10-21"><a href="rna-sequencing.html#cb10-21" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb10-22"><a href="rna-sequencing.html#cb10-22" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="rna-sequencing.html#cb10-23" tabindex="-1"></a><span class="co">#Plot PC1 vs PC2</span></span>
+<span id="cb10-24"><a href="rna-sequencing.html#cb10-24" tabindex="-1"></a><span class="fu">ggplot</span>(pca_plotting) <span class="sc">+</span> </span>
+<span id="cb10-25"><a href="rna-sequencing.html#cb10-25" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>PC1, <span class="at">y=</span>PC2, <span class="at">color =</span> treatment), <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb10-26"><a href="rna-sequencing.html#cb10-26" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Fig 4: PCA plot voor fibroblasten transdifferentiatie onderzoek&quot;</span>) <span class="sc">+</span></span>
+<span id="cb10-27"><a href="rna-sequencing.html#cb10-27" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="fu">paste0</span>(<span class="st">&quot;PC1 (&quot;</span>, PC1_var, <span class="st">&quot;%)&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb10-28"><a href="rna-sequencing.html#cb10-28" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">&quot;PC2 (&quot;</span>, PC2_var, <span class="st">&quot;%)&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb10-29"><a href="rna-sequencing.html#cb10-29" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><strong>Conclusie:</strong><br />
+Op basis van de resultaten van <em>figuur 3</em> is te zien dat PC1 90% van de variatie weergeeft van de RNA-sequencing data.</p>
+<p>Op basis van de resultaten van <em>figuur 4</em> kan geconclueerd worden dat er een groot verschil is in de genexpressie tussen de <em>“Fibroblasten behandeld met BCLXL”</em> en <em>“Fibroblasten behandeld met ONECUT2”</em>. Hierdoor is er een grote afstand zichtbaar tussen de fibroblasten op de x-as. Dit komt overeen met de hypothese.</p>
+<p>Er wordt ook gezien dat er een groot verschil in de genexpressie tussen de <strong>fibroblasten samples</strong> is. Dit is vreemd, aangezien de behandelingen in duplo uitgevoerd zijn met de exact zelfde cellijnen en behandelingen. Hoogst waarschijnlijk is er iets mis gegaan tijdens de behandelingen van de duplo meting, zoals contaminatie. Dit kan ook het lage percentage verklaren van het aantal toegewezen fragmenten.</p>
+</div>
+</div>
+<div id="differential-gene-expression-analysis" class="section level3 hasAnchor">
+<h3>Differential gene expression analysis<a href="rna-sequencing.html#differential-gene-expression-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Er moet uiteindelijk bekeken worden wat het verschil is in genexpressie tussen <em>“Fibroblasten behandeld met BCLXL”</em> en <em>“Fibroblasten behandeld met ONECUT2”</em>. Hiervoor wordt gebruik gemaakt van een “Differential Gene Expression (DGE)” analyse. In een DGE analyse wordt gezocht naar een set genen met een ander expressie profiel ten opzichte van een andere conditie. Deze genen zijn dan “differentially expressed (DE)”. Hiertoe wordt gekeken naar significantie en dus p-waarden.</p>
+<p>Een p-waarde geeft weer of er een significant verschil aanwezig is tussen twee condities. In een DGE-analyse moet de p-waarde voor elk gen berekend worden. In dit geval 28.395 genen. Hiervoor moeten de p-waarden worden gecorrigeerd. De output van het DESeq2-pakket geeft zowel ongecorrigeerde <em>p-values</em>, als gecorrigeerde p-waardes <em>padj</em> (p-adjusted).</p>
+<p>Op basis van p-waarden alleen kan echter niet geconcludeerd worden of de expressie van genen toeneemt ( <strong>upreguleerd</strong> ) of afneemt ( <strong>downreguleerd</strong> ). Hiervoor berekent DESeq2 ook de <strong>fold change</strong>. De fold changes worden gerapporteerd als <strong>log2 fold changes (LFC)</strong>. Dat betekent dat de log2 van de fold change wordt genomen. Stel dat een gen een 4x verhoogde expressie ( <strong>= upregulated</strong> ) heeft in cellen behandeld met BCLXL vergeleken met behandelde cellen met ONECUT2. De LFC zou dan log2(4) = 2 zijn. Op dezelfde manier geeft een LFC van 2 een 4x (2^2) toename in genexpressie aan in de BCLXL behandelde cellen.</p>
+</div>
+<div id="uitvoering-van-dge-analyse" class="section level3 hasAnchor">
+<h3>Uitvoering van DGE analyse<a href="rna-sequencing.html#uitvoering-van-dge-analyse" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rna-sequencing.html#cb11-1" tabindex="-1"></a><span class="co"># Uitvoer DGE analyse</span></span>
+<span id="cb11-2"><a href="rna-sequencing.html#cb11-2" tabindex="-1"></a>fibroblasten_dge <span class="ot">&lt;-</span> <span class="fu">DESeq</span>(dds)</span></code></pre></div>
+<p>Na de uitvoering van de DGE analyse, kunnen de resultaten van de DGE analyse bekeken worden met behulp van de **results()* functie.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rna-sequencing.html#cb12-1" tabindex="-1"></a><span class="co">#Verkrijgt de resultaten van de DGE Analyse.</span></span>
+<span id="cb12-2"><a href="rna-sequencing.html#cb12-2" tabindex="-1"></a>fibroblasten_dge_results <span class="ot">&lt;-</span> <span class="fu">results</span>(fibroblasten_dge, <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">lfcThreshold =</span> <span class="dv">1</span>)</span>
+<span id="cb12-3"><a href="rna-sequencing.html#cb12-3" tabindex="-1"></a>fibroblasten_dge_results</span>
+<span id="cb12-4"><a href="rna-sequencing.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="rna-sequencing.html#cb12-5" tabindex="-1"></a><span class="co">#Verkrijgt een samenvatting van de resultaten.</span></span>
+<span id="cb12-6"><a href="rna-sequencing.html#cb12-6" tabindex="-1"></a><span class="fu">summary</span>(fibroblasten_dge_results)</span></code></pre></div>
+<p>Met deze samenvatting kan gezien worden dat ongeveer 1753 genen upgereguleerd zijn en ongeveer 939 genen downreguleerd zijn als gevolg van de behandeling van fibroblasten met ONECUT2 ten opzichte van BCLXL.</p>
+</div>
+<div id="visualisatie-van-de-dge-resultaten." class="section level3 hasAnchor">
+<h3>Visualisatie van de DGE resultaten.<a href="rna-sequencing.html#visualisatie-van-de-dge-resultaten." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Om de resultaten van de DGE analyse te visualiseren, worden gebruik gemaakt van volcano plots en heatmaps.</p>
+<div id="volcano-plots" class="section level4 hasAnchor">
+<h4>Volcano Plots<a href="rna-sequencing.html#volcano-plots" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In deze grafiek worden de significant verschillende genen, met een padj &lt; 0.01, onderscheiden worden door een donkeroranje kleur. De naam van het meest significante upgereguleerde gen wordt ook toegevoerd.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rna-sequencing.html#cb13-1" tabindex="-1"></a><span class="co"># Creert een dataframe voor plotting without genes with NA&#39;s values</span></span>
+<span id="cb13-2"><a href="rna-sequencing.html#cb13-2" tabindex="-1"></a>fibroblasten_dge_plotting <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(fibroblasten_dge_results) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(padj))</span>
+<span id="cb13-3"><a href="rna-sequencing.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="rna-sequencing.html#cb13-4" tabindex="-1"></a><span class="co"># Maak een kolom waar je vertelt of het gen een significante verschil heeft.</span></span>
+<span id="cb13-5"><a href="rna-sequencing.html#cb13-5" tabindex="-1"></a>fibroblasten_dge_plotting <span class="ot">&lt;-</span> fibroblasten_dge_plotting <span class="sc">%&gt;%</span> </span>
+<span id="cb13-6"><a href="rna-sequencing.html#cb13-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">signif =</span> <span class="fu">if_else</span>(padj <span class="sc">&lt;</span> <span class="fl">0.01</span> <span class="sc">&amp;</span> <span class="fu">abs</span>(log2FoldChange) <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="st">&quot;Significant&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</span>
+<span id="cb13-7"><a href="rna-sequencing.html#cb13-7" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="rna-sequencing.html#cb13-8" tabindex="-1"></a><span class="co"># Maak objecten met het aantal upgereguleerde en downgereguleerd genen</span></span>
+<span id="cb13-9"><a href="rna-sequencing.html#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="rna-sequencing.html#cb13-10" tabindex="-1"></a>up_genen <span class="ot">&lt;-</span> fibroblasten_dge_plotting <span class="sc">%&gt;%</span>  <span class="fu">filter</span>(padj <span class="sc">&lt;</span> <span class="fl">0.01</span> <span class="sc">&amp;</span> log2FoldChange <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span>  <span class="fu">nrow</span>()</span>
+<span id="cb13-11"><a href="rna-sequencing.html#cb13-11" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="rna-sequencing.html#cb13-12" tabindex="-1"></a>down_genen <span class="ot">&lt;-</span> fibroblasten_dge_plotting <span class="sc">%&gt;%</span> <span class="fu">filter</span>(padj <span class="sc">&lt;</span> <span class="fl">0.01</span> <span class="sc">&amp;</span> log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()</span>
+<span id="cb13-13"><a href="rna-sequencing.html#cb13-13" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="rna-sequencing.html#cb13-14" tabindex="-1"></a><span class="co"># Maak een volcano plot</span></span>
+<span id="cb13-15"><a href="rna-sequencing.html#cb13-15" tabindex="-1"></a>fibroblasten_dge_plotting <span class="sc">%&gt;%</span> </span>
+<span id="cb13-16"><a href="rna-sequencing.html#cb13-16" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj), <span class="at">color =</span> signif)) <span class="sc">+</span></span>
+<span id="cb13-17"><a href="rna-sequencing.html#cb13-17" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb13-18"><a href="rna-sequencing.html#cb13-18" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">1</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-19"><a href="rna-sequencing.html#cb13-19" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-20"><a href="rna-sequencing.html#cb13-20" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="sc">-</span><span class="fu">log10</span>(<span class="fl">0.01</span>), <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-21"><a href="rna-sequencing.html#cb13-21" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;log2 fold change&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-22"><a href="rna-sequencing.html#cb13-22" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;-log10 adjusted p-value&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-23"><a href="rna-sequencing.html#cb13-23" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Fig 5: Volcano plot met de significante genen </span><span class="sc">\n</span><span class="st"> van het fibroblast transdifferentiatie onderzoek&quot;</span>)<span class="sc">+</span></span>
+<span id="cb13-24"><a href="rna-sequencing.html#cb13-24" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb13-25"><a href="rna-sequencing.html#cb13-25" tabindex="-1"></a>  </span>
+<span id="cb13-26"><a href="rna-sequencing.html#cb13-26" tabindex="-1"></a>  <span class="co"># Veranderd de legende van de tekst en kleur</span></span>
+<span id="cb13-27"><a href="rna-sequencing.html#cb13-27" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;grey&quot;</span>, <span class="st">&quot;darkorange&quot;</span>), <span class="at">name =</span> <span class="st">&quot;Significance&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-28"><a href="rna-sequencing.html#cb13-28" tabindex="-1"></a>  </span>
+<span id="cb13-29"><a href="rna-sequencing.html#cb13-29" tabindex="-1"></a>  <span class="co"># het aantal upgereguleerde en downgereguleerd genen</span></span>
+<span id="cb13-30"><a href="rna-sequencing.html#cb13-30" tabindex="-1"></a> <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
+<span id="cb13-31"><a href="rna-sequencing.html#cb13-31" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">paste</span>(<span class="st">&quot;Downgereguleerde </span><span class="sc">\n</span><span class="st"> genen:&quot;</span>, down_genen ), <span class="at">colour =</span> <span class="st">&quot;darkorange&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-32"><a href="rna-sequencing.html#cb13-32" tabindex="-1"></a>  </span>
+<span id="cb13-33"><a href="rna-sequencing.html#cb13-33" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">8</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
+<span id="cb13-34"><a href="rna-sequencing.html#cb13-34" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">paste</span>(<span class="st">&quot;Upgereguleerde </span><span class="sc">\n</span><span class="st"> genen:&quot;</span>, up_genen ), <span class="at">colour =</span> <span class="st">&quot;darkorange&quot;</span>)</span></code></pre></div>
+</div>
+<div id="heatmaps" class="section level4 hasAnchor">
+<h4>Heatmaps<a href="rna-sequencing.html#heatmaps" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Een heatmap wordt gebruikt om te zien welke genen zijn <em>up- en downgereguleerd</em> tijdens het <em>transdifferentiatie proces</em>. Hiervoor worden eerst de <strong>top 5 up- en downgereguleerde genen</strong> geselecteerd en vervolgens geplot in een heatmap.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="rna-sequencing.html#cb14-1" tabindex="-1"></a><span class="co">#Verkrijgt genen met een significante p-waarde</span></span>
+<span id="cb14-2"><a href="rna-sequencing.html#cb14-2" tabindex="-1"></a>sign_genes <span class="ot">&lt;-</span> fibroblasten_dge_results[<span class="fu">which</span>(fibroblasten_dge_results<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.01</span>),]</span>
+<span id="cb14-3"><a href="rna-sequencing.html#cb14-3" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="rna-sequencing.html#cb14-4" tabindex="-1"></a><span class="co"># Verkrijgt de 5 meeste significante upgenen</span></span>
+<span id="cb14-5"><a href="rna-sequencing.html#cb14-5" tabindex="-1"></a>top5_upgenen <span class="ot">&lt;-</span> <span class="fu">rownames</span>(sign_genes[<span class="fu">order</span>(sign_genes<span class="sc">$</span>log2FoldChange, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], ])</span>
+<span id="cb14-6"><a href="rna-sequencing.html#cb14-6" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="rna-sequencing.html#cb14-7" tabindex="-1"></a><span class="co"># Verkrijgt de 5 meeste significante downgenen</span></span>
+<span id="cb14-8"><a href="rna-sequencing.html#cb14-8" tabindex="-1"></a>top5_downgenen <span class="ot">&lt;-</span> <span class="fu">rownames</span>(sign_genes[<span class="fu">order</span>(sign_genes<span class="sc">$</span>log2FoldChange, <span class="at">decreasing =</span> <span class="cn">FALSE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], ])</span>
+<span id="cb14-9"><a href="rna-sequencing.html#cb14-9" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="rna-sequencing.html#cb14-10" tabindex="-1"></a><span class="co"># Combinneer de twee top 5 genen in een object</span></span>
+<span id="cb14-11"><a href="rna-sequencing.html#cb14-11" tabindex="-1"></a>top_genen <span class="ot">&lt;-</span> <span class="fu">c</span>(top5_upgenen, top5_downgenen)</span>
+<span id="cb14-12"><a href="rna-sequencing.html#cb14-12" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="rna-sequencing.html#cb14-13" tabindex="-1"></a><span class="co"># Verkrijgt de count values voor de top 5 upgenen</span></span>
+<span id="cb14-14"><a href="rna-sequencing.html#cb14-14" tabindex="-1"></a>count_values <span class="ot">&lt;-</span> <span class="fu">assay</span>(dds)[top_genen,]</span>
+<span id="cb14-15"><a href="rna-sequencing.html#cb14-15" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="rna-sequencing.html#cb14-16" tabindex="-1"></a><span class="co"># Vervang de kolom namen met de condities </span></span>
+<span id="cb14-17"><a href="rna-sequencing.html#cb14-17" tabindex="-1"></a><span class="fu">colnames</span>(count_values) <span class="ot">&lt;-</span> <span class="fu">colData</span>(dds)<span class="sc">$</span>treatment</span>
+<span id="cb14-18"><a href="rna-sequencing.html#cb14-18" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="rna-sequencing.html#cb14-19" tabindex="-1"></a><span class="co"># Visualiseert de resultaten in een heatmap( genormaliseerd)</span></span>
+<span id="cb14-20"><a href="rna-sequencing.html#cb14-20" tabindex="-1"></a><span class="fu">pheatmap</span>(count_values, <span class="at">scale =</span> <span class="st">&quot;row&quot;</span>, <span class="at">show_rownames =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="onderdeel-4" class="section level2 hasAnchor">
+<h2>Onderdeel 4:<a href="rna-sequencing.html#onderdeel-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ontdekt-welke-genen-veranderen" class="section level3 hasAnchor">
+<h3>Ontdekt welke genen veranderen<a href="rna-sequencing.html#ontdekt-welke-genen-veranderen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>De <strong>top 5 up- en downgereguleerde genen</strong> zijn nu gevonden. Echter zijn alleen de <em>Entrez-identificatienummers</em> voor deze genen zichtbaar. Aangezien dit niet veel informatie verschaft, worden de gen symbolen aangegeven door middel van de Entrex-identificatienummers m.b.v de <em>mapIds() functie</em>.</p>
+<div id="mapidsfunctie" class="section level4 hasAnchor">
+<h4>mapIds(functie)<a href="rna-sequencing.html#mapidsfunctie" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Deze functie wordt gebruikt om identificatienummers van genen of eiwitten om te zetten naar andere identificatienummers of annotaties, zoals het omzetten van Entrez-genen naar symbolen of omgekeerd.</p>
+<p>Bijvoorbeeld als je een lijst hebt met Entrez-gen-ID’s en je wilt de corresponderende gen-symboolnamen verkrijgen, kun je mapIds() gebruiken om deze conversie uit te voeren. Dit maakt gebruik van een annotatie-database die beschikbaar is in pakketten zoals org.Hs.eg.db (voor menselijke genen).</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="rna-sequencing.html#cb15-1" tabindex="-1"></a><span class="co"># Omzet de 5 meeste significante upgenen in een dataframe</span></span>
+<span id="cb15-2"><a href="rna-sequencing.html#cb15-2" tabindex="-1"></a>top5_upgenen <span class="ot">&lt;-</span> sign_genes[<span class="fu">order</span>(sign_genes<span class="sc">$</span>log2FoldChange, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>],] <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb15-3"><a href="rna-sequencing.html#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="rna-sequencing.html#cb15-4" tabindex="-1"></a><span class="co"># Omzet de 5 meeste significante downgenen in een dataframe</span></span>
+<span id="cb15-5"><a href="rna-sequencing.html#cb15-5" tabindex="-1"></a>top5_downgenen <span class="ot">&lt;-</span> sign_genes[<span class="fu">order</span>(sign_genes<span class="sc">$</span>log2FoldChange, <span class="at">decreasing =</span> <span class="cn">FALSE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>],] <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb15-6"><a href="rna-sequencing.html#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="rna-sequencing.html#cb15-7" tabindex="-1"></a><span class="co"># Combinneer de twee top 5 genen in een dataframe</span></span>
+<span id="cb15-8"><a href="rna-sequencing.html#cb15-8" tabindex="-1"></a>top_genen <span class="ot">&lt;-</span> <span class="fu">rbind</span>(top5_upgenen, top5_downgenen)</span>
+<span id="cb15-9"><a href="rna-sequencing.html#cb15-9" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="rna-sequencing.html#cb15-10" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(top_genen))</span>
+<span id="cb15-11"><a href="rna-sequencing.html#cb15-11" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="rna-sequencing.html#cb15-12" tabindex="-1"></a><span class="co"># Voeg een extra kolom aan de dataframe met Entrez id (Gebaseerd op de rijennamen)</span></span>
+<span id="cb15-13"><a href="rna-sequencing.html#cb15-13" tabindex="-1"></a>top_genen <span class="ot">&lt;-</span> top_genen <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">entrezid =</span> <span class="fu">rownames</span>(top_genen))</span>
+<span id="cb15-14"><a href="rna-sequencing.html#cb15-14" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="rna-sequencing.html#cb15-15" tabindex="-1"></a><span class="co"># Verkrijgt de gen symbolen gebaseerd ip de Entrez identifiers</span></span>
+<span id="cb15-16"><a href="rna-sequencing.html#cb15-16" tabindex="-1"></a>top_genen<span class="sc">$</span>symbol <span class="ot">&lt;-</span> <span class="fu">mapIds</span>(org.Hs.eg.db,</span>
+<span id="cb15-17"><a href="rna-sequencing.html#cb15-17" tabindex="-1"></a>                             <span class="at">keys =</span> top_genen<span class="sc">$</span>entrezid,</span>
+<span id="cb15-18"><a href="rna-sequencing.html#cb15-18" tabindex="-1"></a>                             <span class="at">column =</span> <span class="st">&quot;SYMBOL&quot;</span>,</span>
+<span id="cb15-19"><a href="rna-sequencing.html#cb15-19" tabindex="-1"></a>                             <span class="at">keytype =</span> <span class="st">&quot;ENTREZID&quot;</span>,</span>
+<span id="cb15-20"><a href="rna-sequencing.html#cb15-20" tabindex="-1"></a>                             <span class="at">multiVals =</span> <span class="st">&quot;first&quot;</span>)</span>
+<span id="cb15-21"><a href="rna-sequencing.html#cb15-21" tabindex="-1"></a></span>
+<span id="cb15-22"><a href="rna-sequencing.html#cb15-22" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(top_genen))</span></code></pre></div>
+<p>Nu dat de gensymbolen van de <strong>top 5 up- en downgereguleerde genen</strong> gevonden zijn, kunnen deze gensymbolen gebruikt worden in de heatmap als ‘rownames’.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="rna-sequencing.html#cb16-1" tabindex="-1"></a><span class="co">#Maak een object met DE-genen symbolen</span></span>
+<span id="cb16-2"><a href="rna-sequencing.html#cb16-2" tabindex="-1"></a>symbolen <span class="ot">&lt;-</span> top_genen<span class="sc">$</span>symbol</span>
+<span id="cb16-3"><a href="rna-sequencing.html#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="rna-sequencing.html#cb16-4" tabindex="-1"></a><span class="co"># Veranderd de rijen namen voor de top 5 up- en downgereguleerde gene symbolen</span></span>
+<span id="cb16-5"><a href="rna-sequencing.html#cb16-5" tabindex="-1"></a><span class="fu">rownames</span>(count_values) <span class="ot">&lt;-</span> symbolen</span>
+<span id="cb16-6"><a href="rna-sequencing.html#cb16-6" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="rna-sequencing.html#cb16-7" tabindex="-1"></a><span class="co"># Visualiseert de resultaten in de heatmap  met de DE-genen(genormaliseerd)</span></span>
+<span id="cb16-8"><a href="rna-sequencing.html#cb16-8" tabindex="-1"></a><span class="fu">pheatmap</span>(count_values, <span class="at">scale =</span> <span class="st">&quot;row&quot;</span>, <span class="at">show_rownames =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>Met de verkregen heatmap is duidelijk zichtbaar welke genen **up- of downgereguleerd* zijn. Echter is hieruit niet duidelijk welke biologische processen geassocieerd met de genen up- of downgereguleerd zijn. Hiertoe wordt een GO enrichment term uitgevoerd op de 10 genen.</p>
+</div>
+</div>
+<div id="cytogenetische-band-functie" class="section level3 hasAnchor">
+<h3>Cytogenetische band functie<a href="rna-sequencing.html#cytogenetische-band-functie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="rna-sequencing.html#cb17-1" tabindex="-1"></a>cytogenbandToEntrex <span class="ot">&lt;-</span> <span class="cf">function</span>(cytogen_band) {</span>
+<span id="cb17-2"><a href="rna-sequencing.html#cb17-2" tabindex="-1"></a>  </span>
+<span id="cb17-3"><a href="rna-sequencing.html#cb17-3" tabindex="-1"></a>  <span class="co"># Verkrijg de cytogene mapping gebaseerd op de entrex IDs voor de 10 genen.</span></span>
+<span id="cb17-4"><a href="rna-sequencing.html#cb17-4" tabindex="-1"></a>  top_genen<span class="sc">$</span>chromosomal_band <span class="ot">&lt;-</span> <span class="fu">mapIds</span>(org.Hs.eg.db,</span>
+<span id="cb17-5"><a href="rna-sequencing.html#cb17-5" tabindex="-1"></a>                                       <span class="at">keys =</span> top_genen<span class="sc">$</span>entrezid,</span>
+<span id="cb17-6"><a href="rna-sequencing.html#cb17-6" tabindex="-1"></a>                                       <span class="at">column =</span> <span class="st">&quot;MAP&quot;</span>,</span>
+<span id="cb17-7"><a href="rna-sequencing.html#cb17-7" tabindex="-1"></a>                                       <span class="at">keytype =</span> <span class="st">&quot;ENTREZID&quot;</span>,</span>
+<span id="cb17-8"><a href="rna-sequencing.html#cb17-8" tabindex="-1"></a>                                       <span class="at">multiVals =</span> <span class="st">&quot;first&quot;</span>)</span>
+<span id="cb17-9"><a href="rna-sequencing.html#cb17-9" tabindex="-1"></a>  </span>
+<span id="cb17-10"><a href="rna-sequencing.html#cb17-10" tabindex="-1"></a>  chromband_to_entrezid <span class="ot">&lt;-</span> top_genen <span class="sc">%&gt;%</span> <span class="fu">filter</span>(chromosomal_band <span class="sc">==</span> cytogen_band) </span>
+<span id="cb17-11"><a href="rna-sequencing.html#cb17-11" tabindex="-1"></a>  entrezid_chromband <span class="ot">&lt;-</span> chromband_to_entrezid<span class="sc">$</span>entrezid</span>
+<span id="cb17-12"><a href="rna-sequencing.html#cb17-12" tabindex="-1"></a>  </span>
+<span id="cb17-13"><a href="rna-sequencing.html#cb17-13" tabindex="-1"></a>  <span class="fu">return</span>(entrezid_chromband)</span>
+<span id="cb17-14"><a href="rna-sequencing.html#cb17-14" tabindex="-1"></a>}</span>
+<span id="cb17-15"><a href="rna-sequencing.html#cb17-15" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="rna-sequencing.html#cb17-16" tabindex="-1"></a><span class="co">#Voorbeeld: chromosomal band geeft entrex id terug.</span></span>
+<span id="cb17-17"><a href="rna-sequencing.html#cb17-17" tabindex="-1"></a><span class="fu">cytogenbandToEntrex</span>(<span class="st">&quot;7p21.2&quot;</span>)</span></code></pre></div>
+</div>
+<div id="uitvoer-go-term-enrichment-analyse" class="section level3 hasAnchor">
+<h3>Uitvoer GO term enrichment analyse<a href="rna-sequencing.html#uitvoer-go-term-enrichment-analyse" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Zoals eerder aangegeven, ligt de interesse niet alleen bij welke genen zijn up- en downgereguleerd na behandeling, maar welke biologische processen deze genen beïnvloeden. Hiertoe wordt een <strong>GO tern enrichment analyse</strong> uitgevoerd. Er wordt hiervoor gebruik gemaakt van de speciale software <em>GOstats-pakket</em> in R en functie <em>hyperGtest()</em>. Zo wordt een duidelijk beeld geschetst tussen te verschillen in genexpressie in fibroblasten na behandeling met ONECUT2 of BCLXL.</p>
+<p>Om herhalende code te voorkomen, is een functie ontworpen om de <strong>GO term enrichment analyse</strong> voor up- en downgereguleerde genen makkelijker en sneller uit te voeren.</p>
+<div id="go-term-enrichment-analyse-functie" class="section level4 hasAnchor">
+<h4>GO term enrichment analyse functie<a href="rna-sequencing.html#go-term-enrichment-analyse-functie" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="rna-sequencing.html#cb18-1" tabindex="-1"></a><span class="co"># GO term enrichment analysis functie</span></span>
+<span id="cb18-2"><a href="rna-sequencing.html#cb18-2" tabindex="-1"></a> </span>
+<span id="cb18-3"><a href="rna-sequencing.html#cb18-3" tabindex="-1"></a>goTermAnalysis_fibroblasten <span class="ot">&lt;-</span> <span class="cf">function</span>(dge_results, upregulated, lfc_value, padj_value) {</span>
+<span id="cb18-4"><a href="rna-sequencing.html#cb18-4" tabindex="-1"></a>  <span class="co"># Maak een lijst van alle genen in de dataset</span></span>
+<span id="cb18-5"><a href="rna-sequencing.html#cb18-5" tabindex="-1"></a>  all_fibroblasten_genen <span class="ot">&lt;-</span> dge_results <span class="sc">%&gt;%</span> <span class="fu">data.frame</span>() <span class="sc">%&gt;%</span> <span class="fu">rownames</span>()</span>
+<span id="cb18-6"><a href="rna-sequencing.html#cb18-6" tabindex="-1"></a>  <span class="cf">if</span> (upregulated<span class="sc">==</span><span class="cn">TRUE</span>) {</span>
+<span id="cb18-7"><a href="rna-sequencing.html#cb18-7" tabindex="-1"></a>    <span class="co"># Maak een  lijst van alle upgereguleerde genen</span></span>
+<span id="cb18-8"><a href="rna-sequencing.html#cb18-8" tabindex="-1"></a>    upregulated_fibroblasten_genen <span class="ot">&lt;-</span> dge_results <span class="sc">%&gt;%</span> <span class="fu">data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb18-9"><a href="rna-sequencing.html#cb18-9" tabindex="-1"></a>      <span class="fu">filter</span>(log2FoldChange <span class="sc">&gt;</span> lfc_value, padj <span class="sc">&lt;</span> padj_value) <span class="sc">%&gt;%</span> <span class="fu">rownames</span>()</span>
+<span id="cb18-10"><a href="rna-sequencing.html#cb18-10" tabindex="-1"></a>    <span class="co">#Uitvoer GO term enrichment analysis</span></span>
+<span id="cb18-11"><a href="rna-sequencing.html#cb18-11" tabindex="-1"></a>    test_object_fibroblasten_up <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">&quot;GOHyperGParams&quot;</span>,</span>
+<span id="cb18-12"><a href="rna-sequencing.html#cb18-12" tabindex="-1"></a>                               <span class="at">geneIds =</span> upregulated_fibroblasten_genen,</span>
+<span id="cb18-13"><a href="rna-sequencing.html#cb18-13" tabindex="-1"></a>                               <span class="at">universeGeneIds =</span> all_fibroblasten_genen, </span>
+<span id="cb18-14"><a href="rna-sequencing.html#cb18-14" tabindex="-1"></a>                               <span class="at">annotation =</span> <span class="st">&quot;org.Hs.eg.db&quot;</span>, </span>
+<span id="cb18-15"><a href="rna-sequencing.html#cb18-15" tabindex="-1"></a>                               <span class="at">ontology =</span> <span class="st">&quot;BP&quot;</span>, </span>
+<span id="cb18-16"><a href="rna-sequencing.html#cb18-16" tabindex="-1"></a>                               <span class="at">pvalueCutoff =</span> <span class="dv">1</span>,</span>
+<span id="cb18-17"><a href="rna-sequencing.html#cb18-17" tabindex="-1"></a>                               <span class="at">testDirection =</span> <span class="st">&quot;over&quot;</span>)</span>
+<span id="cb18-18"><a href="rna-sequencing.html#cb18-18" tabindex="-1"></a></span>
+<span id="cb18-19"><a href="rna-sequencing.html#cb18-19" tabindex="-1"></a>    goterm_analysis_up_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">hyperGTest</span>(test_object_fibroblasten_up))</span>
+<span id="cb18-20"><a href="rna-sequencing.html#cb18-20" tabindex="-1"></a>    <span class="fu">return</span>(goterm_analysis_up_summary)</span>
+<span id="cb18-21"><a href="rna-sequencing.html#cb18-21" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb18-22"><a href="rna-sequencing.html#cb18-22" tabindex="-1"></a>    <span class="co"># Maak een  lijst van alle downgereguleerde genen</span></span>
+<span id="cb18-23"><a href="rna-sequencing.html#cb18-23" tabindex="-1"></a>    downregulated_fibroblasten_genen <span class="ot">&lt;-</span> dge_results <span class="sc">%&gt;%</span> <span class="fu">data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb18-24"><a href="rna-sequencing.html#cb18-24" tabindex="-1"></a>      <span class="fu">filter</span>(log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span>lfc_value, padj <span class="sc">&lt;</span> padj_value) <span class="sc">%&gt;%</span> <span class="fu">rownames</span>()</span>
+<span id="cb18-25"><a href="rna-sequencing.html#cb18-25" tabindex="-1"></a>    <span class="co">#Uitvoer GO term enrichment analysis</span></span>
+<span id="cb18-26"><a href="rna-sequencing.html#cb18-26" tabindex="-1"></a>    test_object_fibroblasten_down <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">&quot;GOHyperGParams&quot;</span>,</span>
+<span id="cb18-27"><a href="rna-sequencing.html#cb18-27" tabindex="-1"></a>                                 <span class="at">geneIds =</span> downregulated_fibroblasten_genen,</span>
+<span id="cb18-28"><a href="rna-sequencing.html#cb18-28" tabindex="-1"></a>                                 <span class="at">universeGeneIds =</span> all_fibroblasten_genen, </span>
+<span id="cb18-29"><a href="rna-sequencing.html#cb18-29" tabindex="-1"></a>                                 <span class="at">annotation =</span> <span class="st">&quot;org.Hs.eg.db&quot;</span>, </span>
+<span id="cb18-30"><a href="rna-sequencing.html#cb18-30" tabindex="-1"></a>                                 <span class="at">ontology =</span> <span class="st">&quot;BP&quot;</span>, </span>
+<span id="cb18-31"><a href="rna-sequencing.html#cb18-31" tabindex="-1"></a>                                 <span class="at">pvalueCutoff =</span> <span class="dv">1</span>,</span>
+<span id="cb18-32"><a href="rna-sequencing.html#cb18-32" tabindex="-1"></a>                                 <span class="at">testDirection =</span> <span class="st">&quot;over&quot;</span>)</span>
+<span id="cb18-33"><a href="rna-sequencing.html#cb18-33" tabindex="-1"></a></span>
+<span id="cb18-34"><a href="rna-sequencing.html#cb18-34" tabindex="-1"></a>    goterm_analysis_down_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">hyperGTest</span>(test_object_fibroblasten_down))</span>
+<span id="cb18-35"><a href="rna-sequencing.html#cb18-35" tabindex="-1"></a>    <span class="fu">return</span>(goterm_analysis_down_summary)</span>
+<span id="cb18-36"><a href="rna-sequencing.html#cb18-36" tabindex="-1"></a>  }</span>
+<span id="cb18-37"><a href="rna-sequencing.html#cb18-37" tabindex="-1"></a>  }</span></code></pre></div>
+<p>Vervolgens wordt de functie uitgevoerd voor upgereguleerde genen en downgereguleerde genen met een LFC van 1 en -1 en een padj van &lt;0.01.</p>
+</div>
+<div id="top-20-upgereguleerde-genen" class="section level4 hasAnchor">
+<h4>Top 20 Upgereguleerde genen<a href="rna-sequencing.html#top-20-upgereguleerde-genen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="rna-sequencing.html#cb19-1" tabindex="-1"></a><span class="co">#Upregulated</span></span>
+<span id="cb19-2"><a href="rna-sequencing.html#cb19-2" tabindex="-1"></a><span class="co"># Maak een dataframe met de samenvatting van de resultaten van GO term analysis</span></span>
+<span id="cb19-3"><a href="rna-sequencing.html#cb19-3" tabindex="-1"></a>summary_fibroblasten_up_GOterm <span class="ot">&lt;-</span> <span class="fu">goTermAnalysis_fibroblasten</span>(fibroblasten_dge_results, <span class="at">upregulated =</span> <span class="cn">TRUE</span>, <span class="dv">1</span>, <span class="fl">0.01</span>)</span>
+<span id="cb19-4"><a href="rna-sequencing.html#cb19-4" tabindex="-1"></a> </span>
+<span id="cb19-5"><a href="rna-sequencing.html#cb19-5" tabindex="-1"></a><span class="co"># Pas de p-waarden aan voor meervoudige testen.</span></span>
+<span id="cb19-6"><a href="rna-sequencing.html#cb19-6" tabindex="-1"></a>summary_fibroblasten_up_GOterm<span class="sc">$</span>padj <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(summary_fibroblasten_up_GOterm<span class="sc">$</span>Pvalue, <span class="at">method =</span> <span class="st">&quot;BH&quot;</span>)</span>
+<span id="cb19-7"><a href="rna-sequencing.html#cb19-7" tabindex="-1"></a> </span>
+<span id="cb19-8"><a href="rna-sequencing.html#cb19-8" tabindex="-1"></a><span class="co"># Selecteer alleen genensets die groter zijn dan 5 maar kleiner dan 500</span></span>
+<span id="cb19-9"><a href="rna-sequencing.html#cb19-9" tabindex="-1"></a><span class="co"># (om te voorkomen dat zeer kleine en zeer grote genensets worden meegenomen).</span></span>
+<span id="cb19-10"><a href="rna-sequencing.html#cb19-10" tabindex="-1"></a>summary_fibroblasten_up_GOterm <span class="ot">&lt;-</span> summary_fibroblasten_up_GOterm <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&lt;</span> <span class="dv">500</span>)</span>
+<span id="cb19-11"><a href="rna-sequencing.html#cb19-11" tabindex="-1"></a> </span>
+<span id="cb19-12"><a href="rna-sequencing.html#cb19-12" tabindex="-1"></a><span class="co"># Kies de top 20 GO termen</span></span>
+<span id="cb19-13"><a href="rna-sequencing.html#cb19-13" tabindex="-1"></a>goterm_analysis_up_summary_top20 <span class="ot">&lt;-</span> summary_fibroblasten_up_GOterm[<span class="fu">order</span>(summary_fibroblasten_up_GOterm<span class="sc">$</span>padj)[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>],]</span>
+<span id="cb19-14"><a href="rna-sequencing.html#cb19-14" tabindex="-1"></a> </span>
+<span id="cb19-15"><a href="rna-sequencing.html#cb19-15" tabindex="-1"></a><span class="co"># Plot  p-waardes van de top 20 uogereguleerde GO termen</span></span>
+<span id="cb19-16"><a href="rna-sequencing.html#cb19-16" tabindex="-1"></a>goterm_analysis_up_summary_top20<span class="sc">$</span>Term <span class="ot">&lt;-</span> <span class="fu">factor</span>(goterm_analysis_up_summary_top20<span class="sc">$</span>Term, </span>
+<span id="cb19-17"><a href="rna-sequencing.html#cb19-17" tabindex="-1"></a>                                     <span class="at">levels =</span> goterm_analysis_up_summary_top20<span class="sc">$</span>Term[</span>
+<span id="cb19-18"><a href="rna-sequencing.html#cb19-18" tabindex="-1"></a>                                       <span class="fu">order</span>(goterm_analysis_up_summary_top20<span class="sc">$</span>padj, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)])</span>
+<span id="cb19-19"><a href="rna-sequencing.html#cb19-19" tabindex="-1"></a> </span>
+<span id="cb19-20"><a href="rna-sequencing.html#cb19-20" tabindex="-1"></a>goterm_analysis_up_summary_top20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Term, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj))) <span class="sc">+</span></span>
+<span id="cb19-21"><a href="rna-sequencing.html#cb19-21" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb19-22"><a href="rna-sequencing.html#cb19-22" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb19-23"><a href="rna-sequencing.html#cb19-23" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="fu">expression</span>(<span class="sc">-</span>log[<span class="dv">10</span>](adjusted<span class="sc">~</span><span class="fu">italic</span>(P)<span class="sc">~</span>value))) <span class="sc">+</span> </span>
+<span id="cb19-24"><a href="rna-sequencing.html#cb19-24" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;GO terms&quot;</span>) <span class="sc">+</span></span>
+<span id="cb19-25"><a href="rna-sequencing.html#cb19-25" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Fig 6: Top 20 enriched GO termen</span><span class="sc">\n</span><span class="st"> voor upgereguleerde genen&quot;</span>) <span class="sc">+</span></span>
+<span id="cb19-26"><a href="rna-sequencing.html#cb19-26" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p>Na het uitvoeren van de <em>GO term enrichment analyse</em> voor upgereguleerde genen, is zichtbaar in <em>figuur 5</em> dat na behandeling met transcriptiefactor <em>ONECUT2</em> genen worden upgereguleerd die betrokken zijn bij onder andere de volgende biologische processen: Ontwikkeling van zenuwstelsel en organen (Development), chemische signalering (Signaling), DNA- en RNA-transcriptie (Transcription) en <strong>cel apoptose</strong>.</p>
+</div>
+<div id="top-20-downgereguleerde-genen" class="section level4 hasAnchor">
+<h4>Top 20 Downgereguleerde genen<a href="rna-sequencing.html#top-20-downgereguleerde-genen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="rna-sequencing.html#cb20-1" tabindex="-1"></a><span class="co">#Downregulated</span></span>
+<span id="cb20-2"><a href="rna-sequencing.html#cb20-2" tabindex="-1"></a><span class="co"># Maak een dataframe met de samenvatting van de resultaten van GO term analysis</span></span>
+<span id="cb20-3"><a href="rna-sequencing.html#cb20-3" tabindex="-1"></a>summary_fibroblasten_down_GOterm <span class="ot">&lt;-</span> <span class="fu">goTermAnalysis_fibroblasten</span>(fibroblasten_dge_results, <span class="at">upregulated =</span> <span class="cn">FALSE</span>, <span class="dv">1</span>, <span class="fl">0.01</span>)</span>
+<span id="cb20-4"><a href="rna-sequencing.html#cb20-4" tabindex="-1"></a> </span>
+<span id="cb20-5"><a href="rna-sequencing.html#cb20-5" tabindex="-1"></a><span class="co"># Pas de p-waarden aan voor meervoudige testen.</span></span>
+<span id="cb20-6"><a href="rna-sequencing.html#cb20-6" tabindex="-1"></a>summary_fibroblasten_down_GOterm<span class="sc">$</span>padj <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(summary_fibroblasten_down_GOterm<span class="sc">$</span>Pvalue, <span class="at">method =</span> <span class="st">&quot;BH&quot;</span>)</span>
+<span id="cb20-7"><a href="rna-sequencing.html#cb20-7" tabindex="-1"></a> </span>
+<span id="cb20-8"><a href="rna-sequencing.html#cb20-8" tabindex="-1"></a><span class="co"># Selecteer alleen genensets die groter zijn dan 5 maar kleiner dan 500</span></span>
+<span id="cb20-9"><a href="rna-sequencing.html#cb20-9" tabindex="-1"></a><span class="co"># (om te voorkomen dat zeer kleine en zeer grote genensets worden meegenomen).</span></span>
+<span id="cb20-10"><a href="rna-sequencing.html#cb20-10" tabindex="-1"></a>summary_fibroblasten_down_GOterm <span class="ot">&lt;-</span> summary_fibroblasten_down_GOterm <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&lt;</span> <span class="dv">500</span>)</span>
+<span id="cb20-11"><a href="rna-sequencing.html#cb20-11" tabindex="-1"></a> </span>
+<span id="cb20-12"><a href="rna-sequencing.html#cb20-12" tabindex="-1"></a><span class="co"># Kies de top 20 GO termen</span></span>
+<span id="cb20-13"><a href="rna-sequencing.html#cb20-13" tabindex="-1"></a>goterm_analysis_down_summary_top20 <span class="ot">&lt;-</span> summary_fibroblasten_down_GOterm[<span class="fu">order</span>(summary_fibroblasten_down_GOterm<span class="sc">$</span>padj)[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>],]</span>
+<span id="cb20-14"><a href="rna-sequencing.html#cb20-14" tabindex="-1"></a> </span>
+<span id="cb20-15"><a href="rna-sequencing.html#cb20-15" tabindex="-1"></a><span class="co"># Plot  p-waardes van de top 20 downgereguleerde GO termen</span></span>
+<span id="cb20-16"><a href="rna-sequencing.html#cb20-16" tabindex="-1"></a>goterm_analysis_down_summary_top20<span class="sc">$</span>Term <span class="ot">&lt;-</span> <span class="fu">factor</span>(goterm_analysis_down_summary_top20<span class="sc">$</span>Term, </span>
+<span id="cb20-17"><a href="rna-sequencing.html#cb20-17" tabindex="-1"></a>                                     <span class="at">levels =</span> goterm_analysis_down_summary_top20<span class="sc">$</span>Term[</span>
+<span id="cb20-18"><a href="rna-sequencing.html#cb20-18" tabindex="-1"></a>                                       <span class="fu">order</span>(goterm_analysis_down_summary_top20<span class="sc">$</span>padj, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)])</span>
+<span id="cb20-19"><a href="rna-sequencing.html#cb20-19" tabindex="-1"></a> </span>
+<span id="cb20-20"><a href="rna-sequencing.html#cb20-20" tabindex="-1"></a>goterm_analysis_down_summary_top20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Term, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj))) <span class="sc">+</span></span>
+<span id="cb20-21"><a href="rna-sequencing.html#cb20-21" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb20-22"><a href="rna-sequencing.html#cb20-22" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb20-23"><a href="rna-sequencing.html#cb20-23" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="fu">expression</span>(<span class="sc">-</span>log[<span class="dv">10</span>](adjusted<span class="sc">~</span><span class="fu">italic</span>(P)<span class="sc">~</span>value))) <span class="sc">+</span> </span>
+<span id="cb20-24"><a href="rna-sequencing.html#cb20-24" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;GO terms&quot;</span>) <span class="sc">+</span></span>
+<span id="cb20-25"><a href="rna-sequencing.html#cb20-25" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Fig 7: Top 20 enriched GO termen</span><span class="sc">\n</span><span class="st"> voor downgereguleerde genen&quot;</span>) <span class="sc">+</span></span>
+<span id="cb20-26"><a href="rna-sequencing.html#cb20-26" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p>Na het uitvoeren van de <em>GO term enrichment analyse</em> voor downgereguleerde genen, is zichtbaar in <em>figuur 6</em> dat na behandeling met transcriptiefactor <em>ONECUT2</em> genen worden downgereguleerd die betrokken zijn bij onder andere de volgende biologische processen: Het ontwikkelen van structuur van weefsels en cellen (Development), morfogenese van de cel-structuur (Morphogenesis), cel beweging en motiliteit.</p>
+</div>
+</div>
+<div id="conclusie" class="section level3 hasAnchor">
+<h3>Conclusie<a href="rna-sequencing.html#conclusie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Op basis van de verkregen resultaten van de RNA-sequencing analyse kan er geconcludeerd worden dat <strong>er een significant verschil is in genexpressie en biologische functies tussen fibroblasten behandeld met <em>BCLXL</em> en <em>ONECUT2</em> </strong>. Dit wordt aangetoond door de resultaten van de <strong>“Differential Gene Expression” analyse </strong> en de <strong>“GO term enrichment” analyse</strong>.</p>
+<p>Bij de <strong>“Differential Gene Expression”</strong> analyse en plots (PCA en Volcano plots), is het zichtbaar dat meerdere genen een significant verschil in hun genexpressie vertonen. Deze veranderingen in genexpressie vormen een duidelijk signaal dat er een verschil is tussen fibroblasten behandeld met <em>BCLXL</em> en <em>ONECUT2</em>.</p>
+<p>Bij de <strong>“GO term enrichment”</strong> analyse, zoals zichtbaar in <em>figuur 6</em>, zijn de biologische functies die upgereguleerd worden tijdens het transdifferentiatieproces van de fibroblasten na behandeling met ONECUT2 geassocieerd met de ontwikkeling van het zenuwstelsel en organen (Development), chemische signalering (Signaling) en DNA- en RNA-transcriptie (Transcription). Deze upgereguleerde biologische functies zijn een goed signaal dat de overexpressie van de transcriptiefactor ONECUT2 ervoor zorgt dat de fibroblasten differentiëren naar hersencellen. Dit suggereert dat de <strong>fibroblasten hun structuur veranderen en zich dus klaarmaken om andere functies uit te voeren</strong>. Echter zien we ook dat sommige biologische functies die upgereguleerd worden tijdens het transdifferentiatieproces van de fibroblasten geassocieerd zijn met <em>cel-apoptose</em>. Dit suggereert dat de <strong>fibroblasten zich ook klaarmaken om dood te gaan als het transdifferentiatie proces zorgt voor problemen</strong>.</p>
+<p>Met behulp van <em>figuur 7</em> is zichtbaar dat de biologische functies die downgereguleerd worden tijdens het transdifferentiatieproces van de fibroblasten, geassocieerd zijn met de ontwikkeling van de structuur van weefsels en cellen (Development), morfogenese van de celstructuur (Morphogenesis) en celbeweging en motiliteit. Dus <strong>fibroblasten verliezen hun structuur en dus ook hun functie</strong>. Dit suggereert dat de <strong>fibroblasten zich klaarmaken om een andere structuur te krijgen en andere functies uit te voeren, zoals gebeurd bij differentiatie naar hersencellen</strong>.</p>
+<p>Op basis van de verkregen resultaten van de <strong>“GO term enrichment”</strong> analyse kan ook geconcludeerd worden dat fibroblasten behandeld met ONECUT2 van structuur veranderen en dus ook van functie. Dus <strong>fibroblasten behandeld met ONECUT2 maken zich klaar om hersencellen te worden, echter is er ook een risico dat fibroblasten een apoptotisch proces ondergaan door complicaties tijdens het transdifferentiatie proces</strong>.</p>
+</div>
+<div id="discussie" class="section level3 hasAnchor">
+<h3>Discussie<a href="rna-sequencing.html#discussie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Het is belangrijk op te merken dat de betrouwbaarheid van de resultaten van deze RNA sequencing analyse verminderd wordt door de resultaten van <em>figuren 1 en 3</em>. In figuur 1 blijkt het aantal toegewezen fragmenten laag en uit figuur 3 blijkt dat er een verschil aanwezig is tussen de duplo metingen van de behandelingen. Dit kan mogelijk ontstaan zijn door contaminatie tijdens het onderzoek. Dit kan invloed hebben gehad op de interpretatie van de up- en downregulatie van de biologische processen. Het wordt aangeraden om hierdoor het experiment te herhalen.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-are-my-plans-for-the-future.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="metagenomics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>

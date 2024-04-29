@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>C. elegans plate experiment | Portfolio</title>
+  <meta name="description" content="Welcome to my portfolio" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="C. elegans plate experiment | Portfolio" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Welcome to my portfolio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="C. elegans plate experiment | Portfolio" />
+  
+  <meta name="twitter:description" content="Welcome to my portfolio" />
+  
+
+<meta name="author" content="Hello there! I’m Jorge Vargas Centeno and this is my portfolio where you can explore and visualize my multiple projects in R, Python and multiple machine learning techniques." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="metagenomics.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html"><i class="fa fa-check"></i>What are my plans for the future?</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html"><i class="fa fa-check"></i>RNA Sequencing</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#data-structure"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-1"><i class="fa fa-check"></i>Onderdeel 1:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#introductie"><i class="fa fa-check"></i>Introductie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#experiment"><i class="fa fa-check"></i>Experiment</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#resultaten-van-de-fastqc-html-rapporten"><i class="fa fa-check"></i>Resultaten van de fastQC html rapporten</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-2"><i class="fa fa-check"></i>Onderdeel 2:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#count-table"><i class="fa fa-check"></i>Count table</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#deseq2-analyse"><i class="fa fa-check"></i>DESeq2 analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#omzetten-van-de-count-tabel-naar-een-deseq-object"><i class="fa fa-check"></i>Omzetten van de “count tabel” naar een DESeq object</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#rnaseq-data-normaliseren"><i class="fa fa-check"></i>RNASeq data normaliseren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-3"><i class="fa fa-check"></i>Onderdeel 3:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#kwaliteitscontrole"><i class="fa fa-check"></i>Kwaliteitscontrole</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#differential-gene-expression-analysis"><i class="fa fa-check"></i>Differential gene expression analysis</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoering-van-dge-analyse"><i class="fa fa-check"></i>Uitvoering van DGE analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#visualisatie-van-de-dge-resultaten."><i class="fa fa-check"></i>Visualisatie van de DGE resultaten.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-4"><i class="fa fa-check"></i>Onderdeel 4:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#ontdekt-welke-genen-veranderen"><i class="fa fa-check"></i>Ontdekt welke genen veranderen</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#cytogenetische-band-functie"><i class="fa fa-check"></i>Cytogenetische band functie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoer-go-term-enrichment-analyse"><i class="fa fa-check"></i>Uitvoer GO term enrichment analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#conclusie"><i class="fa fa-check"></i>Conclusie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#discussie"><i class="fa fa-check"></i>Discussie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html"><i class="fa fa-check"></i>Metagenomics</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#data-structure-1"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-1-1"><i class="fa fa-check"></i>Onderdeel 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#fastqc-genereren"><i class="fa fa-check"></i>FastQC genereren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#per-base-sequencing-quality"><i class="fa fa-check"></i>Per base sequencing quality</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-2-1"><i class="fa fa-check"></i>Onderdeel 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken2-uitvoeren"><i class="fa fa-check"></i>Kraken2 uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#bracken-uitvoeren"><i class="fa fa-check"></i>Bracken uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken-biom-uitvoeren"><i class="fa fa-check"></i>Kraken-biom uitvoeren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-3-1"><i class="fa fa-check"></i>Onderdeel 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#read-count-visualisatie-per-kingdom"><i class="fa fa-check"></i>Read count visualisatie per kingdom</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#visualiseren-van-geïdentificeerde-soorten"><i class="fa fa-check"></i>Visualiseren van geïdentificeerde soorten</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#optimalisatie-door-verwijdering-van-soorten-met-lage-read-counts"><i class="fa fa-check"></i>Optimalisatie door verwijdering van soorten met lage read counts</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#normalisatie"><i class="fa fa-check"></i>Normalisatie</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-4-1"><i class="fa fa-check"></i>Onderdeel 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#verkrijgen-van-compositie-data"><i class="fa fa-check"></i>Verkrijgen van compositie data</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#vergelijking-van-resultaten-met-compositie"><i class="fa fa-check"></i>Vergelijking van resultaten met compositie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html"><i class="fa fa-check"></i>C. elegans plate experiment</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-file"><i class="fa fa-check"></i>Inspect file</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-datavariabels"><i class="fa fa-check"></i>Inspect data/variabels</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#making-a-scatterplot"><i class="fa fa-check"></i>Making a scatterplot</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c.-elegans-plate-experiment" class="section level1 hasAnchor">
+<h1>C. elegans plate experiment<a href="c.-elegans-plate-experiment.html#c.-elegans-plate-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The data for this exercise was kindly supplied by J. Louter (INT/ILC) and was derived from an experiment in which adult C.elegans nematodes were exposed to varying concentrations of different compounds. The variables <strong>RawData</strong> (the outcome - number of offspring counted as an integer value, after incubation time), <strong>compName</strong> (the generic name of the compound/chemical), the <strong>compConcentration</strong> (the concentration of the compound), and the <strong>expType</strong> are the most important variables in this dataset.</p>
+<p>A typical analysis with this data would be to run a dose-response analysis using a log-logistic model with estimates for the maximal, the minimal, the IC50 concentration and the slope at IC50.</p>
+<div id="inspect-file" class="section level2 hasAnchor">
+<h2>Inspect file<a href="c.-elegans-plate-experiment.html#inspect-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="c.-elegans-plate-experiment.html#cb44-1" tabindex="-1"></a>experiment <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;rmd_files/rmd_data/celegans_plate_data/CE.LIQ.FLOW.062_Tidydata.xlsx&quot;</span>))</span>
+<span id="cb44-2"><a href="c.-elegans-plate-experiment.html#cb44-2" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="c.-elegans-plate-experiment.html#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="c.-elegans-plate-experiment.html#cb44-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(experiment))</span></code></pre></div>
+<table style="width:100%;">
+<colgroup>
+<col width="1%" />
+<col width="2%" />
+<col width="1%" />
+<col width="1%" />
+<col width="2%" />
+<col width="2%" />
+<col width="3%" />
+<col width="2%" />
+<col width="6%" />
+<col width="1%" />
+<col width="1%" />
+<col width="3%" />
+<col width="1%" />
+<col width="2%" />
+<col width="5%" />
+<col width="3%" />
+<col width="1%" />
+<col width="2%" />
+<col width="3%" />
+<col width="2%" />
+<col width="2%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="2%" />
+<col width="1%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">plateRow</th>
+<th align="left">plateColumn</th>
+<th align="right">vialNr</th>
+<th align="left">dropCode</th>
+<th align="left">expType</th>
+<th align="right">expReplicate</th>
+<th align="left">expName</th>
+<th align="left">expDate</th>
+<th align="left">expResearcher</th>
+<th align="right">expTime</th>
+<th align="left">expUnit</th>
+<th align="right">expVolumeCounted</th>
+<th align="right">RawData</th>
+<th align="left">compCASRN</th>
+<th align="left">compName</th>
+<th align="left">compConcentration</th>
+<th align="left">compUnit</th>
+<th align="left">compDelivery</th>
+<th align="left">compVehicle</th>
+<th align="left">elegansStrain</th>
+<th align="right">elegansInput</th>
+<th align="left">bacterialStrain</th>
+<th align="left">bacterialTreatment</th>
+<th align="right">bacterialOD600</th>
+<th align="right">bacterialConcX</th>
+<th align="right">bacterialVolume</th>
+<th align="left">bacterialVolUnit</th>
+<th align="left">incubationVial</th>
+<th align="right">incubationVolume</th>
+<th align="left">incubationUnit</th>
+<th align="left">incubationMethod</th>
+<th align="right">incubationRPM</th>
+<th align="left">bubble</th>
+<th align="right">incubateTemperature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="right">1</td>
+<td align="left">a</td>
+<td align="left">experiment</td>
+<td align="right">3</td>
+<td align="left">CE.LIQ.FLOW.062</td>
+<td align="left">2020-11-30</td>
+<td align="left">Sergio Reijnders - Ellis Herder</td>
+<td align="right">68</td>
+<td align="left">hour</td>
+<td align="right">50</td>
+<td align="right">44</td>
+<td align="left">24157-81-1</td>
+<td align="left">2,6-diisopropylnaphthalene</td>
+<td align="left">4.99</td>
+<td align="left">nM</td>
+<td align="left">Liquid</td>
+<td align="left">controlVehicleA</td>
+<td align="left">N2</td>
+<td align="right">25</td>
+<td align="left">OP50</td>
+<td align="left">heated</td>
+<td align="right">0.743</td>
+<td align="right">8</td>
+<td align="right">300</td>
+<td align="left">ul</td>
+<td align="left">1,5 glass vial</td>
+<td align="right">1000</td>
+<td align="left">ul</td>
+<td align="left">rockroll</td>
+<td align="right">35</td>
+<td align="left">NA</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="right">1</td>
+<td align="left">b</td>
+<td align="left">experiment</td>
+<td align="right">3</td>
+<td align="left">CE.LIQ.FLOW.062</td>
+<td align="left">2020-11-30</td>
+<td align="left">Sergio Reijnders - Ellis Herder</td>
+<td align="right">68</td>
+<td align="left">hour</td>
+<td align="right">50</td>
+<td align="right">37</td>
+<td align="left">24157-81-1</td>
+<td align="left">2,6-diisopropylnaphthalene</td>
+<td align="left">4.99</td>
+<td align="left">nM</td>
+<td align="left">Liquid</td>
+<td align="left">controlVehicleA</td>
+<td align="left">N2</td>
+<td align="right">25</td>
+<td align="left">OP50</td>
+<td align="left">heated</td>
+<td align="right">0.743</td>
+<td align="right">8</td>
+<td align="right">300</td>
+<td align="left">ul</td>
+<td align="left">1,5 glass vial</td>
+<td align="right">1000</td>
+<td align="left">ul</td>
+<td align="left">rockroll</td>
+<td align="right">35</td>
+<td align="left">NA</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="right">1</td>
+<td align="left">c</td>
+<td align="left">experiment</td>
+<td align="right">3</td>
+<td align="left">CE.LIQ.FLOW.062</td>
+<td align="left">2020-11-30</td>
+<td align="left">Sergio Reijnders - Ellis Herder</td>
+<td align="right">68</td>
+<td align="left">hour</td>
+<td align="right">50</td>
+<td align="right">45</td>
+<td align="left">24157-81-1</td>
+<td align="left">2,6-diisopropylnaphthalene</td>
+<td align="left">4.99</td>
+<td align="left">nM</td>
+<td align="left">Liquid</td>
+<td align="left">controlVehicleA</td>
+<td align="left">N2</td>
+<td align="right">25</td>
+<td align="left">OP50</td>
+<td align="left">heated</td>
+<td align="right">0.743</td>
+<td align="right">8</td>
+<td align="right">300</td>
+<td align="left">ul</td>
+<td align="left">1,5 glass vial</td>
+<td align="right">1000</td>
+<td align="left">ul</td>
+<td align="left">rockroll</td>
+<td align="right">35</td>
+<td align="left">NA</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="right">1</td>
+<td align="left">d</td>
+<td align="left">experiment</td>
+<td align="right">3</td>
+<td align="left">CE.LIQ.FLOW.062</td>
+<td align="left">2020-11-30</td>
+<td align="left">Sergio Reijnders - Ellis Herder</td>
+<td align="right">68</td>
+<td align="left">hour</td>
+<td align="right">50</td>
+<td align="right">47</td>
+<td align="left">24157-81-1</td>
+<td align="left">2,6-diisopropylnaphthalene</td>
+<td align="left">4.99</td>
+<td align="left">nM</td>
+<td align="left">Liquid</td>
+<td align="left">controlVehicleA</td>
+<td align="left">N2</td>
+<td align="right">25</td>
+<td align="left">OP50</td>
+<td align="left">heated</td>
+<td align="right">0.743</td>
+<td align="right">8</td>
+<td align="right">300</td>
+<td align="left">ul</td>
+<td align="left">1,5 glass vial</td>
+<td align="right">1000</td>
+<td align="left">ul</td>
+<td align="left">rockroll</td>
+<td align="right">35</td>
+<td align="left">NA</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="right">1</td>
+<td align="left">e</td>
+<td align="left">experiment</td>
+<td align="right">3</td>
+<td align="left">CE.LIQ.FLOW.062</td>
+<td align="left">2020-11-30</td>
+<td align="left">Sergio Reijnders - Ellis Herder</td>
+<td align="right">68</td>
+<td align="left">hour</td>
+<td align="right">50</td>
+<td align="right">41</td>
+<td align="left">24157-81-1</td>
+<td align="left">2,6-diisopropylnaphthalene</td>
+<td align="left">4.99</td>
+<td align="left">nM</td>
+<td align="left">Liquid</td>
+<td align="left">controlVehicleA</td>
+<td align="left">N2</td>
+<td align="right">25</td>
+<td align="left">OP50</td>
+<td align="left">heated</td>
+<td align="right">0.743</td>
+<td align="right">8</td>
+<td align="right">300</td>
+<td align="left">ul</td>
+<td align="left">1,5 glass vial</td>
+<td align="right">1000</td>
+<td align="left">ul</td>
+<td align="left">rockroll</td>
+<td align="right">35</td>
+<td align="left">NA</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="right">2</td>
+<td align="left">a</td>
+<td align="left">experiment</td>
+<td align="right">3</td>
+<td align="left">CE.LIQ.FLOW.062</td>
+<td align="left">2020-11-30</td>
+<td align="left">Sergio Reijnders - Ellis Herder</td>
+<td align="right">68</td>
+<td align="left">hour</td>
+<td align="right">50</td>
+<td align="right">35</td>
+<td align="left">24157-81-1</td>
+<td align="left">2,6-diisopropylnaphthalene</td>
+<td align="left">4.99</td>
+<td align="left">nM</td>
+<td align="left">Liquid</td>
+<td align="left">controlVehicleA</td>
+<td align="left">N2</td>
+<td align="right">25</td>
+<td align="left">OP50</td>
+<td align="left">heated</td>
+<td align="right">0.743</td>
+<td align="right">8</td>
+<td align="right">300</td>
+<td align="left">ul</td>
+<td align="left">1,5 glass vial</td>
+<td align="right">1000</td>
+<td align="left">ul</td>
+<td align="left">rockroll</td>
+<td align="right">35</td>
+<td align="left">NA</td>
+<td align="right">20</td>
+</tr>
+</tbody>
+</table>
+<div id="inspect-datavariabels" class="section level3 hasAnchor">
+<h3>Inspect data/variabels<a href="c.-elegans-plate-experiment.html#inspect-datavariabels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Raw Data</strong></p>
+<ul>
+<li><p>Expected type of data = <strong>Numeric (Integer)</strong></p></li>
+<li><p>Type of data = <strong>double</strong></p></li>
+</ul>
+<p><strong>compName</strong></p>
+<ul>
+<li><p>Expected type of data = <strong>character</strong></p></li>
+<li><p>Type of data = <strong>double</strong></p></li>
+</ul>
+<p><strong>compConcentration</strong></p>
+<ul>
+<li><p>Expected type of data = <strong>Numeric (Double)</strong></p></li>
+<li><p>Type of data = <strong>character</strong></p></li>
+</ul>
+<div id="changing-type-of-data" class="section level4 hasAnchor">
+<h4>Changing type of data<a href="c.-elegans-plate-experiment.html#changing-type-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="c.-elegans-plate-experiment.html#cb45-1" tabindex="-1"></a>experiment<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(experiment<span class="sc">$</span>compConcentration)</span></code></pre></div>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<p>Type of data now = <strong>double</strong></p>
+</div>
+</div>
+</div>
+<div id="making-a-scatterplot" class="section level2 hasAnchor">
+<h2>Making a scatterplot<a href="c.-elegans-plate-experiment.html#making-a-scatterplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="c.-elegans-plate-experiment.html#cb47-1" tabindex="-1"></a>experiment <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fu">log10</span>(compConcentration), <span class="at">y=</span>RawData, </span>
+<span id="cb47-2"><a href="c.-elegans-plate-experiment.html#cb47-2" tabindex="-1"></a>                          <span class="at">group =</span> compName, <span class="at">colour =</span> compName, </span>
+<span id="cb47-3"><a href="c.-elegans-plate-experiment.html#cb47-3" tabindex="-1"></a>                          <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb47-4"><a href="c.-elegans-plate-experiment.html#cb47-4" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">na.rm =</span> <span class="cn">TRUE</span>)<span class="sc">+</span></span>
+<span id="cb47-5"><a href="c.-elegans-plate-experiment.html#cb47-5" tabindex="-1"></a> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb47-6"><a href="c.-elegans-plate-experiment.html#cb47-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Scatterplot for C.elegans plate experiment&quot;</span>,</span>
+<span id="cb47-7"><a href="c.-elegans-plate-experiment.html#cb47-7" tabindex="-1"></a>       <span class="at">x=</span><span class="st">&quot;Log_Compound Concentration&quot;</span>,</span>
+<span id="cb47-8"><a href="c.-elegans-plate-experiment.html#cb47-8" tabindex="-1"></a>       <span class="at">y=</span><span class="st">&quot;Count offspring&quot;</span>,</span>
+<span id="cb47-9"><a href="c.-elegans-plate-experiment.html#cb47-9" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Compound Name&quot;</span>,  </span>
+<span id="cb47-10"><a href="c.-elegans-plate-experiment.html#cb47-10" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Type of experiment&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>The positive control for this experiments is <strong>Ethanol.</strong></p>
+<p>The negative control for this experiment is <strong>S-medium</strong></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="metagenomics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>

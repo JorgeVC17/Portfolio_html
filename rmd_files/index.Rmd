@@ -4,6 +4,18 @@ author: "Hello there! I'm Jorge Vargas Centeno and this is my portfolio where yo
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
+    config:
+      toc:
+        collapse: section
+        scroll_highlight: true
+      fontsettings:
+        theme: white
+        family: serif
+      sharing:
+        facebook: false
+        github: true
+        twitter: false
+        linkedin: true
     number_sections: FALSE
 documentclass: book
 link-citations: yes

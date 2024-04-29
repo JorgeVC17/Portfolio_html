@@ -53,6 +53,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -73,6 +137,73 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html"><i class="fa fa-check"></i>What are my plans for the future?</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html"><i class="fa fa-check"></i>RNA Sequencing</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#data-structure"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-1"><i class="fa fa-check"></i>Onderdeel 1:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#introductie"><i class="fa fa-check"></i>Introductie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#experiment"><i class="fa fa-check"></i>Experiment</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#resultaten-van-de-fastqc-html-rapporten"><i class="fa fa-check"></i>Resultaten van de fastQC html rapporten</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-2"><i class="fa fa-check"></i>Onderdeel 2:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#count-table"><i class="fa fa-check"></i>Count table</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#deseq2-analyse"><i class="fa fa-check"></i>DESeq2 analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#omzetten-van-de-count-tabel-naar-een-deseq-object"><i class="fa fa-check"></i>Omzetten van de “count tabel” naar een DESeq object</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#rnaseq-data-normaliseren"><i class="fa fa-check"></i>RNASeq data normaliseren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-3"><i class="fa fa-check"></i>Onderdeel 3:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#kwaliteitscontrole"><i class="fa fa-check"></i>Kwaliteitscontrole</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#differential-gene-expression-analysis"><i class="fa fa-check"></i>Differential gene expression analysis</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoering-van-dge-analyse"><i class="fa fa-check"></i>Uitvoering van DGE analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#visualisatie-van-de-dge-resultaten."><i class="fa fa-check"></i>Visualisatie van de DGE resultaten.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-4"><i class="fa fa-check"></i>Onderdeel 4:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#ontdekt-welke-genen-veranderen"><i class="fa fa-check"></i>Ontdekt welke genen veranderen</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#cytogenetische-band-functie"><i class="fa fa-check"></i>Cytogenetische band functie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoer-go-term-enrichment-analyse"><i class="fa fa-check"></i>Uitvoer GO term enrichment analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#conclusie"><i class="fa fa-check"></i>Conclusie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#discussie"><i class="fa fa-check"></i>Discussie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html"><i class="fa fa-check"></i>Metagenomics</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#data-structure-1"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-1-1"><i class="fa fa-check"></i>Onderdeel 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#fastqc-genereren"><i class="fa fa-check"></i>FastQC genereren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#per-base-sequencing-quality"><i class="fa fa-check"></i>Per base sequencing quality</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-2-1"><i class="fa fa-check"></i>Onderdeel 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken2-uitvoeren"><i class="fa fa-check"></i>Kraken2 uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#bracken-uitvoeren"><i class="fa fa-check"></i>Bracken uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken-biom-uitvoeren"><i class="fa fa-check"></i>Kraken-biom uitvoeren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-3-1"><i class="fa fa-check"></i>Onderdeel 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#read-count-visualisatie-per-kingdom"><i class="fa fa-check"></i>Read count visualisatie per kingdom</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#visualiseren-van-geïdentificeerde-soorten"><i class="fa fa-check"></i>Visualiseren van geïdentificeerde soorten</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#optimalisatie-door-verwijdering-van-soorten-met-lage-read-counts"><i class="fa fa-check"></i>Optimalisatie door verwijdering van soorten met lage read counts</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#normalisatie"><i class="fa fa-check"></i>Normalisatie</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-4-1"><i class="fa fa-check"></i>Onderdeel 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#verkrijgen-van-compositie-data"><i class="fa fa-check"></i>Verkrijgen van compositie data</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#vergelijking-van-resultaten-met-compositie"><i class="fa fa-check"></i>Vergelijking van resultaten met compositie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html"><i class="fa fa-check"></i>C. elegans plate experiment</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-file"><i class="fa fa-check"></i>Inspect file</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#inspect-datavariabels"><i class="fa fa-check"></i>Inspect data/variabels</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-experiment.html"><a href="c.-elegans-plate-experiment.html#making-a-scatterplot"><i class="fa fa-check"></i>Making a scatterplot</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -123,10 +254,10 @@
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
+"github": true,
+"facebook": false,
+"twitter": false,
+"linkedin": true,
 "weibo": false,
 "instapaper": false,
 "vk": false,
@@ -135,7 +266,7 @@ gitbook.start({
 },
 "fontsettings": {
 "theme": "white",
-"family": "sans",
+"family": "serif",
 "size": 2
 },
 "edit": {
@@ -156,7 +287,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });
