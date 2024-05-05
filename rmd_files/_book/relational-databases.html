@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Portfolio</title>
+  <title>Relational databases | Portfolio</title>
   <meta name="description" content="Welcome to my portfolio" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Portfolio" />
+  <meta property="og:title" content="Relational databases | Portfolio" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Welcome to my portfolio" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Portfolio" />
+  <meta name="twitter:title" content="Relational databases | Portfolio" />
   
   <meta name="twitter:description" content="Welcome to my portfolio" />
   
@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="c.-elegans-plate-analysis.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -228,18 +228,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="relational-databases" class="section level1 hasAnchor">
+<h1>Relational databases<a href="relational-databases.html#relational-databases" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="loading-data" class="section level2 hasAnchor">
+<h2>Loading data<a href="relational-databases.html#loading-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="relational-databases.html#cb52-1" tabindex="-1"></a>flu_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/relational_databases/data/flu_data_db.csv&quot;</span>), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb52-2"><a href="relational-databases.html#cb52-2" tabindex="-1"></a><span class="fu">head</span>(flu_df)</span></code></pre></div>
+<pre><code>##         Date Argentina Australia Austria Belgium Bolivia Brazil Bulgaria Canada Chile France Germany Hungary Japan
+## 1 2002-12-29        NA        NA      NA      NA      NA    174       NA     NA    NA     NA      NA      NA    NA
+## 2 2003-01-05        NA        NA      NA      NA      NA    162       NA     NA    NA     NA      NA      NA    NA
+## 3 2003-01-12        NA        NA      NA      NA      NA    174       NA     NA     1     NA      NA      NA    NA
+## 4 2003-01-19        NA        NA      NA      NA      NA    162       NA     NA     0     NA      NA      NA    NA
+## 5 2003-01-26        NA        NA      NA      NA      NA    131       NA     NA     0     NA      NA      NA    NA
+## 6 2003-02-02       136        NA      NA      NA      NA    151       NA     NA     0     NA      NA      NA    NA
+##   Mexico Netherlands New.Zealand Norway Paraguay Peru Poland Romania Russia South.Africa Spain Sweden Switzerland
+## 1     NA          NA          NA     NA       NA  329     NA      NA     NA           NA    NA     NA          NA
+## 2     NA          NA          NA     NA       NA  315     NA      NA     NA           NA    NA     NA          NA
+## 3     NA          NA          NA     NA       NA  314     NA      NA     NA           NA    NA     NA          NA
+## 4     NA          NA          NA     NA       NA  267     NA      NA     NA           NA    NA     NA          NA
+## 5     NA          NA          NA     NA       NA  241     NA      NA     NA           NA    NA     NA          NA
+## 6     NA          NA          NA     NA       NA  227     NA      NA     NA           NA    NA     NA          NA
+##   Ukraine United.States Uruguay
+## 1      NA            NA      NA
+## 2      NA            NA      NA
+## 3      NA            NA      NA
+## 4      NA            NA      NA
+## 5      NA            NA      NA
+## 6      NA            NA      NA</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="relational-databases.html#cb54-1" tabindex="-1"></a>dengue_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/relational_databases/data/dengue_data_db.csv&quot;</span>), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb54-2"><a href="relational-databases.html#cb54-2" tabindex="-1"></a><span class="fu">head</span>(dengue_df)</span></code></pre></div>
+<pre><code>##         Date Argentina Bolivia Brazil India Indonesia Mexico Philippines Singapore Thailand Venezuela
+## 1 2002-12-29        NA   0.101  0.073 0.062     0.101     NA          NA     0.059       NA        NA
+## 2 2003-01-05        NA   0.143  0.098 0.047     0.039     NA          NA     0.059       NA        NA
+## 3 2003-01-12        NA   0.176  0.119 0.051     0.059  0.071          NA     0.238       NA        NA
+## 4 2003-01-19        NA   0.173  0.170 0.032     0.039  0.052          NA     0.175       NA        NA
+## 5 2003-01-26        NA   0.146  0.138 0.040     0.112  0.048          NA     0.164       NA        NA
+## 6 2003-02-02        NA   0.160  0.202 0.038     0.049  0.041          NA     0.163       NA        NA</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="relational-databases.html#cb56-1" tabindex="-1"></a>gapminder_df <span class="ot">&lt;-</span> gapminder</span>
+<span id="cb56-2"><a href="relational-databases.html#cb56-2" tabindex="-1"></a><span class="fu">head</span>(gapminder_df)</span></code></pre></div>
+<pre><code>##               country year infant_mortality life_expectancy fertility population          gdp continent
+## 1             Albania 1960           115.40           62.87      6.19    1636054           NA    Europe
+## 2             Algeria 1960           148.20           47.50      7.65   11124892  13828152297    Africa
+## 3              Angola 1960           208.00           35.98      7.32    5270844           NA    Africa
+## 4 Antigua and Barbuda 1960               NA           62.97      4.43      54681           NA  Americas
+## 5           Argentina 1960            59.87           65.39      3.11   20619075 108322326649  Americas
+## 6             Armenia 1960               NA           66.86      4.55    1867396           NA      Asia
+##            region
+## 1 Southern Europe
+## 2 Northern Africa
+## 3   Middle Africa
+## 4       Caribbean
+## 5   South America
+## 6    Western Asia</code></pre>
+<p>The <strong>flu and dengue dataframes</strong> are not tidy. Let’s make them tidy.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="relational-databases.html#cb58-1" tabindex="-1"></a><span class="co"># Making flu data tidy</span></span>
+<span id="cb58-2"><a href="relational-databases.html#cb58-2" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="relational-databases.html#cb58-3" tabindex="-1"></a>flu_tidy <span class="ot">&lt;-</span> flu_df <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&#39;Argentina&#39;</span>,<span class="st">&#39;Australia&#39;</span>,<span class="st">&#39;Austria&#39;</span>,<span class="st">&#39;Belgium&#39;</span>,<span class="st">&#39;Bolivia&#39;</span>,<span class="st">&#39;Brazil&#39;</span>,<span class="st">&#39;Bulgaria&#39;</span>,<span class="st">&#39;Canada&#39;</span>,<span class="st">&#39;Chile&#39;</span>,<span class="st">&#39;France&#39;</span>,<span class="st">&#39;Germany&#39;</span>,<span class="st">&#39;Hungary&#39;</span>,<span class="st">&#39;Japan&#39;</span>,<span class="st">&#39;Mexico&#39;</span>,<span class="st">&#39;Netherlands&#39;</span>,<span class="st">&#39;New.Zealand&#39;</span>,<span class="st">&#39;Norway&#39;</span>,<span class="st">&#39;Paraguay&#39;</span>,<span class="st">&#39;Peru&#39;</span>,<span class="st">&#39;Poland&#39;</span>,<span class="st">&#39;Romania&#39;</span>,<span class="st">&#39;Russia&#39;</span>,<span class="st">&#39;South.Africa&#39;</span>,<span class="st">&#39;Spain&#39;</span>,<span class="st">&#39;Sweden&#39;</span>,<span class="st">&#39;Switzerland&#39;</span>,<span class="st">&#39;Ukraine&#39;</span>,<span class="st">&#39;United.States&#39;</span>,<span class="st">&#39;Uruguay&#39;</span>), <span class="at">names_to =</span> <span class="st">&quot;country&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;cases&quot;</span>)</span>
+<span id="cb58-4"><a href="relational-databases.html#cb58-4" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="relational-databases.html#cb58-5" tabindex="-1"></a>flu_tidy <span class="ot">&lt;-</span> <span class="fu">separate</span>(flu_tidy, Date, <span class="at">into =</span>  <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>))</span>
+<span id="cb58-6"><a href="relational-databases.html#cb58-6" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="relational-databases.html#cb58-7" tabindex="-1"></a><span class="co"># Making dengue data tidy</span></span>
+<span id="cb58-8"><a href="relational-databases.html#cb58-8" tabindex="-1"></a></span>
+<span id="cb58-9"><a href="relational-databases.html#cb58-9" tabindex="-1"></a>dengue_tidy <span class="ot">&lt;-</span> dengue_df <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;Argentina&quot;</span>, <span class="st">&quot;Bolivia&quot;</span>, <span class="st">&quot;Brazil&quot;</span>, <span class="st">&quot;India&quot;</span>, <span class="st">&quot;Indonesia&quot;</span>, <span class="st">&quot;Mexico&quot;</span>, <span class="st">&quot;Philippines&quot;</span>, <span class="st">&quot;Singapore&quot;</span>, <span class="st">&quot;Thailand&quot;</span>, <span class="st">&quot;Venezuela&quot;</span>), <span class="at">names_to =</span> <span class="st">&quot;country&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;cases&quot;</span>)</span>
+<span id="cb58-10"><a href="relational-databases.html#cb58-10" tabindex="-1"></a></span>
+<span id="cb58-11"><a href="relational-databases.html#cb58-11" tabindex="-1"></a>dengue_tidy <span class="ot">&lt;-</span> <span class="fu">separate</span>(dengue_tidy, Date, <span class="at">into =</span>  <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>))</span></code></pre></div>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="c.-elegans-plate-analysis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

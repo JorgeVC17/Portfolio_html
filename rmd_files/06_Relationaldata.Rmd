@@ -1,0 +1,44 @@
+
+```{r setup 5, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dslabs)
+library(readxl)
+library(toolboxr)
+```
+
+# Relational databases
+
+## Loading data
+
+```{r loading data, echo=TRUE, message=FALSE}
+
+flu_df <- read.csv(here::here("projects/relational_databases/data/flu_data_db.csv"), header = TRUE)
+head(flu_df)
+
+dengue_df <- read.csv(here::here("projects/relational_databases/data/dengue_data_db.csv"), header = TRUE)
+head(dengue_df)
+
+gapminder_df <- gapminder
+head(gapminder_df)
+
+```
+
+
+The **flu and dengue dataframes** are not tidy. Let's make them tidy.
+
+```{r Tidy df, echo=TRUE, message=FALSE}
+# Making flu data tidy
+
+flu_tidy <- flu_df %>% pivot_longer(cols = c('Argentina','Australia','Austria','Belgium','Bolivia','Brazil','Bulgaria','Canada','Chile','France','Germany','Hungary','Japan','Mexico','Netherlands','New.Zealand','Norway','Paraguay','Peru','Poland','Romania','Russia','South.Africa','Spain','Sweden','Switzerland','Ukraine','United.States','Uruguay'), names_to = "country", values_to = "cases")
+
+flu_tidy <- separate(flu_tidy, Date, into =  c("year", "month", "day"))
+
+# Making dengue data tidy
+
+dengue_tidy <- dengue_df %>% pivot_longer(cols = c("Argentina", "Bolivia", "Brazil", "India", "Indonesia", "Mexico", "Philippines", "Singapore", "Thailand", "Venezuela"), names_to = "country", values_to = "cases")
+
+dengue_tidy <- separate(dengue_tidy, Date, into =  c("year", "month", "day"))
+
+```
+
