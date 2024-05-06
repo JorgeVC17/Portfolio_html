@@ -247,17 +247,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Onderdeel 1<a href="metagenomics.html#onderdeel-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="fastqc-genereren" class="section level3 hasAnchor">
 <h3>FastQC genereren<a href="metagenomics.html#fastqc-genereren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="metagenomics.html#cb21-1" tabindex="-1"></a><span class="co"># activate environment</span></span>
-<span id="cb21-2"><a href="metagenomics.html#cb21-2" tabindex="-1"></a><span class="ex">conda</span> activate meta</span>
-<span id="cb21-3"><a href="metagenomics.html#cb21-3" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="metagenomics.html#cb21-4" tabindex="-1"></a><span class="co"># perform FastQC analysis</span></span>
-<span id="cb21-5"><a href="metagenomics.html#cb21-5" tabindex="-1"></a><span class="ex">fastqc</span> <span class="at">-o</span> ~/metagenomics/data/fastqc_output</span>
-<span id="cb21-6"><a href="metagenomics.html#cb21-6" tabindex="-1"></a><span class="ex">/home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R1_001.fastq.gz</span></span>
-<span id="cb21-7"><a href="metagenomics.html#cb21-7" tabindex="-1"></a><span class="ex">fastqc</span> <span class="at">-o</span> ~/metagenomics/data/fastqc_output</span>
-<span id="cb21-8"><a href="metagenomics.html#cb21-8" tabindex="-1"></a><span class="ex">/home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R2_001.fastq.gz</span></span>
-<span id="cb21-9"><a href="metagenomics.html#cb21-9" tabindex="-1"></a></span>
-<span id="cb21-10"><a href="metagenomics.html#cb21-10" tabindex="-1"></a><span class="co"># deactivate conda virtual environment</span></span>
-<span id="cb21-11"><a href="metagenomics.html#cb21-11" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="metagenomics.html#cb22-1" tabindex="-1"></a><span class="co"># activate environment</span></span>
+<span id="cb22-2"><a href="metagenomics.html#cb22-2" tabindex="-1"></a><span class="ex">conda</span> activate meta</span>
+<span id="cb22-3"><a href="metagenomics.html#cb22-3" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="metagenomics.html#cb22-4" tabindex="-1"></a><span class="co"># perform FastQC analysis</span></span>
+<span id="cb22-5"><a href="metagenomics.html#cb22-5" tabindex="-1"></a><span class="ex">fastqc</span> <span class="at">-o</span> ~/metagenomics/data/fastqc_output</span>
+<span id="cb22-6"><a href="metagenomics.html#cb22-6" tabindex="-1"></a><span class="ex">/home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R1_001.fastq.gz</span></span>
+<span id="cb22-7"><a href="metagenomics.html#cb22-7" tabindex="-1"></a><span class="ex">fastqc</span> <span class="at">-o</span> ~/metagenomics/data/fastqc_output</span>
+<span id="cb22-8"><a href="metagenomics.html#cb22-8" tabindex="-1"></a><span class="ex">/home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R2_001.fastq.gz</span></span>
+<span id="cb22-9"><a href="metagenomics.html#cb22-9" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="metagenomics.html#cb22-10" tabindex="-1"></a><span class="co"># deactivate conda virtual environment</span></span>
+<span id="cb22-11"><a href="metagenomics.html#cb22-11" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
 </div>
 <div id="per-base-sequencing-quality" class="section level3 hasAnchor">
 <h3>Per base sequencing quality<a href="metagenomics.html#per-base-sequencing-quality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -267,159 +267,159 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Onderdeel 2<a href="metagenomics.html#onderdeel-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="kraken2-uitvoeren" class="section level3 hasAnchor">
 <h3>Kraken2 uitvoeren<a href="metagenomics.html#kraken2-uitvoeren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="metagenomics.html#cb22-1" tabindex="-1"></a><span class="co"># activate environment</span></span>
-<span id="cb22-2"><a href="metagenomics.html#cb22-2" tabindex="-1"></a><span class="ex">conda</span> activate meta</span>
-<span id="cb22-3"><a href="metagenomics.html#cb22-3" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="metagenomics.html#cb22-4" tabindex="-1"></a><span class="ex">kraken2</span> <span class="at">--db</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE/ <span class="at">--threads</span> 2 <span class="at">--paired</span> <span class="at">--gzip-compressed</span> <span class="at">--output</span> ~/metagenomics/mock2/mock2.kraken <span class="at">--report</span> ~/metagenomics/data/mock2/mock2.report <span class="at">--use-names</span> /home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R1_001.fastq.gz /home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R2_001.fastq.gz</span>
-<span id="cb22-5"><a href="metagenomics.html#cb22-5" tabindex="-1"></a></span>
-<span id="cb22-6"><a href="metagenomics.html#cb22-6" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="metagenomics.html#cb23-1" tabindex="-1"></a><span class="co"># activate environment</span></span>
+<span id="cb23-2"><a href="metagenomics.html#cb23-2" tabindex="-1"></a><span class="ex">conda</span> activate meta</span>
+<span id="cb23-3"><a href="metagenomics.html#cb23-3" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="metagenomics.html#cb23-4" tabindex="-1"></a><span class="ex">kraken2</span> <span class="at">--db</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE/ <span class="at">--threads</span> 2 <span class="at">--paired</span> <span class="at">--gzip-compressed</span> <span class="at">--output</span> ~/metagenomics/mock2/mock2.kraken <span class="at">--report</span> ~/metagenomics/data/mock2/mock2.report <span class="at">--use-names</span> /home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R1_001.fastq.gz /home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R2_001.fastq.gz</span>
+<span id="cb23-5"><a href="metagenomics.html#cb23-5" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="metagenomics.html#cb23-6" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
 <p>Er zijn 65915836 sequences verwerkt, waarvan 59541308 zijn geklassificeerd en 6374528 niet zijn geklassificeerd. De procedure heeft 963.827 seconden, 16,06 minuten, geduurd (4103.4 Kseq/m, 1210.17 Mbp/m).</p>
 </div>
 <div id="bracken-uitvoeren" class="section level3 hasAnchor">
 <h3>Bracken uitvoeren<a href="metagenomics.html#bracken-uitvoeren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="metagenomics.html#cb23-1" tabindex="-1"></a><span class="co"># activate environment</span></span>
-<span id="cb23-2"><a href="metagenomics.html#cb23-2" tabindex="-1"></a><span class="ex">conda</span> activate meta</span>
-<span id="cb23-3"><a href="metagenomics.html#cb23-3" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="metagenomics.html#cb23-4" tabindex="-1"></a><span class="ex">bracken</span> <span class="at">-d</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE/ <span class="at">-i</span> ~/metagenomics/data/mock2/mock2.report <span class="at">-o</span> ~/metagenomics/data/bracken/mock2.bracken</span>
-<span id="cb23-5"><a href="metagenomics.html#cb23-5" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="metagenomics.html#cb23-6" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
-</div>
-<div id="kraken-biom-uitvoeren" class="section level3 hasAnchor">
-<h3>Kraken-biom uitvoeren<a href="metagenomics.html#kraken-biom-uitvoeren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="metagenomics.html#cb24-1" tabindex="-1"></a><span class="co"># activate environment</span></span>
 <span id="cb24-2"><a href="metagenomics.html#cb24-2" tabindex="-1"></a><span class="ex">conda</span> activate meta</span>
 <span id="cb24-3"><a href="metagenomics.html#cb24-3" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="metagenomics.html#cb24-4" tabindex="-1"></a><span class="ex">kraken-biom</span> ~/metagenomics/data/mock2/mock2_bracken_species.report <span class="at">--fmt</span> json <span class="at">-o</span> ~/metagenomics/data/mock2/mock2_bracken_species.biom</span>
+<span id="cb24-4"><a href="metagenomics.html#cb24-4" tabindex="-1"></a><span class="ex">bracken</span> <span class="at">-d</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE/ <span class="at">-i</span> ~/metagenomics/data/mock2/mock2.report <span class="at">-o</span> ~/metagenomics/data/bracken/mock2.bracken</span>
 <span id="cb24-5"><a href="metagenomics.html#cb24-5" tabindex="-1"></a></span>
 <span id="cb24-6"><a href="metagenomics.html#cb24-6" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
+</div>
+<div id="kraken-biom-uitvoeren" class="section level3 hasAnchor">
+<h3>Kraken-biom uitvoeren<a href="metagenomics.html#kraken-biom-uitvoeren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="metagenomics.html#cb25-1" tabindex="-1"></a><span class="co"># activate environment</span></span>
+<span id="cb25-2"><a href="metagenomics.html#cb25-2" tabindex="-1"></a><span class="ex">conda</span> activate meta</span>
+<span id="cb25-3"><a href="metagenomics.html#cb25-3" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="metagenomics.html#cb25-4" tabindex="-1"></a><span class="ex">kraken-biom</span> ~/metagenomics/data/mock2/mock2_bracken_species.report <span class="at">--fmt</span> json <span class="at">-o</span> ~/metagenomics/data/mock2/mock2_bracken_species.biom</span>
+<span id="cb25-5"><a href="metagenomics.html#cb25-5" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="metagenomics.html#cb25-6" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
 </div>
 </div>
 <div id="onderdeel-3-1" class="section level2 hasAnchor">
 <h2>Onderdeel 3<a href="metagenomics.html#onderdeel-3-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="metagenomics.html#cb25-1" tabindex="-1"></a><span class="co"># load nessecary packages </span></span>
-<span id="cb25-2"><a href="metagenomics.html#cb25-2" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="metagenomics.html#cb26-1" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="metagenomics.html#cb26-1" tabindex="-1"></a><span class="co"># load nessecary packages </span></span>
+<span id="cb26-2"><a href="metagenomics.html#cb26-2" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="metagenomics.html#cb27-1" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
 <div id="read-count-visualisatie-per-kingdom" class="section level3 hasAnchor">
 <h3>Read count visualisatie per kingdom<a href="metagenomics.html#read-count-visualisatie-per-kingdom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="metagenomics.html#cb27-1" tabindex="-1"></a>data_mock2 <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/metagenomics/data/mock2/mock2_bracken_species.biom&quot;</span>)</span>
-<span id="cb27-2"><a href="metagenomics.html#cb27-2" tabindex="-1"></a>merged_metagenomes_mock2 <span class="ot">&lt;-</span> <span class="fu">import_biom</span>(data_mock2)</span></code></pre></div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="metagenomics.html#cb28-1" tabindex="-1"></a><span class="co"># Verwijder taxonomische informatie uit waarden/ verwijder eerste vier tekens</span></span>
-<span id="cb28-2"><a href="metagenomics.html#cb28-2" tabindex="-1"></a>merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data <span class="ot">&lt;-</span></span>
-<span id="cb28-3"><a href="metagenomics.html#cb28-3" tabindex="-1"></a>  <span class="fu">substring</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data, <span class="dv">4</span>)</span>
-<span id="cb28-4"><a href="metagenomics.html#cb28-4" tabindex="-1"></a></span>
-<span id="cb28-5"><a href="metagenomics.html#cb28-5" tabindex="-1"></a><span class="co"># Hernoem kolomkoppen naar informatieve indeling</span></span>
-<span id="cb28-6"><a href="metagenomics.html#cb28-6" tabindex="-1"></a><span class="fu">colnames</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data) <span class="ot">&lt;-</span> </span>
-<span id="cb28-7"><a href="metagenomics.html#cb28-7" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">&quot;Kingdom&quot;</span>, <span class="st">&quot;Phylum&quot;</span>, <span class="st">&quot;Class&quot;</span>, <span class="st">&quot;Order&quot;</span>, <span class="st">&quot;Family&quot;</span>, <span class="st">&quot;Genus&quot;</span>, <span class="st">&quot;Species&quot;</span>)</span>
-<span id="cb28-8"><a href="metagenomics.html#cb28-8" tabindex="-1"></a></span>
-<span id="cb28-9"><a href="metagenomics.html#cb28-9" tabindex="-1"></a><span class="co"># Haal de aanwezige taxonomische rijken uit onze data op</span></span>
-<span id="cb28-10"><a href="metagenomics.html#cb28-10" tabindex="-1"></a><span class="fu">unique</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data[,<span class="st">&quot;Kingdom&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="metagenomics.html#cb28-1" tabindex="-1"></a>data_mock2 <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/metagenomics/data/mock2/mock2_bracken_species.biom&quot;</span>)</span>
+<span id="cb28-2"><a href="metagenomics.html#cb28-2" tabindex="-1"></a>merged_metagenomes_mock2 <span class="ot">&lt;-</span> <span class="fu">import_biom</span>(data_mock2)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="metagenomics.html#cb29-1" tabindex="-1"></a><span class="co"># Verwijder taxonomische informatie uit waarden/ verwijder eerste vier tekens</span></span>
+<span id="cb29-2"><a href="metagenomics.html#cb29-2" tabindex="-1"></a>merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data <span class="ot">&lt;-</span></span>
+<span id="cb29-3"><a href="metagenomics.html#cb29-3" tabindex="-1"></a>  <span class="fu">substring</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data, <span class="dv">4</span>)</span>
+<span id="cb29-4"><a href="metagenomics.html#cb29-4" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="metagenomics.html#cb29-5" tabindex="-1"></a><span class="co"># Hernoem kolomkoppen naar informatieve indeling</span></span>
+<span id="cb29-6"><a href="metagenomics.html#cb29-6" tabindex="-1"></a><span class="fu">colnames</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data) <span class="ot">&lt;-</span> </span>
+<span id="cb29-7"><a href="metagenomics.html#cb29-7" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">&quot;Kingdom&quot;</span>, <span class="st">&quot;Phylum&quot;</span>, <span class="st">&quot;Class&quot;</span>, <span class="st">&quot;Order&quot;</span>, <span class="st">&quot;Family&quot;</span>, <span class="st">&quot;Genus&quot;</span>, <span class="st">&quot;Species&quot;</span>)</span>
+<span id="cb29-8"><a href="metagenomics.html#cb29-8" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="metagenomics.html#cb29-9" tabindex="-1"></a><span class="co"># Haal de aanwezige taxonomische rijken uit onze data op</span></span>
+<span id="cb29-10"><a href="metagenomics.html#cb29-10" tabindex="-1"></a><span class="fu">unique</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data[,<span class="st">&quot;Kingdom&quot;</span>])</span></code></pre></div>
 <pre><code>## [1] &quot;Bacteria&quot;  &quot;Eukaryota&quot; &quot;Archaea&quot;   &quot;Viruses&quot;</code></pre>
 <p>Er zitten bacteriën, eukaryoten, archaea en virus genomen in de dataset. Het kan zijn dat de virus genomen in de dataset zijn gekomen door contaminatie.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="metagenomics.html#cb30-1" tabindex="-1"></a><span class="co"># Subset rijken (Kingdoms)</span></span>
-<span id="cb30-2"><a href="metagenomics.html#cb30-2" tabindex="-1"></a>merged_metagenomes_mock2_b <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Bacteria&quot;</span>)</span>
-<span id="cb30-3"><a href="metagenomics.html#cb30-3" tabindex="-1"></a>merged_metagenomes_mock2_e <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Eukaryota&quot;</span>)</span>
-<span id="cb30-4"><a href="metagenomics.html#cb30-4" tabindex="-1"></a>merged_metagenomes_mock2_a <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Archaea&quot;</span>)</span>
-<span id="cb30-5"><a href="metagenomics.html#cb30-5" tabindex="-1"></a>merged_metagenomes_mock2_v <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Viruses&quot;</span>)</span>
-<span id="cb30-6"><a href="metagenomics.html#cb30-6" tabindex="-1"></a></span>
-<span id="cb30-7"><a href="metagenomics.html#cb30-7" tabindex="-1"></a><span class="co"># Hernoemd samples</span></span>
-<span id="cb30-8"><a href="metagenomics.html#cb30-8" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_b) <span class="ot">&lt;-</span> <span class="st">&quot;bacteria&quot;</span></span>
-<span id="cb30-9"><a href="metagenomics.html#cb30-9" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_e) <span class="ot">&lt;-</span> <span class="st">&quot;eukaryote&quot;</span></span>
-<span id="cb30-10"><a href="metagenomics.html#cb30-10" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_a) <span class="ot">&lt;-</span> <span class="st">&quot;archea&quot;</span></span>
-<span id="cb30-11"><a href="metagenomics.html#cb30-11" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_v) <span class="ot">&lt;-</span> <span class="st">&quot;virus&quot;</span></span>
-<span id="cb30-12"><a href="metagenomics.html#cb30-12" tabindex="-1"></a></span>
-<span id="cb30-13"><a href="metagenomics.html#cb30-13" tabindex="-1"></a><span class="co"># Telt het aantal reads in totaal</span></span>
-<span id="cb30-14"><a href="metagenomics.html#cb30-14" tabindex="-1"></a><span class="fu">sample_sums</span>(merged_metagenomes_mock2)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="metagenomics.html#cb31-1" tabindex="-1"></a><span class="co"># Subset rijken (Kingdoms)</span></span>
+<span id="cb31-2"><a href="metagenomics.html#cb31-2" tabindex="-1"></a>merged_metagenomes_mock2_b <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Bacteria&quot;</span>)</span>
+<span id="cb31-3"><a href="metagenomics.html#cb31-3" tabindex="-1"></a>merged_metagenomes_mock2_e <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Eukaryota&quot;</span>)</span>
+<span id="cb31-4"><a href="metagenomics.html#cb31-4" tabindex="-1"></a>merged_metagenomes_mock2_a <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Archaea&quot;</span>)</span>
+<span id="cb31-5"><a href="metagenomics.html#cb31-5" tabindex="-1"></a>merged_metagenomes_mock2_v <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(merged_metagenomes_mock2, Kingdom <span class="sc">==</span> <span class="st">&quot;Viruses&quot;</span>)</span>
+<span id="cb31-6"><a href="metagenomics.html#cb31-6" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="metagenomics.html#cb31-7" tabindex="-1"></a><span class="co"># Hernoemd samples</span></span>
+<span id="cb31-8"><a href="metagenomics.html#cb31-8" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_b) <span class="ot">&lt;-</span> <span class="st">&quot;bacteria&quot;</span></span>
+<span id="cb31-9"><a href="metagenomics.html#cb31-9" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_e) <span class="ot">&lt;-</span> <span class="st">&quot;eukaryote&quot;</span></span>
+<span id="cb31-10"><a href="metagenomics.html#cb31-10" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_a) <span class="ot">&lt;-</span> <span class="st">&quot;archea&quot;</span></span>
+<span id="cb31-11"><a href="metagenomics.html#cb31-11" tabindex="-1"></a><span class="fu">sample_names</span>(merged_metagenomes_mock2_v) <span class="ot">&lt;-</span> <span class="st">&quot;virus&quot;</span></span>
+<span id="cb31-12"><a href="metagenomics.html#cb31-12" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="metagenomics.html#cb31-13" tabindex="-1"></a><span class="co"># Telt het aantal reads in totaal</span></span>
+<span id="cb31-14"><a href="metagenomics.html#cb31-14" tabindex="-1"></a><span class="fu">sample_sums</span>(merged_metagenomes_mock2)</span></code></pre></div>
 <pre><code>##      sa1 
 ## 59538284</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="metagenomics.html#cb32-1" tabindex="-1"></a><span class="co"># Telt het aantal reads per rijk (kingdom)</span></span>
-<span id="cb32-2"><a href="metagenomics.html#cb32-2" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">sample_sums</span>(merged_metagenomes_mock2_b), <span class="fu">sample_sums</span>(merged_metagenomes_mock2_e), <span class="fu">sample_sums</span>(merged_metagenomes_mock2_a), <span class="fu">sample_sums</span>(merged_metagenomes_mock2_v))</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="metagenomics.html#cb33-1" tabindex="-1"></a><span class="co"># Telt het aantal reads per rijk (kingdom)</span></span>
+<span id="cb33-2"><a href="metagenomics.html#cb33-2" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">sample_sums</span>(merged_metagenomes_mock2_b), <span class="fu">sample_sums</span>(merged_metagenomes_mock2_e), <span class="fu">sample_sums</span>(merged_metagenomes_mock2_a), <span class="fu">sample_sums</span>(merged_metagenomes_mock2_v))</span></code></pre></div>
 <pre><code>##  bacteria eukaryote    archea     virus 
 ##  59491948     18373       263     27700</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="metagenomics.html#cb34-1" tabindex="-1"></a><span class="co"># Verzamel de rijken (kingdoms)in data frames</span></span>
-<span id="cb34-2"><a href="metagenomics.html#cb34-2" tabindex="-1"></a>data_mock2_b <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_b),</span>
-<span id="cb34-3"><a href="metagenomics.html#cb34-3" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_b))</span>
-<span id="cb34-4"><a href="metagenomics.html#cb34-4" tabindex="-1"></a></span>
-<span id="cb34-5"><a href="metagenomics.html#cb34-5" tabindex="-1"></a>data_mock2_e <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_e),</span>
-<span id="cb34-6"><a href="metagenomics.html#cb34-6" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_e))</span>
-<span id="cb34-7"><a href="metagenomics.html#cb34-7" tabindex="-1"></a></span>
-<span id="cb34-8"><a href="metagenomics.html#cb34-8" tabindex="-1"></a>data_mock2_a <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_a),</span>
-<span id="cb34-9"><a href="metagenomics.html#cb34-9" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_a))</span>
-<span id="cb34-10"><a href="metagenomics.html#cb34-10" tabindex="-1"></a></span>
-<span id="cb34-11"><a href="metagenomics.html#cb34-11" tabindex="-1"></a>data_mock2_v <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_v),</span>
-<span id="cb34-12"><a href="metagenomics.html#cb34-12" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_v))</span>
-<span id="cb34-13"><a href="metagenomics.html#cb34-13" tabindex="-1"></a></span>
-<span id="cb34-14"><a href="metagenomics.html#cb34-14" tabindex="-1"></a><span class="co"># Voeg kingdom data in een dataframe</span></span>
-<span id="cb34-15"><a href="metagenomics.html#cb34-15" tabindex="-1"></a>data_mock2_t <span class="ot">&lt;-</span> <span class="fu">rbind</span>(data_mock2_b, data_mock2_e, data_mock2_a, data_mock2_v)</span>
-<span id="cb34-16"><a href="metagenomics.html#cb34-16" tabindex="-1"></a></span>
-<span id="cb34-17"><a href="metagenomics.html#cb34-17" tabindex="-1"></a><span class="co"># Plot het aantal reads per rijk</span></span>
-<span id="cb34-18"><a href="metagenomics.html#cb34-18" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_mock2_t, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Samples, <span class="at">y =</span> Reads, <span class="at">fill =</span> Samples )) <span class="sc">+</span></span>
-<span id="cb34-19"><a href="metagenomics.html#cb34-19" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb34-20"><a href="metagenomics.html#cb34-20" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb34-21"><a href="metagenomics.html#cb34-21" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Read count per kingdom&quot;</span>) <span class="sc">+</span></span>
-<span id="cb34-22"><a href="metagenomics.html#cb34-22" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
-<span id="cb34-23"><a href="metagenomics.html#cb34-23" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">45</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="metagenomics.html#cb35-1" tabindex="-1"></a><span class="co"># Verzamel de rijken (kingdoms)in data frames</span></span>
+<span id="cb35-2"><a href="metagenomics.html#cb35-2" tabindex="-1"></a>data_mock2_b <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_b),</span>
+<span id="cb35-3"><a href="metagenomics.html#cb35-3" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_b))</span>
+<span id="cb35-4"><a href="metagenomics.html#cb35-4" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="metagenomics.html#cb35-5" tabindex="-1"></a>data_mock2_e <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_e),</span>
+<span id="cb35-6"><a href="metagenomics.html#cb35-6" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_e))</span>
+<span id="cb35-7"><a href="metagenomics.html#cb35-7" tabindex="-1"></a></span>
+<span id="cb35-8"><a href="metagenomics.html#cb35-8" tabindex="-1"></a>data_mock2_a <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_a),</span>
+<span id="cb35-9"><a href="metagenomics.html#cb35-9" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_a))</span>
+<span id="cb35-10"><a href="metagenomics.html#cb35-10" tabindex="-1"></a></span>
+<span id="cb35-11"><a href="metagenomics.html#cb35-11" tabindex="-1"></a>data_mock2_v <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Samples =</span> <span class="fu">sample_names</span>(merged_metagenomes_mock2_v),</span>
+<span id="cb35-12"><a href="metagenomics.html#cb35-12" tabindex="-1"></a>                   <span class="at">Reads =</span> <span class="fu">sample_sums</span>(merged_metagenomes_mock2_v))</span>
+<span id="cb35-13"><a href="metagenomics.html#cb35-13" tabindex="-1"></a></span>
+<span id="cb35-14"><a href="metagenomics.html#cb35-14" tabindex="-1"></a><span class="co"># Voeg kingdom data in een dataframe</span></span>
+<span id="cb35-15"><a href="metagenomics.html#cb35-15" tabindex="-1"></a>data_mock2_t <span class="ot">&lt;-</span> <span class="fu">rbind</span>(data_mock2_b, data_mock2_e, data_mock2_a, data_mock2_v)</span>
+<span id="cb35-16"><a href="metagenomics.html#cb35-16" tabindex="-1"></a></span>
+<span id="cb35-17"><a href="metagenomics.html#cb35-17" tabindex="-1"></a><span class="co"># Plot het aantal reads per rijk</span></span>
+<span id="cb35-18"><a href="metagenomics.html#cb35-18" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_mock2_t, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Samples, <span class="at">y =</span> Reads, <span class="at">fill =</span> Samples )) <span class="sc">+</span></span>
+<span id="cb35-19"><a href="metagenomics.html#cb35-19" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb35-20"><a href="metagenomics.html#cb35-20" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb35-21"><a href="metagenomics.html#cb35-21" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Read count per kingdom&quot;</span>) <span class="sc">+</span></span>
+<span id="cb35-22"><a href="metagenomics.html#cb35-22" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
+<span id="cb35-23"><a href="metagenomics.html#cb35-23" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">45</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="visualiseren-van-geïdentificeerde-soorten" class="section level3 hasAnchor">
 <h3>Visualiseren van geïdentificeerde soorten<a href="metagenomics.html#visualiseren-van-geïdentificeerde-soorten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="metagenomics.html#cb35-1" tabindex="-1"></a><span class="co"># Herlaad de biom-gegevens, bewerk kolomkoppen en sample name</span></span>
-<span id="cb35-2"><a href="metagenomics.html#cb35-2" tabindex="-1"></a>merged_metagenomes_mock2 <span class="ot">&lt;-</span> <span class="fu">import_biom</span>(data_mock2)</span>
-<span id="cb35-3"><a href="metagenomics.html#cb35-3" tabindex="-1"></a>merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data <span class="ot">&lt;-</span> <span class="fu">substring</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data, <span class="dv">4</span>)</span>
-<span id="cb35-4"><a href="metagenomics.html#cb35-4" tabindex="-1"></a><span class="fu">colnames</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data)<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Kingdom&quot;</span>, <span class="st">&quot;Phylum&quot;</span>, <span class="st">&quot;Class&quot;</span>, <span class="st">&quot;Order&quot;</span>, <span class="st">&quot;Family&quot;</span>, <span class="st">&quot;Genus&quot;</span>, <span class="st">&quot;Species&quot;</span>)</span>
-<span id="cb35-5"><a href="metagenomics.html#cb35-5" tabindex="-1"></a><span class="fu">colnames</span>(merged_metagenomes_mock2<span class="sc">@</span>otu_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mock2&quot;</span>)</span>
-<span id="cb35-6"><a href="metagenomics.html#cb35-6" tabindex="-1"></a></span>
-<span id="cb35-7"><a href="metagenomics.html#cb35-7" tabindex="-1"></a><span class="co"># check lege labels (empty = TRUE)</span></span>
-<span id="cb35-8"><a href="metagenomics.html#cb35-8" tabindex="-1"></a><span class="fu">summary</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data<span class="sc">==</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="metagenomics.html#cb36-1" tabindex="-1"></a><span class="co"># Herlaad de biom-gegevens, bewerk kolomkoppen en sample name</span></span>
+<span id="cb36-2"><a href="metagenomics.html#cb36-2" tabindex="-1"></a>merged_metagenomes_mock2 <span class="ot">&lt;-</span> <span class="fu">import_biom</span>(data_mock2)</span>
+<span id="cb36-3"><a href="metagenomics.html#cb36-3" tabindex="-1"></a>merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data <span class="ot">&lt;-</span> <span class="fu">substring</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data, <span class="dv">4</span>)</span>
+<span id="cb36-4"><a href="metagenomics.html#cb36-4" tabindex="-1"></a><span class="fu">colnames</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data)<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Kingdom&quot;</span>, <span class="st">&quot;Phylum&quot;</span>, <span class="st">&quot;Class&quot;</span>, <span class="st">&quot;Order&quot;</span>, <span class="st">&quot;Family&quot;</span>, <span class="st">&quot;Genus&quot;</span>, <span class="st">&quot;Species&quot;</span>)</span>
+<span id="cb36-5"><a href="metagenomics.html#cb36-5" tabindex="-1"></a><span class="fu">colnames</span>(merged_metagenomes_mock2<span class="sc">@</span>otu_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mock2&quot;</span>)</span>
+<span id="cb36-6"><a href="metagenomics.html#cb36-6" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="metagenomics.html#cb36-7" tabindex="-1"></a><span class="co"># check lege labels (empty = TRUE)</span></span>
+<span id="cb36-8"><a href="metagenomics.html#cb36-8" tabindex="-1"></a><span class="fu">summary</span>(merged_metagenomes_mock2<span class="sc">@</span>tax_table<span class="sc">@</span>.Data<span class="sc">==</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
 <pre><code>##   Kingdom          Phylum          Class           Order           Family          Genus          Species       
 ##  Mode :logical   Mode :logical   Mode :logical   Mode :logical   Mode :logical   Mode :logical   Mode :logical  
 ##  FALSE:863       FALSE:847       FALSE:835       FALSE:861       FALSE:860       FALSE:855       FALSE:863      
 ##                  TRUE :16        TRUE :28        TRUE :2         TRUE :3         TRUE :8</code></pre>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="metagenomics.html#cb37-1" tabindex="-1"></a><span class="co"># transformeer data frame voor plotten</span></span>
-<span id="cb37-2"><a href="metagenomics.html#cb37-2" tabindex="-1"></a>glom_mock2 <span class="ot">&lt;-</span> <span class="fu">tax_glom</span>(merged_metagenomes_mock2, <span class="at">taxrank =</span> <span class="st">&quot;Species&quot;</span>)</span>
-<span id="cb37-3"><a href="metagenomics.html#cb37-3" tabindex="-1"></a>mock2_metagenome_species <span class="ot">&lt;-</span> <span class="fu">psmelt</span>(glom_mock2)</span>
-<span id="cb37-4"><a href="metagenomics.html#cb37-4" tabindex="-1"></a></span>
-<span id="cb37-5"><a href="metagenomics.html#cb37-5" tabindex="-1"></a><span class="co"># Combineer genus- en soortlabels voor wetenschappelijke benaming in de plot</span></span>
-<span id="cb37-6"><a href="metagenomics.html#cb37-6" tabindex="-1"></a>mock2_metagenome_species<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">as.character</span>(mock2_metagenome_species<span class="sc">$</span>Species)</span>
-<span id="cb37-7"><a href="metagenomics.html#cb37-7" tabindex="-1"></a>mock2_metagenome_species<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">paste</span>(mock2_metagenome_species[,]<span class="sc">$</span>Genus,mock2_metagenome_species[,]<span class="sc">$</span>Species,  <span class="at">sep=</span><span class="st">&quot; &quot;</span>, <span class="at">collapse=</span><span class="cn">NULL</span>)</span>
-<span id="cb37-8"><a href="metagenomics.html#cb37-8" tabindex="-1"></a></span>
-<span id="cb37-9"><a href="metagenomics.html#cb37-9" tabindex="-1"></a><span class="co"># Controleer labelmanipulatie</span></span>
-<span id="cb37-10"><a href="metagenomics.html#cb37-10" tabindex="-1"></a><span class="co">#unique(mock2_metagenome_species$Species)</span></span>
-<span id="cb37-11"><a href="metagenomics.html#cb37-11" tabindex="-1"></a></span>
-<span id="cb37-12"><a href="metagenomics.html#cb37-12" tabindex="-1"></a>id_species_mock2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mock2_metagenome_species, <span class="fu">aes</span>(<span class="at">x=</span>Sample, <span class="at">y=</span>Abundance, <span class="at">fill=</span>Species))<span class="sc">+</span> </span>
-<span id="cb37-13"><a href="metagenomics.html#cb37-13" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>)</span>
-<span id="cb37-14"><a href="metagenomics.html#cb37-14" tabindex="-1"></a>id_species_mock2</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="metagenomics.html#cb38-1" tabindex="-1"></a><span class="co"># transformeer data frame voor plotten</span></span>
+<span id="cb38-2"><a href="metagenomics.html#cb38-2" tabindex="-1"></a>glom_mock2 <span class="ot">&lt;-</span> <span class="fu">tax_glom</span>(merged_metagenomes_mock2, <span class="at">taxrank =</span> <span class="st">&quot;Species&quot;</span>)</span>
+<span id="cb38-3"><a href="metagenomics.html#cb38-3" tabindex="-1"></a>mock2_metagenome_species <span class="ot">&lt;-</span> <span class="fu">psmelt</span>(glom_mock2)</span>
+<span id="cb38-4"><a href="metagenomics.html#cb38-4" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="metagenomics.html#cb38-5" tabindex="-1"></a><span class="co"># Combineer genus- en soortlabels voor wetenschappelijke benaming in de plot</span></span>
+<span id="cb38-6"><a href="metagenomics.html#cb38-6" tabindex="-1"></a>mock2_metagenome_species<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">as.character</span>(mock2_metagenome_species<span class="sc">$</span>Species)</span>
+<span id="cb38-7"><a href="metagenomics.html#cb38-7" tabindex="-1"></a>mock2_metagenome_species<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">paste</span>(mock2_metagenome_species[,]<span class="sc">$</span>Genus,mock2_metagenome_species[,]<span class="sc">$</span>Species,  <span class="at">sep=</span><span class="st">&quot; &quot;</span>, <span class="at">collapse=</span><span class="cn">NULL</span>)</span>
+<span id="cb38-8"><a href="metagenomics.html#cb38-8" tabindex="-1"></a></span>
+<span id="cb38-9"><a href="metagenomics.html#cb38-9" tabindex="-1"></a><span class="co"># Controleer labelmanipulatie</span></span>
+<span id="cb38-10"><a href="metagenomics.html#cb38-10" tabindex="-1"></a><span class="co">#unique(mock2_metagenome_species$Species)</span></span>
+<span id="cb38-11"><a href="metagenomics.html#cb38-11" tabindex="-1"></a></span>
+<span id="cb38-12"><a href="metagenomics.html#cb38-12" tabindex="-1"></a>id_species_mock2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mock2_metagenome_species, <span class="fu">aes</span>(<span class="at">x=</span>Sample, <span class="at">y=</span>Abundance, <span class="at">fill=</span>Species))<span class="sc">+</span> </span>
+<span id="cb38-13"><a href="metagenomics.html#cb38-13" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>)</span>
+<span id="cb38-14"><a href="metagenomics.html#cb38-14" tabindex="-1"></a>id_species_mock2</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
 <div id="optimalisatie-door-verwijdering-van-soorten-met-lage-read-counts" class="section level3 hasAnchor">
 <h3>Optimalisatie door verwijdering van soorten met lage read counts<a href="metagenomics.html#optimalisatie-door-verwijdering-van-soorten-met-lage-read-counts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="metagenomics.html#cb38-1" tabindex="-1"></a>mock2_metagenome_species<span class="sc">$</span>Species[mock2_metagenome_species<span class="sc">$</span>Abundance <span class="sc">&lt;</span> <span class="dv">160000</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Species &lt; 160.000 abund.&quot;</span></span>
-<span id="cb38-2"><a href="metagenomics.html#cb38-2" tabindex="-1"></a></span>
-<span id="cb38-3"><a href="metagenomics.html#cb38-3" tabindex="-1"></a>id_species_mock2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mock2_metagenome_species, <span class="fu">aes</span>(<span class="at">x=</span>Sample, <span class="at">y=</span>Abundance, <span class="at">fill=</span>Species))<span class="sc">+</span> </span>
-<span id="cb38-4"><a href="metagenomics.html#cb38-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>)</span>
-<span id="cb38-5"><a href="metagenomics.html#cb38-5" tabindex="-1"></a>id_species_mock2</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="metagenomics.html#cb39-1" tabindex="-1"></a>mock2_metagenome_species<span class="sc">$</span>Species[mock2_metagenome_species<span class="sc">$</span>Abundance <span class="sc">&lt;</span> <span class="dv">160000</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Species &lt; 160.000 abund.&quot;</span></span>
+<span id="cb39-2"><a href="metagenomics.html#cb39-2" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="metagenomics.html#cb39-3" tabindex="-1"></a>id_species_mock2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mock2_metagenome_species, <span class="fu">aes</span>(<span class="at">x=</span>Sample, <span class="at">y=</span>Abundance, <span class="at">fill=</span>Species))<span class="sc">+</span> </span>
+<span id="cb39-4"><a href="metagenomics.html#cb39-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>)</span>
+<span id="cb39-5"><a href="metagenomics.html#cb39-5" tabindex="-1"></a>id_species_mock2</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
 <div id="normalisatie" class="section level3 hasAnchor">
 <h3>Normalisatie<a href="metagenomics.html#normalisatie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="metagenomics.html#cb39-1" tabindex="-1"></a><span class="co"># Normaliseren van de read counts</span></span>
-<span id="cb39-2"><a href="metagenomics.html#cb39-2" tabindex="-1"></a></span>
-<span id="cb39-3"><a href="metagenomics.html#cb39-3" tabindex="-1"></a><span class="co"># transformeer read counts naar percentages</span></span>
-<span id="cb39-4"><a href="metagenomics.html#cb39-4" tabindex="-1"></a>glom_mock2 <span class="ot">&lt;-</span> <span class="fu">tax_glom</span>(merged_metagenomes_mock2, <span class="at">taxrank =</span> <span class="st">&quot;Species&quot;</span>)</span>
-<span id="cb39-5"><a href="metagenomics.html#cb39-5" tabindex="-1"></a>mock2_metagenome_species_percent <span class="ot">&lt;-</span> <span class="fu">psmelt</span>(glom_mock2)</span>
-<span id="cb39-6"><a href="metagenomics.html#cb39-6" tabindex="-1"></a></span>
-<span id="cb39-7"><a href="metagenomics.html#cb39-7" tabindex="-1"></a><span class="co"># Normaliseert read counts percentages</span></span>
-<span id="cb39-8"><a href="metagenomics.html#cb39-8" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Abundance <span class="ot">&lt;-</span> (mock2_metagenome_species_percent<span class="sc">$</span>Abundance<span class="sc">*</span><span class="dv">100</span>)<span class="sc">/</span><span class="fu">sum</span>(mock2_metagenome_species_percent<span class="sc">$</span>Abundance)</span>
-<span id="cb39-9"><a href="metagenomics.html#cb39-9" tabindex="-1"></a></span>
-<span id="cb39-10"><a href="metagenomics.html#cb39-10" tabindex="-1"></a><span class="co"># Combineert genus and species label for scientific noemen in het plot</span></span>
-<span id="cb39-11"><a href="metagenomics.html#cb39-11" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">as.character</span>(mock2_metagenome_species_percent<span class="sc">$</span>Species)</span>
-<span id="cb39-12"><a href="metagenomics.html#cb39-12" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">paste</span>(mock2_metagenome_species_percent[,]<span class="sc">$</span>Genus,mock2_metagenome_species_percent[,]<span class="sc">$</span>Species,  <span class="at">sep=</span><span class="st">&quot; &quot;</span>, <span class="at">collapse=</span><span class="cn">NULL</span>)</span>
-<span id="cb39-13"><a href="metagenomics.html#cb39-13" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Species[mock2_metagenome_species_percent<span class="sc">$</span>Abundance <span class="sc">&lt;</span> <span class="fl">0.5</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Species &lt; 0.5% abund.&quot;</span></span>
-<span id="cb39-14"><a href="metagenomics.html#cb39-14" tabindex="-1"></a><span class="co">#unique(mock2_metagenome_species_percent$Species)</span></span></code></pre></div>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="metagenomics.html#cb40-1" tabindex="-1"></a>id_species_mock2_percent <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mock2_metagenome_species_percent, <span class="fu">aes</span>(<span class="at">x=</span>Sample, <span class="at">y=</span>Abundance, <span class="at">fill=</span>Species))<span class="sc">+</span> </span>
-<span id="cb40-2"><a href="metagenomics.html#cb40-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>)</span>
-<span id="cb40-3"><a href="metagenomics.html#cb40-3" tabindex="-1"></a></span>
-<span id="cb40-4"><a href="metagenomics.html#cb40-4" tabindex="-1"></a><span class="co"># plot species identificatie</span></span>
-<span id="cb40-5"><a href="metagenomics.html#cb40-5" tabindex="-1"></a><span class="fu">grid.arrange</span>(id_species_mock2, id_species_mock2_percent, <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">top=</span><span class="fu">textGrob</span>(<span class="st">&quot;Identified species and their corresponding abundance</span><span class="sc">\n</span><span class="st">read count (right) and percentage (left)</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="at">gp=</span><span class="fu">gpar</span>(<span class="at">fontsize=</span><span class="dv">12</span>,<span class="at">font=</span><span class="dv">8</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="metagenomics.html#cb40-1" tabindex="-1"></a><span class="co"># Normaliseren van de read counts</span></span>
+<span id="cb40-2"><a href="metagenomics.html#cb40-2" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="metagenomics.html#cb40-3" tabindex="-1"></a><span class="co"># transformeer read counts naar percentages</span></span>
+<span id="cb40-4"><a href="metagenomics.html#cb40-4" tabindex="-1"></a>glom_mock2 <span class="ot">&lt;-</span> <span class="fu">tax_glom</span>(merged_metagenomes_mock2, <span class="at">taxrank =</span> <span class="st">&quot;Species&quot;</span>)</span>
+<span id="cb40-5"><a href="metagenomics.html#cb40-5" tabindex="-1"></a>mock2_metagenome_species_percent <span class="ot">&lt;-</span> <span class="fu">psmelt</span>(glom_mock2)</span>
+<span id="cb40-6"><a href="metagenomics.html#cb40-6" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="metagenomics.html#cb40-7" tabindex="-1"></a><span class="co"># Normaliseert read counts percentages</span></span>
+<span id="cb40-8"><a href="metagenomics.html#cb40-8" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Abundance <span class="ot">&lt;-</span> (mock2_metagenome_species_percent<span class="sc">$</span>Abundance<span class="sc">*</span><span class="dv">100</span>)<span class="sc">/</span><span class="fu">sum</span>(mock2_metagenome_species_percent<span class="sc">$</span>Abundance)</span>
+<span id="cb40-9"><a href="metagenomics.html#cb40-9" tabindex="-1"></a></span>
+<span id="cb40-10"><a href="metagenomics.html#cb40-10" tabindex="-1"></a><span class="co"># Combineert genus and species label for scientific noemen in het plot</span></span>
+<span id="cb40-11"><a href="metagenomics.html#cb40-11" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">as.character</span>(mock2_metagenome_species_percent<span class="sc">$</span>Species)</span>
+<span id="cb40-12"><a href="metagenomics.html#cb40-12" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">paste</span>(mock2_metagenome_species_percent[,]<span class="sc">$</span>Genus,mock2_metagenome_species_percent[,]<span class="sc">$</span>Species,  <span class="at">sep=</span><span class="st">&quot; &quot;</span>, <span class="at">collapse=</span><span class="cn">NULL</span>)</span>
+<span id="cb40-13"><a href="metagenomics.html#cb40-13" tabindex="-1"></a>mock2_metagenome_species_percent<span class="sc">$</span>Species[mock2_metagenome_species_percent<span class="sc">$</span>Abundance <span class="sc">&lt;</span> <span class="fl">0.5</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Species &lt; 0.5% abund.&quot;</span></span>
+<span id="cb40-14"><a href="metagenomics.html#cb40-14" tabindex="-1"></a><span class="co">#unique(mock2_metagenome_species_percent$Species)</span></span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="metagenomics.html#cb41-1" tabindex="-1"></a>id_species_mock2_percent <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mock2_metagenome_species_percent, <span class="fu">aes</span>(<span class="at">x=</span>Sample, <span class="at">y=</span>Abundance, <span class="at">fill=</span>Species))<span class="sc">+</span> </span>
+<span id="cb41-2"><a href="metagenomics.html#cb41-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>)</span>
+<span id="cb41-3"><a href="metagenomics.html#cb41-3" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="metagenomics.html#cb41-4" tabindex="-1"></a><span class="co"># plot species identificatie</span></span>
+<span id="cb41-5"><a href="metagenomics.html#cb41-5" tabindex="-1"></a><span class="fu">grid.arrange</span>(id_species_mock2, id_species_mock2_percent, <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">top=</span><span class="fu">textGrob</span>(<span class="st">&quot;Identified species and their corresponding abundance</span><span class="sc">\n</span><span class="st">read count (right) and percentage (left)</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="at">gp=</span><span class="fu">gpar</span>(<span class="at">fontsize=</span><span class="dv">12</span>,<span class="at">font=</span><span class="dv">8</span>)))</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 </div>
@@ -427,58 +427,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Onderdeel 4<a href="metagenomics.html#onderdeel-4-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="verkrijgen-van-compositie-data" class="section level3 hasAnchor">
 <h3>Verkrijgen van compositie data<a href="metagenomics.html#verkrijgen-van-compositie-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="metagenomics.html#cb41-1" tabindex="-1"></a><span class="co"># Verkrijgen van compositie data</span></span>
-<span id="cb41-2"><a href="metagenomics.html#cb41-2" tabindex="-1"></a>mock2_composition <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">read.csv</span>(<span class="st">&#39;/home/daur2/metagenomics/formative_data/HU_waternet_MOCK2_composition.csv&#39;</span>, <span class="at">row.names=</span><span class="dv">1</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>))</span>
-<span id="cb41-3"><a href="metagenomics.html#cb41-3" tabindex="-1"></a></span>
-<span id="cb41-4"><a href="metagenomics.html#cb41-4" tabindex="-1"></a>mock2_composition<span class="sc">$</span>amount <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">&quot;,&quot;</span>, <span class="st">&quot;.&quot;</span>, mock2_composition<span class="sc">$</span>amount))</span>
-<span id="cb41-5"><a href="metagenomics.html#cb41-5" tabindex="-1"></a>mock2_composition <span class="ot">&lt;-</span> mock2_composition <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">amountP =</span> (amount <span class="sc">/</span> total_volume) <span class="sc">*</span> <span class="dv">100</span>)</span>
-<span id="cb41-6"><a href="metagenomics.html#cb41-6" tabindex="-1"></a><span class="fu">colnames</span>(mock2_composition) <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">&quot;name&quot;</span>,<span class="st">&quot;amount&quot;</span>,<span class="st">&quot;sample_name&quot;</span>,<span class="st">&quot;total_volume&quot;</span>,<span class="st">&quot;amountP&quot;</span>)</span>
-<span id="cb41-7"><a href="metagenomics.html#cb41-7" tabindex="-1"></a></span>
-<span id="cb41-8"><a href="metagenomics.html#cb41-8" tabindex="-1"></a><span class="co"># Intersect databases to collect overlap between composition and `kraken2` results</span></span>
-<span id="cb41-9"><a href="metagenomics.html#cb41-9" tabindex="-1"></a>mock2_and_composition_intersect <span class="ot">&lt;-</span> mock2_metagenome_species_percent[mock2_metagenome_species_percent<span class="sc">$</span>Species <span class="sc">%in%</span> mock2_composition<span class="sc">$</span>name,]</span>
-<span id="cb41-10"><a href="metagenomics.html#cb41-10" tabindex="-1"></a></span>
-<span id="cb41-11"><a href="metagenomics.html#cb41-11" tabindex="-1"></a><span class="co"># collect species that are in composition and not in `kraken2` results</span></span>
-<span id="cb41-12"><a href="metagenomics.html#cb41-12" tabindex="-1"></a><span class="st">`</span><span class="at">%!in%</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="fu">Negate</span>(<span class="st">`</span><span class="at">%in%</span><span class="st">`</span>) <span class="co"># allow not in = !in</span></span>
-<span id="cb41-13"><a href="metagenomics.html#cb41-13" tabindex="-1"></a>comp_not_in_mock2 <span class="ot">&lt;-</span> mock2_composition[mock2_composition<span class="sc">$</span>name <span class="sc">%!in%</span> mock2_metagenome_species_percent<span class="sc">$</span>Species,]</span>
-<span id="cb41-14"><a href="metagenomics.html#cb41-14" tabindex="-1"></a></span>
-<span id="cb41-15"><a href="metagenomics.html#cb41-15" tabindex="-1"></a><span class="co"># generate a list of species overlap between mock1 and composition</span></span>
-<span id="cb41-16"><a href="metagenomics.html#cb41-16" tabindex="-1"></a><span class="fu">unique</span>(mock2_and_composition_intersect<span class="sc">$</span>Species)</span>
-<span id="cb41-17"><a href="metagenomics.html#cb41-17" tabindex="-1"></a></span>
-<span id="cb41-18"><a href="metagenomics.html#cb41-18" tabindex="-1"></a><span class="co"># generate a list of species that are from composition and not in mock1</span></span>
-<span id="cb41-19"><a href="metagenomics.html#cb41-19" tabindex="-1"></a><span class="fu">unique</span>(comp_not_in_mock2<span class="sc">$</span>name)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="metagenomics.html#cb42-1" tabindex="-1"></a><span class="co"># Verkrijgen van compositie data</span></span>
+<span id="cb42-2"><a href="metagenomics.html#cb42-2" tabindex="-1"></a>mock2_composition <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">read.csv</span>(<span class="st">&#39;/home/daur2/metagenomics/formative_data/HU_waternet_MOCK2_composition.csv&#39;</span>, <span class="at">row.names=</span><span class="dv">1</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>))</span>
+<span id="cb42-3"><a href="metagenomics.html#cb42-3" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="metagenomics.html#cb42-4" tabindex="-1"></a>mock2_composition<span class="sc">$</span>amount <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">&quot;,&quot;</span>, <span class="st">&quot;.&quot;</span>, mock2_composition<span class="sc">$</span>amount))</span>
+<span id="cb42-5"><a href="metagenomics.html#cb42-5" tabindex="-1"></a>mock2_composition <span class="ot">&lt;-</span> mock2_composition <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">amountP =</span> (amount <span class="sc">/</span> total_volume) <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb42-6"><a href="metagenomics.html#cb42-6" tabindex="-1"></a><span class="fu">colnames</span>(mock2_composition) <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">&quot;name&quot;</span>,<span class="st">&quot;amount&quot;</span>,<span class="st">&quot;sample_name&quot;</span>,<span class="st">&quot;total_volume&quot;</span>,<span class="st">&quot;amountP&quot;</span>)</span>
+<span id="cb42-7"><a href="metagenomics.html#cb42-7" tabindex="-1"></a></span>
+<span id="cb42-8"><a href="metagenomics.html#cb42-8" tabindex="-1"></a><span class="co"># Intersect databases to collect overlap between composition and `kraken2` results</span></span>
+<span id="cb42-9"><a href="metagenomics.html#cb42-9" tabindex="-1"></a>mock2_and_composition_intersect <span class="ot">&lt;-</span> mock2_metagenome_species_percent[mock2_metagenome_species_percent<span class="sc">$</span>Species <span class="sc">%in%</span> mock2_composition<span class="sc">$</span>name,]</span>
+<span id="cb42-10"><a href="metagenomics.html#cb42-10" tabindex="-1"></a></span>
+<span id="cb42-11"><a href="metagenomics.html#cb42-11" tabindex="-1"></a><span class="co"># collect species that are in composition and not in `kraken2` results</span></span>
+<span id="cb42-12"><a href="metagenomics.html#cb42-12" tabindex="-1"></a><span class="st">`</span><span class="at">%!in%</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="fu">Negate</span>(<span class="st">`</span><span class="at">%in%</span><span class="st">`</span>) <span class="co"># allow not in = !in</span></span>
+<span id="cb42-13"><a href="metagenomics.html#cb42-13" tabindex="-1"></a>comp_not_in_mock2 <span class="ot">&lt;-</span> mock2_composition[mock2_composition<span class="sc">$</span>name <span class="sc">%!in%</span> mock2_metagenome_species_percent<span class="sc">$</span>Species,]</span>
+<span id="cb42-14"><a href="metagenomics.html#cb42-14" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="metagenomics.html#cb42-15" tabindex="-1"></a><span class="co"># generate a list of species overlap between mock1 and composition</span></span>
+<span id="cb42-16"><a href="metagenomics.html#cb42-16" tabindex="-1"></a><span class="fu">unique</span>(mock2_and_composition_intersect<span class="sc">$</span>Species)</span>
+<span id="cb42-17"><a href="metagenomics.html#cb42-17" tabindex="-1"></a></span>
+<span id="cb42-18"><a href="metagenomics.html#cb42-18" tabindex="-1"></a><span class="co"># generate a list of species that are from composition and not in mock1</span></span>
+<span id="cb42-19"><a href="metagenomics.html#cb42-19" tabindex="-1"></a><span class="fu">unique</span>(comp_not_in_mock2<span class="sc">$</span>name)</span></code></pre></div>
 </div>
 <div id="vergelijking-van-resultaten-met-compositie" class="section level3 hasAnchor">
 <h3>Vergelijking van resultaten met compositie<a href="metagenomics.html#vergelijking-van-resultaten-met-compositie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="metagenomics.html#cb42-1" tabindex="-1"></a><span class="co"># compare labels between `kraken2` subset and composition and store percent values when labels are identical</span></span>
-<span id="cb42-2"><a href="metagenomics.html#cb42-2" tabindex="-1"></a>mock2_and_composition_intersect<span class="sc">$</span>amountP <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb42-3"><a href="metagenomics.html#cb42-3" tabindex="-1"></a><span class="cf">for</span> (m2_label <span class="cf">in</span> mock2_and_composition_intersect<span class="sc">$</span>Species){</span>
-<span id="cb42-4"><a href="metagenomics.html#cb42-4" tabindex="-1"></a>  <span class="cf">for</span> (m2c_label <span class="cf">in</span> mock2_composition<span class="sc">$</span>name){</span>
-<span id="cb42-5"><a href="metagenomics.html#cb42-5" tabindex="-1"></a>    <span class="cf">if</span>(m2_label <span class="sc">==</span> m2c_label){</span>
-<span id="cb42-6"><a href="metagenomics.html#cb42-6" tabindex="-1"></a>      mock2_and_composition_intersect<span class="sc">$</span>amountP[mock2_and_composition_intersect<span class="sc">$</span>Species <span class="sc">==</span> m2_label] <span class="ot">&lt;-</span> mock2_composition<span class="sc">$</span>amountP[mock2_composition<span class="sc">$</span>name <span class="sc">==</span> m2c_label]</span>
-<span id="cb42-7"><a href="metagenomics.html#cb42-7" tabindex="-1"></a>    }</span>
-<span id="cb42-8"><a href="metagenomics.html#cb42-8" tabindex="-1"></a>  }</span>
-<span id="cb42-9"><a href="metagenomics.html#cb42-9" tabindex="-1"></a>}</span></code></pre></div>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="metagenomics.html#cb43-1" tabindex="-1"></a><span class="co"># load library for melting data frame</span></span>
-<span id="cb43-2"><a href="metagenomics.html#cb43-2" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span>
-<span id="cb43-3"><a href="metagenomics.html#cb43-3" tabindex="-1"></a></span>
-<span id="cb43-4"><a href="metagenomics.html#cb43-4" tabindex="-1"></a><span class="co"># collect plotting info and pretify layout format</span></span>
-<span id="cb43-5"><a href="metagenomics.html#cb43-5" tabindex="-1"></a><span class="co">#colnames(mock1_and_composition_intersect)</span></span>
-<span id="cb43-6"><a href="metagenomics.html#cb43-6" tabindex="-1"></a>mock2_and_comp_plotting_data           <span class="ot">&lt;-</span> mock2_and_composition_intersect[,<span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">3</span>,<span class="dv">11</span>)]</span>
-<span id="cb43-7"><a href="metagenomics.html#cb43-7" tabindex="-1"></a><span class="fu">colnames</span>(mock2_and_comp_plotting_data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;species&quot;</span>, <span class="st">&quot;k_abundance&quot;</span>, <span class="st">&quot;c_abundance&quot;</span>)</span>
-<span id="cb43-8"><a href="metagenomics.html#cb43-8" tabindex="-1"></a></span>
-<span id="cb43-9"><a href="metagenomics.html#cb43-9" tabindex="-1"></a>mock2_and_comp_plotting_data       <span class="ot">&lt;-</span> <span class="fu">melt</span>(mock2_and_comp_plotting_data, <span class="at">id.var =</span> <span class="st">&quot;species&quot;</span>)</span>
-<span id="cb43-10"><a href="metagenomics.html#cb43-10" tabindex="-1"></a>mock2_and_comp_plotting_data<span class="sc">$</span>value <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(mock2_and_comp_plotting_data<span class="sc">$</span>value)</span>
-<span id="cb43-11"><a href="metagenomics.html#cb43-11" tabindex="-1"></a></span>
-<span id="cb43-12"><a href="metagenomics.html#cb43-12" tabindex="-1"></a><span class="fu">ggplot</span>(mock2_and_comp_plotting_data, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> value, <span class="at">fill =</span> variable)) <span class="sc">+</span> </span>
-<span id="cb43-13"><a href="metagenomics.html#cb43-13" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
-<span id="cb43-14"><a href="metagenomics.html#cb43-14" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb43-15"><a href="metagenomics.html#cb43-15" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Abundance (%)&quot;</span>) <span class="sc">+</span></span>
-<span id="cb43-16"><a href="metagenomics.html#cb43-16" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
-<span id="cb43-17"><a href="metagenomics.html#cb43-17" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Abundance comparison between Kraken2 results and composition&quot;</span>) <span class="sc">+</span></span>
-<span id="cb43-18"><a href="metagenomics.html#cb43-18" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
-<span id="cb43-19"><a href="metagenomics.html#cb43-19" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">25</span>) <span class="sc">+</span></span>
-<span id="cb43-20"><a href="metagenomics.html#cb43-20" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb43-21"><a href="metagenomics.html#cb43-21" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;skyblue&quot;</span>, <span class="st">&quot;orangered&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="metagenomics.html#cb43-1" tabindex="-1"></a><span class="co"># compare labels between `kraken2` subset and composition and store percent values when labels are identical</span></span>
+<span id="cb43-2"><a href="metagenomics.html#cb43-2" tabindex="-1"></a>mock2_and_composition_intersect<span class="sc">$</span>amountP <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb43-3"><a href="metagenomics.html#cb43-3" tabindex="-1"></a><span class="cf">for</span> (m2_label <span class="cf">in</span> mock2_and_composition_intersect<span class="sc">$</span>Species){</span>
+<span id="cb43-4"><a href="metagenomics.html#cb43-4" tabindex="-1"></a>  <span class="cf">for</span> (m2c_label <span class="cf">in</span> mock2_composition<span class="sc">$</span>name){</span>
+<span id="cb43-5"><a href="metagenomics.html#cb43-5" tabindex="-1"></a>    <span class="cf">if</span>(m2_label <span class="sc">==</span> m2c_label){</span>
+<span id="cb43-6"><a href="metagenomics.html#cb43-6" tabindex="-1"></a>      mock2_and_composition_intersect<span class="sc">$</span>amountP[mock2_and_composition_intersect<span class="sc">$</span>Species <span class="sc">==</span> m2_label] <span class="ot">&lt;-</span> mock2_composition<span class="sc">$</span>amountP[mock2_composition<span class="sc">$</span>name <span class="sc">==</span> m2c_label]</span>
+<span id="cb43-7"><a href="metagenomics.html#cb43-7" tabindex="-1"></a>    }</span>
+<span id="cb43-8"><a href="metagenomics.html#cb43-8" tabindex="-1"></a>  }</span>
+<span id="cb43-9"><a href="metagenomics.html#cb43-9" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="metagenomics.html#cb44-1" tabindex="-1"></a><span class="co"># load library for melting data frame</span></span>
+<span id="cb44-2"><a href="metagenomics.html#cb44-2" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span>
+<span id="cb44-3"><a href="metagenomics.html#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="metagenomics.html#cb44-4" tabindex="-1"></a><span class="co"># collect plotting info and pretify layout format</span></span>
+<span id="cb44-5"><a href="metagenomics.html#cb44-5" tabindex="-1"></a><span class="co">#colnames(mock1_and_composition_intersect)</span></span>
+<span id="cb44-6"><a href="metagenomics.html#cb44-6" tabindex="-1"></a>mock2_and_comp_plotting_data           <span class="ot">&lt;-</span> mock2_and_composition_intersect[,<span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">3</span>,<span class="dv">11</span>)]</span>
+<span id="cb44-7"><a href="metagenomics.html#cb44-7" tabindex="-1"></a><span class="fu">colnames</span>(mock2_and_comp_plotting_data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;species&quot;</span>, <span class="st">&quot;k_abundance&quot;</span>, <span class="st">&quot;c_abundance&quot;</span>)</span>
+<span id="cb44-8"><a href="metagenomics.html#cb44-8" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="metagenomics.html#cb44-9" tabindex="-1"></a>mock2_and_comp_plotting_data       <span class="ot">&lt;-</span> <span class="fu">melt</span>(mock2_and_comp_plotting_data, <span class="at">id.var =</span> <span class="st">&quot;species&quot;</span>)</span>
+<span id="cb44-10"><a href="metagenomics.html#cb44-10" tabindex="-1"></a>mock2_and_comp_plotting_data<span class="sc">$</span>value <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(mock2_and_comp_plotting_data<span class="sc">$</span>value)</span>
+<span id="cb44-11"><a href="metagenomics.html#cb44-11" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="metagenomics.html#cb44-12" tabindex="-1"></a><span class="fu">ggplot</span>(mock2_and_comp_plotting_data, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> value, <span class="at">fill =</span> variable)) <span class="sc">+</span> </span>
+<span id="cb44-13"><a href="metagenomics.html#cb44-13" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb44-14"><a href="metagenomics.html#cb44-14" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb44-15"><a href="metagenomics.html#cb44-15" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Abundance (%)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb44-16"><a href="metagenomics.html#cb44-16" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb44-17"><a href="metagenomics.html#cb44-17" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Abundance comparison between Kraken2 results and composition&quot;</span>) <span class="sc">+</span></span>
+<span id="cb44-18"><a href="metagenomics.html#cb44-18" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
+<span id="cb44-19"><a href="metagenomics.html#cb44-19" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">25</span>) <span class="sc">+</span></span>
+<span id="cb44-20"><a href="metagenomics.html#cb44-20" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb44-21"><a href="metagenomics.html#cb44-21" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;skyblue&quot;</span>, <span class="st">&quot;orangered&quot;</span>))</span></code></pre></div>
 <p>We hebben bracken gebruikt om de waardes in te schatten. Het kan daardoor zijn dat de compositie file niet overeenkomt.</p>
 
 </div>

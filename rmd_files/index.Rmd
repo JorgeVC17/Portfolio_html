@@ -24,6 +24,7 @@ description: "Welcome to my portfolio"
 ---
 ```{r setup index, echo=FALSE, message=FALSE, warning=FALSE}
 library(bookdown)
+knitr::include_graphics
 ```
 
 
