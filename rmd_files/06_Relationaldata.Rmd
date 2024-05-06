@@ -36,11 +36,14 @@ flu_tidy <- flu_df %>% pivot_longer(cols = c('Argentina','Australia','Austria','
 
 flu_tidy <- separate(flu_tidy, Date, into =  c("year", "month", "day"))
 
+knitr::kable(head(flu_tidy))
 # Making dengue data tidy
 
 dengue_tidy <- dengue_df %>% pivot_longer(cols = c("Argentina", "Bolivia", "Brazil", "India", "Indonesia", "Mexico", "Philippines", "Singapore", "Thailand", "Venezuela"), names_to = "country", values_to = "cases")
 
 dengue_tidy <- separate(dengue_tidy, Date, into =  c("year", "month", "day"))
+
+knitr::kable(head(dengue_tidy))
 
 ```
 

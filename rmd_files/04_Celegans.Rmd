@@ -76,10 +76,10 @@ Type of data now = **`r typeof(experiment$compConcentration)`**
 After inspecting the data of the experiment we can make an exploratory plot to identify the set up of this experiment. For this plot we will use the following code:
 
 ```{r Grafiek 1 C elegans, echo=TRUE}
-experiment %>% ggplot(aes(x=log10(compConcentration), y=RawData, 
+experiment %>% ggplot(aes(x=log10(compConcentration + .001), y=RawData, 
                           group = compName, colour = compName, 
                           shape = expType)) +
-  geom_jitter(na.rm = TRUE)+
+  geom_point(na.rm = TRUE, position = position_jitter(width = 0.1))+
  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   labs(title = "Fig 1: Scatterplot for C.elegans plate experiment",
        x="Log_Compound Concentration",
@@ -130,16 +130,17 @@ knitr::kable(head(experiment %>% select(RawData, NormalizedData, expType)))
 Now that the data has been normalized, let's plot the normalized data in a new graphic.
 
 ```{r Grafiek 2 C elegans, echo=TRUE}
-experiment %>% ggplot(aes(x=log10(compConcentration), y=NormalizedData, 
+experiment %>% ggplot(aes(x=log10(compConcentration +.001), y=NormalizedData, 
                           group = compName, colour = compName, 
                           shape = expType)) +
-  geom_jitter(na.rm = TRUE)+
+  geom_point(na.rm = TRUE, position = position_jitter(width = 0.1))+ # jitter to avoid overlap 
  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   labs(title = "Fig 2: Scatterplot for C.elegans plate experiment with normalized data.",
        x="Log_Compound Concentration",
        y="Count offspring",
        color = "Compound Name",  
        shape = "Type of experiment")
+
   
 ```
 
