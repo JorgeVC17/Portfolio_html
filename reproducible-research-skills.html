@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Reproducible research skills | Portfolio</title>
+  <meta name="description" content="Welcome to my portfolio" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Reproducible research skills | Portfolio" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Welcome to my portfolio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Reproducible research skills | Portfolio" />
+  
+  <meta name="twitter:description" content="Welcome to my portfolio" />
+  
+
+<meta name="author" content="Hello there! I’m Jorge Vargas Centeno and this is my portfolio where you can explore and visualize my multiple projects in R, Python and multiple machine learning techniques." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c.-elegans-plate-analysis.html"/>
+<link rel="next" href="relational-databases.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html"><i class="fa fa-check"></i>What are my plans for the future?</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html"><i class="fa fa-check"></i>RNA Sequencing</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#data-structure"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-1"><i class="fa fa-check"></i>Onderdeel 1:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#introductie"><i class="fa fa-check"></i>Introductie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#experiment"><i class="fa fa-check"></i>Experiment</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#resultaten-van-de-fastqc-html-rapporten"><i class="fa fa-check"></i>Resultaten van de fastQC html rapporten</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-2"><i class="fa fa-check"></i>Onderdeel 2:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#count-table"><i class="fa fa-check"></i>Count table</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#deseq2-analyse"><i class="fa fa-check"></i>DESeq2 analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#omzetten-van-de-count-tabel-naar-een-deseq-object"><i class="fa fa-check"></i>Omzetten van de “count tabel” naar een DESeq object</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#rnaseq-data-normaliseren"><i class="fa fa-check"></i>RNASeq data normaliseren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-3"><i class="fa fa-check"></i>Onderdeel 3:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#kwaliteitscontrole"><i class="fa fa-check"></i>Kwaliteitscontrole</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#differential-gene-expression-analysis"><i class="fa fa-check"></i>Differential gene expression analysis</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoering-van-dge-analyse"><i class="fa fa-check"></i>Uitvoering van DGE analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#visualisatie-van-de-dge-resultaten."><i class="fa fa-check"></i>Visualisatie van de DGE resultaten.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#onderdeel-4"><i class="fa fa-check"></i>Onderdeel 4:</a>
+<ul>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#ontdekt-welke-genen-veranderen"><i class="fa fa-check"></i>Ontdekt welke genen veranderen</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#cytogenetische-band-functie"><i class="fa fa-check"></i>Cytogenetische band functie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#uitvoer-go-term-enrichment-analyse"><i class="fa fa-check"></i>Uitvoer GO term enrichment analyse</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#conclusie"><i class="fa fa-check"></i>Conclusie</a></li>
+<li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#discussie"><i class="fa fa-check"></i>Discussie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html"><i class="fa fa-check"></i>Metagenomics</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#data-structure-1"><i class="fa fa-check"></i>Data Structure:</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-1-1"><i class="fa fa-check"></i>Onderdeel 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#fastqc-genereren"><i class="fa fa-check"></i>FastQC genereren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#per-base-sequencing-quality"><i class="fa fa-check"></i>Per base sequencing quality</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-2-1"><i class="fa fa-check"></i>Onderdeel 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken2-uitvoeren"><i class="fa fa-check"></i>Kraken2 uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#bracken-uitvoeren"><i class="fa fa-check"></i>Bracken uitvoeren</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#kraken-biom-uitvoeren"><i class="fa fa-check"></i>Kraken-biom uitvoeren</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-3-1"><i class="fa fa-check"></i>Onderdeel 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#read-count-visualisatie-per-kingdom"><i class="fa fa-check"></i>Read count visualisatie per kingdom</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#visualiseren-van-geïdentificeerde-soorten"><i class="fa fa-check"></i>Visualiseren van geïdentificeerde soorten</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#optimalisatie-door-verwijdering-van-soorten-met-lage-read-counts"><i class="fa fa-check"></i>Optimalisatie door verwijdering van soorten met lage read counts</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#normalisatie"><i class="fa fa-check"></i>Normalisatie</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#onderdeel-4-1"><i class="fa fa-check"></i>Onderdeel 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#verkrijgen-van-compositie-data"><i class="fa fa-check"></i>Verkrijgen van compositie data</a></li>
+<li class="chapter" data-level="" data-path="metagenomics.html"><a href="metagenomics.html#vergelijking-van-resultaten-met-compositie"><i class="fa fa-check"></i>Vergelijking van resultaten met compositie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html"><i class="fa fa-check"></i>C. elegans plate analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html#metadata"><i class="fa fa-check"></i>Metadata</a></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html#inspect-file"><i class="fa fa-check"></i>Inspect file</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html#inspect-datavariables"><i class="fa fa-check"></i>Inspect data/variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html#making-a-scatterplot"><i class="fa fa-check"></i>Making a scatterplot</a></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html#how-i-would-analyze-this-data-for-a-typical-analysis-of-dose-response"><i class="fa fa-check"></i>How I would analyze this data for a typical analysis of dose-response?</a></li>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html#normalizing-the-data-of-the-negative-control"><i class="fa fa-check"></i>Normalizing the data of the negative control</a>
+<ul>
+<li class="chapter" data-level="" data-path="c.-elegans-plate-analysis.html"><a href="c.-elegans-plate-analysis.html#why-the-value-of-the-negative-control-has-to-be-set-to-1"><i class="fa fa-check"></i>Why the value of the negative control has to be set to 1?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reproducible-research-skills.html"><a href="reproducible-research-skills.html"><i class="fa fa-check"></i>Reproducible research skills</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-research-skills.html"><a href="reproducible-research-skills.html#open-peer-review-of-an-article"><i class="fa fa-check"></i>Open peer review of an article</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-research-skills.html"><a href="reproducible-research-skills.html#project-enviroment-of-the-article"><i class="fa fa-check"></i>Project enviroment of the article</a></li>
+<li class="chapter" data-level="" data-path="reproducible-research-skills.html"><a href="reproducible-research-skills.html#data-structure-2"><i class="fa fa-check"></i>Data structure:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reproducible-research-skills.html"><a href="reproducible-research-skills.html#impressions-of-the-code"><i class="fa fa-check"></i>Impressions of the code</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-research-skills.html"><a href="reproducible-research-skills.html#readibility"><i class="fa fa-check"></i>Readibility</a></li>
+<li class="chapter" data-level="" data-path="reproducible-research-skills.html"><a href="reproducible-research-skills.html#reproducibility"><i class="fa fa-check"></i>Reproducibility</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html"><i class="fa fa-check"></i>Relational databases</a>
+<ul>
+<li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html#loading-data"><i class="fa fa-check"></i>Loading data</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="reproducible-research-skills" class="section level1 hasAnchor">
+<h1>Reproducible research skills<a href="reproducible-research-skills.html#reproducible-research-skills" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="open-peer-review-of-an-article" class="section level2 hasAnchor">
+<h2>Open peer review of an article<a href="reproducible-research-skills.html#open-peer-review-of-an-article" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For this project I’ll be testing my reproducible research skills reviewing the reproducibility and reporting practices of the article; <a href="https://pubmed.ncbi.nlm.nih.gov/37590308/">The COVID-19 Pandemic Eroded System Support but not Social Solidarity</a></p>
+<div class="float">
+<img src="rmd_data/review/article.png" alt="Article: The COVID-19 Pandemic Eroded System Support but not Social Solidarity" />
+<div class="figcaption">Article: The COVID-19 Pandemic Eroded System Support but not Social Solidarity</div>
+</div>
+<div id="project-enviroment-of-the-article" class="section level3 hasAnchor">
+<h3>Project enviroment of the article<a href="reproducible-research-skills.html#project-enviroment-of-the-article" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>My chosen article have the following <a href="https://osf.io/fwy5j/files/osfstorage">project enviroment</a>:</p>
+<div class="float">
+<img src="rmd_data/review/enviroment.png" alt="Project enviroment of the article: the COVID-19 Pandemic Eroded System Support but not Social Solidarity" />
+<div class="figcaption">Project enviroment of the article: the COVID-19 Pandemic Eroded System Support but not Social Solidarity</div>
+</div>
+</div>
+<div id="data-structure-2" class="section level3 hasAnchor">
+<h3>Data structure:<a href="reproducible-research-skills.html#data-structure-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>With the given project enviroment we will obtain the following data structure:</p>
+<p><img src="rmd_data/review/data_tree.png" /></p>
+<p>For the rest of this project I’ll be focusing in the R script <em>“agg_plot.R”</em> inside the folder <strong>“C-code”</strong></p>
+</div>
+</div>
+<div id="impressions-of-the-code" class="section level2 hasAnchor">
+<h2>Impressions of the code<a href="reproducible-research-skills.html#impressions-of-the-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If we open the R script <em>“agg_plot.R”</em> we could find the following code:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="reproducible-research-skills.html#cb52-1" tabindex="-1"></a><span class="co"># a function to calculate quantile for a specific CI width</span></span>
+<span id="cb52-2"><a href="reproducible-research-skills.html#cb52-2" tabindex="-1"></a>myquantile <span class="ot">&lt;-</span> <span class="cf">function</span>(ci){</span>
+<span id="cb52-3"><a href="reproducible-research-skills.html#cb52-3" tabindex="-1"></a>         alpha <span class="ot">=</span> (<span class="dv">100</span><span class="sc">-</span>ci)<span class="sc">/</span><span class="dv">2</span><span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb52-4"><a href="reproducible-research-skills.html#cb52-4" tabindex="-1"></a>         <span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha)</span>
+<span id="cb52-5"><a href="reproducible-research-skills.html#cb52-5" tabindex="-1"></a>}</span>
+<span id="cb52-6"><a href="reproducible-research-skills.html#cb52-6" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="reproducible-research-skills.html#cb52-7" tabindex="-1"></a></span>
+<span id="cb52-8"><a href="reproducible-research-skills.html#cb52-8" tabindex="-1"></a><span class="co"># custom functions for calculating weighted mean and SE which work inside functions </span></span>
+<span id="cb52-9"><a href="reproducible-research-skills.html#cb52-9" tabindex="-1"></a>mymean <span class="ot">&lt;-</span> <span class="cf">function</span>(x,w) {<span class="fu">wtd.mean</span>(<span class="at">x =</span> x, <span class="at">weights =</span> w, <span class="at">na.rm  =</span> T)}</span>
+<span id="cb52-10"><a href="reproducible-research-skills.html#cb52-10" tabindex="-1"></a>myse <span class="ot">&lt;-</span> <span class="cf">function</span>(x,w) {<span class="fu">sqrt</span>(<span class="fu">wtd.var</span>(x, <span class="at">weights =</span> w, <span class="at">na.rm =</span> T))<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(x))}</span>
+<span id="cb52-11"><a href="reproducible-research-skills.html#cb52-11" tabindex="-1"></a></span>
+<span id="cb52-12"><a href="reproducible-research-skills.html#cb52-12" tabindex="-1"></a></span>
+<span id="cb52-13"><a href="reproducible-research-skills.html#cb52-13" tabindex="-1"></a><span class="co"># Import data -------------------------------------------------------------</span></span>
+<span id="cb52-14"><a href="reproducible-research-skills.html#cb52-14" tabindex="-1"></a></span>
+<span id="cb52-15"><a href="reproducible-research-skills.html#cb52-15" tabindex="-1"></a>df_full <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;B-analysis-data/yougov_clean_202204122.rds&quot;</span>)</span>
+<span id="cb52-16"><a href="reproducible-research-skills.html#cb52-16" tabindex="-1"></a>var_lookup <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;B-analysis-data/varlookup.rds&quot;</span>)</span>
+<span id="cb52-17"><a href="reproducible-research-skills.html#cb52-17" tabindex="-1"></a></span>
+<span id="cb52-18"><a href="reproducible-research-skills.html#cb52-18" tabindex="-1"></a></span>
+<span id="cb52-19"><a href="reproducible-research-skills.html#cb52-19" tabindex="-1"></a></span>
+<span id="cb52-20"><a href="reproducible-research-skills.html#cb52-20" tabindex="-1"></a><span class="co"># Figure 1. Benchmarked changes in Solidarity and System support ------------------------------</span></span>
+<span id="cb52-21"><a href="reproducible-research-skills.html#cb52-21" tabindex="-1"></a><span class="co"># ~ Crunch Systemic variables  -----------------------------------------------------</span></span>
+<span id="cb52-22"><a href="reproducible-research-skills.html#cb52-22" tabindex="-1"></a></span>
+<span id="cb52-23"><a href="reproducible-research-skills.html#cb52-23" tabindex="-1"></a>system_dvs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;system_satisfaction.z&quot;</span>, <span class="st">&quot;level_democracy.z&quot;</span>, <span class="st">&quot;supp_demcy.z&quot;</span>,</span>
+<span id="cb52-24"><a href="reproducible-research-skills.html#cb52-24" tabindex="-1"></a>                <span class="st">&quot;proudcitizen.z&quot;</span>)</span>
+<span id="cb52-25"><a href="reproducible-research-skills.html#cb52-25" tabindex="-1"></a></span>
+<span id="cb52-26"><a href="reproducible-research-skills.html#cb52-26" tabindex="-1"></a><span class="co"># 4*3 country-wave means for individual outcomes</span></span>
+<span id="cb52-27"><a href="reproducible-research-skills.html#cb52-27" tabindex="-1"></a>system_4c <span class="ot">&lt;-</span> df_full <span class="sc">%&gt;%</span> </span>
+<span id="cb52-28"><a href="reproducible-research-skills.html#cb52-28" tabindex="-1"></a>        <span class="co"># subset to relevant vars for system support</span></span>
+<span id="cb52-29"><a href="reproducible-research-skills.html#cb52-29" tabindex="-1"></a>        dplyr<span class="sc">::</span><span class="fu">select</span>(country, weight, wavedate, <span class="fu">all_of</span>(system_dvs)) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-30"><a href="reproducible-research-skills.html#cb52-30" tabindex="-1"></a>        <span class="co"># calculate weighted mean by country-waves</span></span>
+<span id="cb52-31"><a href="reproducible-research-skills.html#cb52-31" tabindex="-1"></a>        <span class="fu">pivot_longer</span>(<span class="fu">all_of</span>(system_dvs), <span class="at">names_to =</span> <span class="st">&quot;dv&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-32"><a href="reproducible-research-skills.html#cb52-32" tabindex="-1"></a>        <span class="fu">group_by</span>(country, wavedate, dv) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-33"><a href="reproducible-research-skills.html#cb52-33" tabindex="-1"></a>        <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mymean</span>(value, weight), </span>
+<span id="cb52-34"><a href="reproducible-research-skills.html#cb52-34" tabindex="-1"></a>                  <span class="at">se =</span> <span class="fu">myse</span>(value, weight)) <span class="sc">%&gt;%</span> glimpse</span>
+<span id="cb52-35"><a href="reproducible-research-skills.html#cb52-35" tabindex="-1"></a></span>
+<span id="cb52-36"><a href="reproducible-research-skills.html#cb52-36" tabindex="-1"></a><span class="co"># reported in the text:</span></span>
+<span id="cb52-37"><a href="reproducible-research-skills.html#cb52-37" tabindex="-1"></a>system_4c <span class="sc">%&gt;%</span> </span>
+<span id="cb52-38"><a href="reproducible-research-skills.html#cb52-38" tabindex="-1"></a>        <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-39"><a href="reproducible-research-skills.html#cb52-39" tabindex="-1"></a>        <span class="fu">summarise</span>(<span class="fu">sum</span>(mean <span class="sc">&gt;</span> <span class="dv">0</span>))</span>
+<span id="cb52-40"><a href="reproducible-research-skills.html#cb52-40" tabindex="-1"></a></span>
+<span id="cb52-41"><a href="reproducible-research-skills.html#cb52-41" tabindex="-1"></a><span class="co"># reported in the text:</span></span>
+<span id="cb52-42"><a href="reproducible-research-skills.html#cb52-42" tabindex="-1"></a>system_4c <span class="sc">%&gt;%</span> </span>
+<span id="cb52-43"><a href="reproducible-research-skills.html#cb52-43" tabindex="-1"></a>        <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Denmark&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-44"><a href="reproducible-research-skills.html#cb52-44" tabindex="-1"></a>        <span class="fu">filter</span>(dv <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;level_democracy.z&quot;</span>) <span class="sc">&amp;</span> </span>
+<span id="cb52-45"><a href="reproducible-research-skills.html#cb52-45" tabindex="-1"></a>                       wavedate <span class="sc">==</span> <span class="fu">ymd</span>(<span class="st">&quot;2020-12-12&quot;</span>)) </span>
+<span id="cb52-46"><a href="reproducible-research-skills.html#cb52-46" tabindex="-1"></a></span>
+<span id="cb52-47"><a href="reproducible-research-skills.html#cb52-47" tabindex="-1"></a><span class="co"># ---------------------A LOT MORE OF DATA WRANGLING AND ANALYSIS ------------------------</span></span>
+<span id="cb52-48"><a href="reproducible-research-skills.html#cb52-48" tabindex="-1"></a></span>
+<span id="cb52-49"><a href="reproducible-research-skills.html#cb52-49" tabindex="-1"></a><span class="co"># ~ Draw system plot ---------------------------------------------------------</span></span>
+<span id="cb52-50"><a href="reproducible-research-skills.html#cb52-50" tabindex="-1"></a><span class="co"># ~ Panel A of Figure 1</span></span>
+<span id="cb52-51"><a href="reproducible-research-skills.html#cb52-51" tabindex="-1"></a></span>
+<span id="cb52-52"><a href="reproducible-research-skills.html#cb52-52" tabindex="-1"></a>system_facet <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(system_plotdata, <span class="fu">aes</span>( <span class="at">x =</span>  wavedate, <span class="at">y =</span> mean, <span class="at">color =</span> dv)) <span class="sc">+</span></span>
+<span id="cb52-53"><a href="reproducible-research-skills.html#cb52-53" tabindex="-1"></a>        <span class="fu">geom_rect</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata, country <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>), </span>
+<span id="cb52-54"><a href="reproducible-research-skills.html#cb52-54" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb52-55"><a href="reproducible-research-skills.html#cb52-55" tabindex="-1"></a>                  <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>, </span>
+<span id="cb52-56"><a href="reproducible-research-skills.html#cb52-56" tabindex="-1"></a>                  <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>) <span class="sc">+</span> </span>
+<span id="cb52-57"><a href="reproducible-research-skills.html#cb52-57" tabindex="-1"></a>        <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">0</span>)) <span class="sc">+</span> </span>
+<span id="cb52-58"><a href="reproducible-research-skills.html#cb52-58" tabindex="-1"></a>        <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb52-59"><a href="reproducible-research-skills.html#cb52-59" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> dv), <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb52-60"><a href="reproducible-research-skills.html#cb52-60" tabindex="-1"></a>        <span class="co"># add extra width to pooled lines</span></span>
+<span id="cb52-61"><a href="reproducible-research-skills.html#cb52-61" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata,dv <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb52-62"><a href="reproducible-research-skills.html#cb52-62" tabindex="-1"></a>        <span class="co"># add errorbars only to pooled estimates</span></span>
+<span id="cb52-63"><a href="reproducible-research-skills.html#cb52-63" tabindex="-1"></a>        <span class="fu">geom_errorbar</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata,dv <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>),</span>
+<span id="cb52-64"><a href="reproducible-research-skills.html#cb52-64" tabindex="-1"></a>                      <span class="fu">aes</span>(<span class="at">ymin =</span> mean <span class="sc">-</span> <span class="fu">myquantile</span>(<span class="dv">95</span>)<span class="sc">*</span>se, </span>
+<span id="cb52-65"><a href="reproducible-research-skills.html#cb52-65" tabindex="-1"></a>                          <span class="at">ymax =</span> mean <span class="sc">+</span> <span class="fu">myquantile</span>(<span class="dv">95</span>)<span class="sc">*</span>se),</span>
+<span id="cb52-66"><a href="reproducible-research-skills.html#cb52-66" tabindex="-1"></a>                      <span class="at">size =</span> .<span class="dv">6</span>, <span class="at">width =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb52-67"><a href="reproducible-research-skills.html#cb52-67" tabindex="-1"></a>        <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb52-68"><a href="reproducible-research-skills.html#cb52-68" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">name =</span> <span class="cn">NULL</span>,</span>
+<span id="cb52-69"><a href="reproducible-research-skills.html#cb52-69" tabindex="-1"></a>                           <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, viridisLite<span class="sc">::</span><span class="fu">viridis</span>(<span class="dv">4</span>)),</span>
+<span id="cb52-70"><a href="reproducible-research-skills.html#cb52-70" tabindex="-1"></a>                              <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Pooled&quot;</span>, </span>
+<span id="cb52-71"><a href="reproducible-research-skills.html#cb52-71" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Level of </span><span class="sc">\n</span><span class="st">Democracy&quot;</span>,</span>
+<span id="cb52-72"><a href="reproducible-research-skills.html#cb52-72" tabindex="-1"></a>                                         <span class="st">&quot;Proud Citizen&quot;</span>,</span>
+<span id="cb52-73"><a href="reproducible-research-skills.html#cb52-73" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Support for </span><span class="sc">\n</span><span class="st">Democracy&quot;</span>,</span>
+<span id="cb52-74"><a href="reproducible-research-skills.html#cb52-74" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Satisf. with </span><span class="sc">\n</span><span class="st">Pol. System&quot;</span>)</span>
+<span id="cb52-75"><a href="reproducible-research-skills.html#cb52-75" tabindex="-1"></a>                              ) <span class="sc">+</span></span>
+<span id="cb52-76"><a href="reproducible-research-skills.html#cb52-76" tabindex="-1"></a>        <span class="fu">scale_x_date</span>(<span class="at">breaks =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">&quot;2020-04-20&quot;</span>,<span class="st">&quot;2020-06-15&quot;</span>,<span class="st">&quot;2020-12-12&quot;</span>)), </span>
+<span id="cb52-77"><a href="reproducible-research-skills.html#cb52-77" tabindex="-1"></a>                     <span class="at">limits =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">&quot;2020-04-01&quot;</span>, <span class="st">&quot;2020-12-31&quot;</span>)),</span>
+<span id="cb52-78"><a href="reproducible-research-skills.html#cb52-78" tabindex="-1"></a>                     <span class="at">date_labels =</span> <span class="st">&quot;%b&quot;</span>) <span class="sc">+</span>  </span>
+<span id="cb52-79"><a href="reproducible-research-skills.html#cb52-79" tabindex="-1"></a>        <span class="fu">ggtitle</span>(<span class="st">&quot;System Support&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb52-80"><a href="reproducible-research-skills.html#cb52-80" tabindex="-1"></a>        <span class="fu">facet_grid</span>(<span class="sc">~</span>country) <span class="sc">+</span> </span>
+<span id="cb52-81"><a href="reproducible-research-skills.html#cb52-81" tabindex="-1"></a>        <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, .<span class="dv">2</span>)) <span class="sc">+</span> </span>
+<span id="cb52-82"><a href="reproducible-research-skills.html#cb52-82" tabindex="-1"></a>        <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb52-83"><a href="reproducible-research-skills.html#cb52-83" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb52-84"><a href="reproducible-research-skills.html#cb52-84" tabindex="-1"></a></span>
+<span id="cb52-85"><a href="reproducible-research-skills.html#cb52-85" tabindex="-1"></a>system_facet</span></code></pre></div>
+<pre><code>## Rows: 48
+## Columns: 5
+## Groups: country, wavedate [12]
+## $ country  &lt;chr&gt; &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark…
+## $ wavedate &lt;date&gt; 2020-04-20, 2020-04-20, 2020-04-20, 2020-04-20, 2020-06-15, 2020-06-15, 2020-06-15, 2020-06-15,…
+## $ dv       &lt;chr&gt; &quot;level_democracy.z&quot;, &quot;proudcitizen.z&quot;, &quot;supp_demcy.z&quot;, &quot;system_satisfaction.z&quot;, &quot;level_democracy…
+## $ mean     &lt;dbl&gt; -0.69705093, -0.19933124, -0.21590985, -0.06795452, -0.79319215, -0.24868934, -0.26202182, -0.14…
+## $ se       &lt;dbl&gt; 0.03401541, 0.02883877, 0.02366249, 0.02493922, 0.03692481, 0.03168742, 0.02632567, 0.02744196, …</code></pre>
+<pre><code>## # A tibble: 4 × 2
+##   country `sum(mean &gt; 0)`
+##   &lt;chr&gt;             &lt;int&gt;
+## 1 Denmark               0
+## 2 Hungary               0
+## 3 Italy                 1
+## 4 USA                   2</code></pre>
+<pre><code>## # A tibble: 1 × 5
+## # Groups:   country, wavedate [1]
+##   country wavedate   dv                  mean     se
+##   &lt;chr&gt;   &lt;date&gt;     &lt;chr&gt;              &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Denmark 2020-12-12 level_democracy.z -0.916 0.0428</code></pre>
+<pre><code>## Rows: 12
+## Columns: 5
+## Groups: country [4]
+## $ country  &lt;chr&gt; &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Denmark&quot;, &quot;Hungary&quot;, &quot;Hungary&quot;, &quot;Hungary&quot;, &quot;Italy&quot;, &quot;Italy&quot;, &quot;Italy&quot;, &quot;US…
+## $ wavedate &lt;date&gt; 2020-04-20, 2020-06-15, 2020-12-12, 2020-04-20, 2020-06-15, 2020-12-12, 2020-04-20, 2020-06-15,…
+## $ mean     &lt;dbl&gt; -0.2950616, -0.3615610, -0.4304080, -0.3466159, -0.3783803, -0.4410880, -0.1925701, -0.2555717, …
+## $ se       &lt;dbl&gt; 0.01440347, 0.01583371, 0.01736561, 0.01285579, 0.01680848, 0.01813122, 0.01381664, 0.01529698, …
+## $ dv       &lt;chr&gt; &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Poole…</code></pre>
+<pre><code>## Rows: 12
+## Columns: 5
+## Groups: wavedate [3]
+## $ wavedate &lt;date&gt; 2020-04-20, 2020-04-20, 2020-04-20, 2020-04-20, 2020-06-15, 2020-06-15, 2020-06-15, 2020-06-15,…
+## $ dv       &lt;chr&gt; &quot;level_democracy.z&quot;, &quot;proudcitizen.z&quot;, &quot;supp_demcy.z&quot;, &quot;system_satisfaction.z&quot;, &quot;level_democracy…
+## $ mean     &lt;dbl&gt; -0.49391135, -0.18197042, -0.26015389, -0.08754136, -0.55958182, -0.27035667, -0.26809312, -0.17…
+## $ se       &lt;dbl&gt; 0.01516400, 0.01477147, 0.01109283, 0.01313228, 0.01781351, 0.01725895, 0.01311345, 0.01501777, …
+## $ country  &lt;chr&gt; &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Poole…</code></pre>
+<pre><code>## Rows: 3
+## Columns: 5
+## $ wavedate &lt;date&gt; 2020-04-20, 2020-06-15, 2020-12-12
+## $ mean     &lt;dbl&gt; -0.2558943, -0.3181518, -0.3712863
+## $ se       &lt;dbl&gt; 0.006884393, 0.008026691, 0.008694820
+## $ country  &lt;chr&gt; &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;
+## $ dv       &lt;chr&gt; &quot;Pooled&quot;, &quot;Pooled&quot;, &quot;Pooled&quot;</code></pre>
+<pre><code>## # A tibble: 3 × 5
+##   wavedate    mean      se country dv    
+##   &lt;date&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
+## 1 2020-04-20 -0.26 0.00688 Pooled  Pooled
+## 2 2020-06-15 -0.32 0.00803 Pooled  Pooled
+## 3 2020-12-12 -0.37 0.00869 Pooled  Pooled</code></pre>
+<div id="readibility" class="section level3 hasAnchor">
+<h3>Readibility<a href="reproducible-research-skills.html#readibility" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After seeing this code my first impressions are:</p>
+<ol style="list-style-type: decimal">
+<li><p>This code is a combination of various data wrangling and analysis steps, <em>including custom functions to streamline the workflow for this project.</em> These various step are needed to plot the various plots inside the code and article.</p></li>
+<li><p>The code is really well documented. It has a lot of comments indicating what is the function of each chunk code inside code. This make more easy to understand what does the code do.</p></li>
+<li><p>The name of each variable and object makes sense. They don’t have a random name, which makes easier to understand what is inside of object/list.</p></li>
+</ol>
+<div id="readibility-score" class="section level4 hasAnchor">
+<h4>Readibility score<a href="reproducible-research-skills.html#readibility-score" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Thus, due to the previous points, I’ll be giving to this article a readibility score of <strong>5 stars</strong></p>
+<p><img src="rmd_data/review/read_score.png" /></p>
+</div>
+</div>
+<div id="reproducibility" class="section level3 hasAnchor">
+<h3>Reproducibility<a href="reproducible-research-skills.html#reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To rate the reproducibility of this article, I will try to reproduce the first plot in the R script <em>“agg_plot.R”</em>. I will try to reproduce the the next code:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="reproducible-research-skills.html#cb60-1" tabindex="-1"></a><span class="co"># ~ Draw system plot ---------------------------------------------------------</span></span>
+<span id="cb60-2"><a href="reproducible-research-skills.html#cb60-2" tabindex="-1"></a><span class="co"># ~ Panel A of Figure 1</span></span>
+<span id="cb60-3"><a href="reproducible-research-skills.html#cb60-3" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="reproducible-research-skills.html#cb60-4" tabindex="-1"></a>system_facet <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(system_plotdata, <span class="fu">aes</span>( <span class="at">x =</span>  wavedate, <span class="at">y =</span> mean, <span class="at">color =</span> dv)) <span class="sc">+</span></span>
+<span id="cb60-5"><a href="reproducible-research-skills.html#cb60-5" tabindex="-1"></a>        <span class="fu">geom_rect</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata, country <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>), </span>
+<span id="cb60-6"><a href="reproducible-research-skills.html#cb60-6" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb60-7"><a href="reproducible-research-skills.html#cb60-7" tabindex="-1"></a>                  <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>, </span>
+<span id="cb60-8"><a href="reproducible-research-skills.html#cb60-8" tabindex="-1"></a>                  <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>) <span class="sc">+</span> </span>
+<span id="cb60-9"><a href="reproducible-research-skills.html#cb60-9" tabindex="-1"></a>        <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">0</span>)) <span class="sc">+</span> </span>
+<span id="cb60-10"><a href="reproducible-research-skills.html#cb60-10" tabindex="-1"></a>        <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb60-11"><a href="reproducible-research-skills.html#cb60-11" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> dv), <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb60-12"><a href="reproducible-research-skills.html#cb60-12" tabindex="-1"></a>        <span class="co"># add extra width to pooled lines</span></span>
+<span id="cb60-13"><a href="reproducible-research-skills.html#cb60-13" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata,dv <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb60-14"><a href="reproducible-research-skills.html#cb60-14" tabindex="-1"></a>        <span class="co"># add errorbars only to pooled estimates</span></span>
+<span id="cb60-15"><a href="reproducible-research-skills.html#cb60-15" tabindex="-1"></a>        <span class="fu">geom_errorbar</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata,dv <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>),</span>
+<span id="cb60-16"><a href="reproducible-research-skills.html#cb60-16" tabindex="-1"></a>                      <span class="fu">aes</span>(<span class="at">ymin =</span> mean <span class="sc">-</span> <span class="fu">myquantile</span>(<span class="dv">95</span>)<span class="sc">*</span>se, </span>
+<span id="cb60-17"><a href="reproducible-research-skills.html#cb60-17" tabindex="-1"></a>                          <span class="at">ymax =</span> mean <span class="sc">+</span> <span class="fu">myquantile</span>(<span class="dv">95</span>)<span class="sc">*</span>se),</span>
+<span id="cb60-18"><a href="reproducible-research-skills.html#cb60-18" tabindex="-1"></a>                      <span class="at">size =</span> .<span class="dv">6</span>, <span class="at">width =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb60-19"><a href="reproducible-research-skills.html#cb60-19" tabindex="-1"></a>        <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb60-20"><a href="reproducible-research-skills.html#cb60-20" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">name =</span> <span class="cn">NULL</span>,</span>
+<span id="cb60-21"><a href="reproducible-research-skills.html#cb60-21" tabindex="-1"></a>                           <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, viridisLite<span class="sc">::</span><span class="fu">viridis</span>(<span class="dv">4</span>)),</span>
+<span id="cb60-22"><a href="reproducible-research-skills.html#cb60-22" tabindex="-1"></a>                              <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Pooled&quot;</span>, </span>
+<span id="cb60-23"><a href="reproducible-research-skills.html#cb60-23" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Level of </span><span class="sc">\n</span><span class="st">Democracy&quot;</span>,</span>
+<span id="cb60-24"><a href="reproducible-research-skills.html#cb60-24" tabindex="-1"></a>                                         <span class="st">&quot;Proud Citizen&quot;</span>,</span>
+<span id="cb60-25"><a href="reproducible-research-skills.html#cb60-25" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Support for </span><span class="sc">\n</span><span class="st">Democracy&quot;</span>,</span>
+<span id="cb60-26"><a href="reproducible-research-skills.html#cb60-26" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Satisf. with </span><span class="sc">\n</span><span class="st">Pol. System&quot;</span>)</span>
+<span id="cb60-27"><a href="reproducible-research-skills.html#cb60-27" tabindex="-1"></a>                              ) <span class="sc">+</span></span>
+<span id="cb60-28"><a href="reproducible-research-skills.html#cb60-28" tabindex="-1"></a>        <span class="fu">scale_x_date</span>(<span class="at">breaks =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">&quot;2020-04-20&quot;</span>,<span class="st">&quot;2020-06-15&quot;</span>,<span class="st">&quot;2020-12-12&quot;</span>)), </span>
+<span id="cb60-29"><a href="reproducible-research-skills.html#cb60-29" tabindex="-1"></a>                     <span class="at">limits =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">&quot;2020-04-01&quot;</span>, <span class="st">&quot;2020-12-31&quot;</span>)),</span>
+<span id="cb60-30"><a href="reproducible-research-skills.html#cb60-30" tabindex="-1"></a>                     <span class="at">date_labels =</span> <span class="st">&quot;%b&quot;</span>) <span class="sc">+</span>  </span>
+<span id="cb60-31"><a href="reproducible-research-skills.html#cb60-31" tabindex="-1"></a>        <span class="fu">ggtitle</span>(<span class="st">&quot;System Support&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb60-32"><a href="reproducible-research-skills.html#cb60-32" tabindex="-1"></a>        <span class="fu">facet_grid</span>(<span class="sc">~</span>country) <span class="sc">+</span> </span>
+<span id="cb60-33"><a href="reproducible-research-skills.html#cb60-33" tabindex="-1"></a>        <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, .<span class="dv">2</span>)) <span class="sc">+</span> </span>
+<span id="cb60-34"><a href="reproducible-research-skills.html#cb60-34" tabindex="-1"></a>        <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb60-35"><a href="reproducible-research-skills.html#cb60-35" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb60-36"><a href="reproducible-research-skills.html#cb60-36" tabindex="-1"></a></span>
+<span id="cb60-37"><a href="reproducible-research-skills.html#cb60-37" tabindex="-1"></a>system_facet</span></code></pre></div>
+<div id="issues" class="section level4 hasAnchor">
+<h4>Issues<a href="reproducible-research-skills.html#issues" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The first issue that I encounter to reproduce this code had something to do with the importing of the data.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="reproducible-research-skills.html#cb61-1" tabindex="-1"></a><span class="co"># Import data -------------------------------------------------------------</span></span>
+<span id="cb61-2"><a href="reproducible-research-skills.html#cb61-2" tabindex="-1"></a></span>
+<span id="cb61-3"><a href="reproducible-research-skills.html#cb61-3" tabindex="-1"></a>df_full <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;B-analysis-data/yougov_clean_202204122.rds&quot;</span>)</span>
+<span id="cb61-4"><a href="reproducible-research-skills.html#cb61-4" tabindex="-1"></a>var_lookup <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;B-analysis-data/varlookup.rds&quot;</span>)</span></code></pre></div>
+<p>There are two main issues with this code:</p>
+<ol style="list-style-type: decimal">
+<li><p>The first one is a very common issue. Obviously the data/folder structure of the original project differs with my data/folder structure. For this reason the needed file cannot been found in my computer directory</p></li>
+<li><p>The second one has something to do with the name of the files. The file name <strong>yougov_clean_202204122.rds</strong> differs with the file name in the folder <strong>B-analysis-data</strong>. The file name in this folder <strong>yougov_clean_20211210.rds</strong>.</p></li>
+</ol>
+<p>We can resolve this issue modifing the previous code as follow:</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="reproducible-research-skills.html#cb62-1" tabindex="-1"></a><span class="co"># Import data -------------------------------------------------------------</span></span>
+<span id="cb62-2"><a href="reproducible-research-skills.html#cb62-2" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="reproducible-research-skills.html#cb62-3" tabindex="-1"></a>df_full <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">&quot;projects&quot;</span>, <span class="st">&quot;review&quot;</span>, <span class="st">&quot;B-analysis-data&quot;</span>, <span class="st">&quot;yougov_clean_20211210.rds&quot;</span>))</span>
+<span id="cb62-4"><a href="reproducible-research-skills.html#cb62-4" tabindex="-1"></a>var_lookup <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">&quot;projects&quot;</span>, <span class="st">&quot;review&quot;</span>, <span class="st">&quot;B-analysis-data&quot;</span>, <span class="st">&quot;varlookup.rds&quot;</span>))</span></code></pre></div>
+</div>
+<div id="plot" class="section level4 hasAnchor">
+<h4>Plot<a href="reproducible-research-skills.html#plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>After resolving this previous issues we can reproduce the next figure:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="reproducible-research-skills.html#cb63-1" tabindex="-1"></a><span class="co"># ~ Draw system plot ---------------------------------------------------------</span></span>
+<span id="cb63-2"><a href="reproducible-research-skills.html#cb63-2" tabindex="-1"></a><span class="co"># ~ Panel A of Figure 1</span></span>
+<span id="cb63-3"><a href="reproducible-research-skills.html#cb63-3" tabindex="-1"></a></span>
+<span id="cb63-4"><a href="reproducible-research-skills.html#cb63-4" tabindex="-1"></a>system_facet <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(system_plotdata, <span class="fu">aes</span>( <span class="at">x =</span>  wavedate, <span class="at">y =</span> mean, <span class="at">color =</span> dv)) <span class="sc">+</span></span>
+<span id="cb63-5"><a href="reproducible-research-skills.html#cb63-5" tabindex="-1"></a>        <span class="fu">geom_rect</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata, country <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>), </span>
+<span id="cb63-6"><a href="reproducible-research-skills.html#cb63-6" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb63-7"><a href="reproducible-research-skills.html#cb63-7" tabindex="-1"></a>                  <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">xmax =</span> <span class="cn">Inf</span>, </span>
+<span id="cb63-8"><a href="reproducible-research-skills.html#cb63-8" tabindex="-1"></a>                  <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>) <span class="sc">+</span> </span>
+<span id="cb63-9"><a href="reproducible-research-skills.html#cb63-9" tabindex="-1"></a>        <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">0</span>)) <span class="sc">+</span> </span>
+<span id="cb63-10"><a href="reproducible-research-skills.html#cb63-10" tabindex="-1"></a>        <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb63-11"><a href="reproducible-research-skills.html#cb63-11" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> dv), <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb63-12"><a href="reproducible-research-skills.html#cb63-12" tabindex="-1"></a>        <span class="co"># add extra width to pooled lines</span></span>
+<span id="cb63-13"><a href="reproducible-research-skills.html#cb63-13" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata,dv <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb63-14"><a href="reproducible-research-skills.html#cb63-14" tabindex="-1"></a>        <span class="co"># add errorbars only to pooled estimates</span></span>
+<span id="cb63-15"><a href="reproducible-research-skills.html#cb63-15" tabindex="-1"></a>        <span class="fu">geom_errorbar</span>(<span class="at">data =</span> <span class="fu">filter</span>(system_plotdata,dv <span class="sc">==</span> <span class="st">&quot;Pooled&quot;</span>),</span>
+<span id="cb63-16"><a href="reproducible-research-skills.html#cb63-16" tabindex="-1"></a>                      <span class="fu">aes</span>(<span class="at">ymin =</span> mean <span class="sc">-</span> <span class="fu">myquantile</span>(<span class="dv">95</span>)<span class="sc">*</span>se, </span>
+<span id="cb63-17"><a href="reproducible-research-skills.html#cb63-17" tabindex="-1"></a>                          <span class="at">ymax =</span> mean <span class="sc">+</span> <span class="fu">myquantile</span>(<span class="dv">95</span>)<span class="sc">*</span>se),</span>
+<span id="cb63-18"><a href="reproducible-research-skills.html#cb63-18" tabindex="-1"></a>                      <span class="at">size =</span> .<span class="dv">6</span>, <span class="at">width =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb63-19"><a href="reproducible-research-skills.html#cb63-19" tabindex="-1"></a>        <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb63-20"><a href="reproducible-research-skills.html#cb63-20" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">name =</span> <span class="cn">NULL</span>,</span>
+<span id="cb63-21"><a href="reproducible-research-skills.html#cb63-21" tabindex="-1"></a>                           <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, viridisLite<span class="sc">::</span><span class="fu">viridis</span>(<span class="dv">4</span>)),</span>
+<span id="cb63-22"><a href="reproducible-research-skills.html#cb63-22" tabindex="-1"></a>                              <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Pooled&quot;</span>, </span>
+<span id="cb63-23"><a href="reproducible-research-skills.html#cb63-23" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Level of </span><span class="sc">\n</span><span class="st">Democracy&quot;</span>,</span>
+<span id="cb63-24"><a href="reproducible-research-skills.html#cb63-24" tabindex="-1"></a>                                         <span class="st">&quot;Proud Citizen&quot;</span>,</span>
+<span id="cb63-25"><a href="reproducible-research-skills.html#cb63-25" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Support for </span><span class="sc">\n</span><span class="st">Democracy&quot;</span>,</span>
+<span id="cb63-26"><a href="reproducible-research-skills.html#cb63-26" tabindex="-1"></a>                                         <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Satisf. with </span><span class="sc">\n</span><span class="st">Pol. System&quot;</span>)</span>
+<span id="cb63-27"><a href="reproducible-research-skills.html#cb63-27" tabindex="-1"></a>                              ) <span class="sc">+</span></span>
+<span id="cb63-28"><a href="reproducible-research-skills.html#cb63-28" tabindex="-1"></a>        <span class="fu">scale_x_date</span>(<span class="at">breaks =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">&quot;2020-04-20&quot;</span>,<span class="st">&quot;2020-06-15&quot;</span>,<span class="st">&quot;2020-12-12&quot;</span>)), </span>
+<span id="cb63-29"><a href="reproducible-research-skills.html#cb63-29" tabindex="-1"></a>                     <span class="at">limits =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">&quot;2020-04-01&quot;</span>, <span class="st">&quot;2020-12-31&quot;</span>)),</span>
+<span id="cb63-30"><a href="reproducible-research-skills.html#cb63-30" tabindex="-1"></a>                     <span class="at">date_labels =</span> <span class="st">&quot;%b&quot;</span>) <span class="sc">+</span>  </span>
+<span id="cb63-31"><a href="reproducible-research-skills.html#cb63-31" tabindex="-1"></a>        <span class="fu">ggtitle</span>(<span class="st">&quot;System Support&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb63-32"><a href="reproducible-research-skills.html#cb63-32" tabindex="-1"></a>        <span class="fu">facet_grid</span>(<span class="sc">~</span>country) <span class="sc">+</span> </span>
+<span id="cb63-33"><a href="reproducible-research-skills.html#cb63-33" tabindex="-1"></a>        <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, .<span class="dv">2</span>)) <span class="sc">+</span> </span>
+<span id="cb63-34"><a href="reproducible-research-skills.html#cb63-34" tabindex="-1"></a>        <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb63-35"><a href="reproducible-research-skills.html#cb63-35" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb63-36"><a href="reproducible-research-skills.html#cb63-36" tabindex="-1"></a></span>
+<span id="cb63-37"><a href="reproducible-research-skills.html#cb63-37" tabindex="-1"></a>system_facet</span></code></pre></div>
+<p><img src="_main_files/figure-html/plot-1.png" width="672" /></p>
+</div>
+<div id="reproducibility-score" class="section level4 hasAnchor">
+<h4>Reproducibility score<a href="reproducible-research-skills.html#reproducibility-score" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Thus, due to the previous points, I’ll be giving to this article a reproducibilityscore of <strong>4.5 stars</strong></p>
+<p><img src="rmd_data/review/repro_score.png" /></p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c.-elegans-plate-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="relational-databases.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>
