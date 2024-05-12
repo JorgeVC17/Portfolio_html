@@ -5,3 +5,11 @@ In the past year, I have found that one of my many passions is programming and I
 I see myself in the future working as freelancer analyzing and communicating data en proposing how to implement different AI-models and techniques in the projects of various companies and enterprises.This companies/enterprises can be related to the Life Sciences area/sector or not. Because I think that my current skills and the future skills that want to develop can be applied to multiple areas or sector. I think in this way, because in the last years I have applied this knowledge in the **Social sector** where I impart multiple workshops to the youth of how to code in python to use various machine learning techniques for the projects. 
 
 To reach this goal I want to try in every free time that I have to learn a new machine learning technique or library that helps me to communicate easier and better the data that I have analyzed. For this reason my plan for my free schedule is to learn another machine-learning technique. The machine-learning technique that I want to learn is "Computer Vision". I think that this machine-learning technique will be incredibly valuable in the future and for this reason I want to train an algorithm to identify rats. If I succeed the next step will be train an algorithm to identify if a rat have stress or if it's in an optimal state.
+
+## What is my plan for the free schedule?
+
+In the future, I really want to work in "AI modeling." I love learning about different machine learning techniques, and I believe that these techniques going to be crucial for the job market. That's why I want to learn more about machine learning technique **Computer vision**. Because I love the concept behind computer vision. It's like teaching computers to recognize objects, understand scenes, and maybe even make decisions based on what they "see."
+
+Rats are super important in Life Sciences for testing medicines, so being able to track them accurately is a big deal. Plus, understanding how they act is crucial for figuring out how medicines might affect us.
+
+As a fun challenge, I also want to teach the program to tell if a rat is stressed out. Being able to spot stress in rats could help make sure they're okay during experiments, which is really important for ethical reasons.

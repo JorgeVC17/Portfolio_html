@@ -136,7 +136,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html"><i class="fa fa-check"></i>What are my plans for the future?</a></li>
+<li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html"><i class="fa fa-check"></i>What are my plans for the future?</a>
+<ul>
+<li class="chapter" data-level="" data-path="what-are-my-plans-for-the-future.html"><a href="what-are-my-plans-for-the-future.html#what-is-my-plan-for-the-free-schedule"><i class="fa fa-check"></i>What is my plan for the free schedule?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="python-projects.html"><a href="python-projects.html"><i class="fa fa-check"></i>Python projects</a>
+<ul>
+<li class="chapter" data-level="" data-path="python-projects.html"><a href="python-projects.html#app-development-medipredict"><i class="fa fa-check"></i>App development (Medipredict)</a></li>
+<li class="chapter" data-level="" data-path="python-projects.html"><a href="python-projects.html#data-story"><i class="fa fa-check"></i>Data Story</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html"><i class="fa fa-check"></i>RNA Sequencing</a>
 <ul>
 <li class="chapter" data-level="" data-path="rna-sequencing.html"><a href="rna-sequencing.html#data-structure"><i class="fa fa-check"></i>Data Structure:</a></li>
@@ -248,8 +256,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Relational databases<a href="relational-databases.html#relational-databases" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="loading-data" class="section level2 hasAnchor">
 <h2>Loading data<a href="relational-databases.html#loading-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="relational-databases.html#cb64-1" tabindex="-1"></a>flu_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/relational_databases/data/flu_data_db.csv&quot;</span>), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb64-2"><a href="relational-databases.html#cb64-2" tabindex="-1"></a><span class="fu">head</span>(flu_df)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="relational-databases.html#cb66-1" tabindex="-1"></a>flu_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/relational_databases/data/flu_data_db.csv&quot;</span>), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb66-2"><a href="relational-databases.html#cb66-2" tabindex="-1"></a><span class="fu">head</span>(flu_df)</span></code></pre></div>
 <pre><code>##         Date Argentina Australia Austria Belgium Bolivia Brazil Bulgaria Canada Chile France Germany Hungary Japan
 ## 1 2002-12-29        NA        NA      NA      NA      NA    174       NA     NA    NA     NA      NA      NA    NA
 ## 2 2003-01-05        NA        NA      NA      NA      NA    162       NA     NA    NA     NA      NA      NA    NA
@@ -271,8 +279,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4      NA            NA      NA
 ## 5      NA            NA      NA
 ## 6      NA            NA      NA</code></pre>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="relational-databases.html#cb66-1" tabindex="-1"></a>dengue_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/relational_databases/data/dengue_data_db.csv&quot;</span>), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb66-2"><a href="relational-databases.html#cb66-2" tabindex="-1"></a><span class="fu">head</span>(dengue_df)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="relational-databases.html#cb68-1" tabindex="-1"></a>dengue_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;projects/relational_databases/data/dengue_data_db.csv&quot;</span>), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb68-2"><a href="relational-databases.html#cb68-2" tabindex="-1"></a><span class="fu">head</span>(dengue_df)</span></code></pre></div>
 <pre><code>##         Date Argentina Bolivia Brazil India Indonesia Mexico Philippines Singapore Thailand Venezuela
 ## 1 2002-12-29        NA   0.101  0.073 0.062     0.101     NA          NA     0.059       NA        NA
 ## 2 2003-01-05        NA   0.143  0.098 0.047     0.039     NA          NA     0.059       NA        NA
@@ -280,8 +288,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4 2003-01-19        NA   0.173  0.170 0.032     0.039  0.052          NA     0.175       NA        NA
 ## 5 2003-01-26        NA   0.146  0.138 0.040     0.112  0.048          NA     0.164       NA        NA
 ## 6 2003-02-02        NA   0.160  0.202 0.038     0.049  0.041          NA     0.163       NA        NA</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="relational-databases.html#cb68-1" tabindex="-1"></a>gapminder_df <span class="ot">&lt;-</span> gapminder</span>
-<span id="cb68-2"><a href="relational-databases.html#cb68-2" tabindex="-1"></a><span class="fu">head</span>(gapminder_df)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="relational-databases.html#cb70-1" tabindex="-1"></a>gapminder_df <span class="ot">&lt;-</span> gapminder</span>
+<span id="cb70-2"><a href="relational-databases.html#cb70-2" tabindex="-1"></a><span class="fu">head</span>(gapminder_df)</span></code></pre></div>
 <pre><code>##               country year infant_mortality life_expectancy fertility population          gdp continent
 ## 1             Albania 1960           115.40           62.87      6.19    1636054           NA    Europe
 ## 2             Algeria 1960           148.20           47.50      7.65   11124892  13828152297    Africa
@@ -297,13 +305,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5   South America
 ## 6    Western Asia</code></pre>
 <p>The <strong>flu and dengue dataframes</strong> are not tidy. Let’s make them tidy.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="relational-databases.html#cb70-1" tabindex="-1"></a><span class="co"># Making flu data tidy</span></span>
-<span id="cb70-2"><a href="relational-databases.html#cb70-2" tabindex="-1"></a></span>
-<span id="cb70-3"><a href="relational-databases.html#cb70-3" tabindex="-1"></a>flu_tidy <span class="ot">&lt;-</span> flu_df <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&#39;Argentina&#39;</span><span class="sc">:</span><span class="st">&#39;Uruguay&#39;</span>), <span class="at">names_to =</span> <span class="st">&quot;country&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;cases&quot;</span>)</span>
-<span id="cb70-4"><a href="relational-databases.html#cb70-4" tabindex="-1"></a></span>
-<span id="cb70-5"><a href="relational-databases.html#cb70-5" tabindex="-1"></a>flu_tidy <span class="ot">&lt;-</span> <span class="fu">separate</span>(flu_tidy, Date, <span class="at">into =</span>  <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>))</span>
-<span id="cb70-6"><a href="relational-databases.html#cb70-6" tabindex="-1"></a></span>
-<span id="cb70-7"><a href="relational-databases.html#cb70-7" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(flu_tidy))</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="relational-databases.html#cb72-1" tabindex="-1"></a><span class="co"># Making flu data tidy</span></span>
+<span id="cb72-2"><a href="relational-databases.html#cb72-2" tabindex="-1"></a></span>
+<span id="cb72-3"><a href="relational-databases.html#cb72-3" tabindex="-1"></a>flu_tidy <span class="ot">&lt;-</span> flu_df <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&#39;Argentina&#39;</span><span class="sc">:</span><span class="st">&#39;Uruguay&#39;</span>), <span class="at">names_to =</span> <span class="st">&quot;country&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;cases&quot;</span>)</span>
+<span id="cb72-4"><a href="relational-databases.html#cb72-4" tabindex="-1"></a></span>
+<span id="cb72-5"><a href="relational-databases.html#cb72-5" tabindex="-1"></a>flu_tidy <span class="ot">&lt;-</span> <span class="fu">separate</span>(flu_tidy, Date, <span class="at">into =</span>  <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>))</span>
+<span id="cb72-6"><a href="relational-databases.html#cb72-6" tabindex="-1"></a></span>
+<span id="cb72-7"><a href="relational-databases.html#cb72-7" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(flu_tidy))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -359,13 +367,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="relational-databases.html#cb71-1" tabindex="-1"></a><span class="co"># Making dengue data tidy</span></span>
-<span id="cb71-2"><a href="relational-databases.html#cb71-2" tabindex="-1"></a></span>
-<span id="cb71-3"><a href="relational-databases.html#cb71-3" tabindex="-1"></a>dengue_tidy <span class="ot">&lt;-</span> dengue_df <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;Argentina&quot;</span><span class="sc">:</span><span class="st">&quot;Venezuela&quot;</span>), <span class="at">names_to =</span> <span class="st">&quot;country&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;cases&quot;</span>)</span>
-<span id="cb71-4"><a href="relational-databases.html#cb71-4" tabindex="-1"></a></span>
-<span id="cb71-5"><a href="relational-databases.html#cb71-5" tabindex="-1"></a>dengue_tidy <span class="ot">&lt;-</span> <span class="fu">separate</span>(dengue_tidy, Date, <span class="at">into =</span>  <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>))</span>
-<span id="cb71-6"><a href="relational-databases.html#cb71-6" tabindex="-1"></a></span>
-<span id="cb71-7"><a href="relational-databases.html#cb71-7" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(dengue_tidy))</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="relational-databases.html#cb73-1" tabindex="-1"></a><span class="co"># Making dengue data tidy</span></span>
+<span id="cb73-2"><a href="relational-databases.html#cb73-2" tabindex="-1"></a></span>
+<span id="cb73-3"><a href="relational-databases.html#cb73-3" tabindex="-1"></a>dengue_tidy <span class="ot">&lt;-</span> dengue_df <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;Argentina&quot;</span><span class="sc">:</span><span class="st">&quot;Venezuela&quot;</span>), <span class="at">names_to =</span> <span class="st">&quot;country&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;cases&quot;</span>)</span>
+<span id="cb73-4"><a href="relational-databases.html#cb73-4" tabindex="-1"></a></span>
+<span id="cb73-5"><a href="relational-databases.html#cb73-5" tabindex="-1"></a>dengue_tidy <span class="ot">&lt;-</span> <span class="fu">separate</span>(dengue_tidy, Date, <span class="at">into =</span>  <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>))</span>
+<span id="cb73-6"><a href="relational-databases.html#cb73-6" tabindex="-1"></a></span>
+<span id="cb73-7"><a href="relational-databases.html#cb73-7" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(dengue_tidy))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
