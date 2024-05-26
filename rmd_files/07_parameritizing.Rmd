@@ -1,0 +1,130 @@
+# Parameritizing reports
+
+<div>
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 125px; float: left; margin-right: 10px;">
+  <p> The last couple of months, I have developed some skill in parameterizing reports. This skills allows me to generate dynamic, customizable reports which improves the flexibility and usability of data insights. </p>
+  <br>
+  <p> To demonstrate my skills in parameterizing reports, I have developed a project that focuses on the analysis of COVID-19 data. This project involves creating a parameterized report that displays the number of cases and deaths generated over the year for a specific country. </p>
+</div>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(here)
+library(conflicted)
+conflicts_prefer(dplyr::filter)
+conflicts_prefer(dplyr::summarize)
+```
+
+## Establishing parameters 
+
+Before we start with the data wrangling and visualization of this report. We have to establish the needed parameters *(Country, Year, Months)* for this we have to write the following code in the **YAML Header** of the report:
+
+```{r header, echo=TRUE, eval=FALSE}
+title: "COVID-19 report for `r params$country` in `r params$year`"
+output:
+  html_document:
+    theme: journal
+    highlight: tango
+params: # Establising parameters
+  country: "Netherlands"
+  year: 2022
+  months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+```
+
+After this step we can start with the importing and the wrangling of the COVID data using the given parameters
+
+## Data Import 
+
+First, we need to import the COVID-19 data from the European Centre for Disease Prevention and Control (ECDC) dataset. This dataset contains daily reports of COVID-19 cases and deaths across various countries.
+
+```{r covid data imp, echo=TRUE}
+df <- read.csv("https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv", na.strings = "", fileEncoding="UTF-8-BOM")
+
+```
+
+## Data Wrangling
+
+Next, we will process the imported data to filter it based on the parameters provided by the user. The parameters will include the country, year, and months of interest. This allows us to focus on the specific data needed for our analysis and visualizations.
+
+```{r wrangling, echo=TRUE}
+# Process data
+covid_data <- df %>% filter(countriesAndTerritories == params$country,
+                            year == params$year,
+                            month %in% params$months)
+```
+
+In this step, we use the provided parameters to filter the data. This involves:
+
+-   **Country: Selecting data for the specified country.**
+
+-   **Year: Filtering data for the given year.**
+
+-   **Months: Including only the data for the specified months.**
+
+For this project we are generating a COVID-19 report for **`r params$country`** for the year **`r params$year`** and for the months **`r paste(params$months, collapse = ', ')`**.
+
+### Summary statistics
+
+For this step we will included the next summary statistics in your report for a easier overview of the COVID-19 situation for the selected parameters:
+
+```{r stats, echo=FALSE, eval=TRUE}
+# Summary statistics of the COVID-19 cases
+summary_cases <- covid_data %>%
+  summarize(total_cases = sum(cases, na.rm = TRUE %>% round(digits = 2)),
+            average_cases = mean(cases, na.rm = TRUE %>% round(digits = 2)),
+            max_cases = max(cases, na.rm = TRUE %>% round(digits = 2)),
+            min_cases = min(cases, na.rm = TRUE %>% round(digits = 2)))
+
+summary_deaths <- covid_data %>%
+  summarize(total_deaths = sum(deaths, na.rm = TRUE %>% round(digits = 2)),
+            average_deaths = mean(deaths, na.rm = TRUE %>% round(digits = 2)),
+            max_deaths = max(deaths, na.rm = TRUE%>% round(digits = 2)),
+            min_deaths = min(deaths, na.rm = TRUE%>% round(digits = 2)))
+```
+
+We will use this statistics later in our report. After we have processed our data we can start with the plotting of the COVID cases and deaths in the given parameters
+
+## COVID-19 Cases
+
+```{r cases, echo=TRUE}
+covid_data %>% ggplot(aes(x = month, y = log10(cases + 1))) +
+  geom_col(na.rm = T) +
+  scale_x_continuous(breaks = seq(1, max(12), by = 1)) +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 6)) +
+    labs(title = paste("COVID-19 Cases in", params$country, "in", params$year),
+       x = "Months",
+       y = "Number of Cases (Log 10 Scale)")
+```
+
+### Summary Statistics
+
+-   **Total COVID-19 cases = `r summary_cases$total_cases`**
+
+-   **Average COVID-19 cases per day = `r summary_cases$average_cases`**
+
+## COVID-19 Deaths
+
+```{r Deaths, echo=TRUE}
+covid_data %>% ggplot(aes(x = month, deaths)) +
+  geom_col(na.rm = T) +
+  scale_x_continuous(breaks = seq(1, max(12), by = 1)) +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 6)) +
+    labs(title = paste("COVID-19 Deaths in", params$country, "in", params$year),
+       x = "Months",
+       y = "Number of Deaths")
+```
+
+### Summary Statistics
+
+-   **Total COVID-19 deaths = `r summary_deaths$total_deaths`**
+
+-   **Average COVID-19 deaths per day = `r summary_deaths$average_deaths`**
+
+Now our report is ready to visualize COVID-19 cases and deaths for the specified parameters, along with their summary statistics. This structured approach ensures that our report is comprehensive and effectively communicates the insights from the data analysis.
+
+<div style="border: 5px dashed #FF0000; padding: 20px;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 120px; float: left; margin-right: 10px;">
+  <p> Are you interested to see the original report? Check my projects folder and search the folder "parameterized reports". You can play with this report using other parameters which will result in different plots, so feel you free to try new parameters! </p>
+</div>

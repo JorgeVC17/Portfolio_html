@@ -1,4 +1,9 @@
-# What are my plans for the future?
+# My vision of the future
+
+<h2 style="display: flex; align-items: center;">
+  <img src="https://2.bp.blogspot.com/-u6NunSYqsSo/WKJmF2_p0GI/AAAAAAAAHP4/y35k51EXAwgmK7-Twv1gCMY1K0mBT3YTwCLcB/s400/Pikachu%2BConfused%2B1.jpg" style="width: 75px; margin-right: 10px;" />
+  What are my plans for the future?
+</h2>
 
 In the past year, I have found that one of my many passions is programming and I mean programming with focus in the world of data analysis and machine learning techniques. For this reason I would like to keep developing and improving this skills. 
 
@@ -6,7 +11,10 @@ I see myself in the future working as freelancer analyzing and communicating dat
 
 To reach this goal I want to try in every free time that I have to learn a new machine learning technique or library that helps me to communicate easier and better the data that I have analyzed. For this reason my plan for my free schedule is to learn another machine-learning technique. The machine-learning technique that I want to learn is "Computer Vision". I think that this machine-learning technique will be incredibly valuable in the future and for this reason I want to train an algorithm to identify rats. If I succeed the next step will be train an algorithm to identify if a rat have stress or if it's in an optimal state.
 
-## What is my plan for the free schedule?
+<h2 style="display: flex; align-items: center;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" style="width: 75px; margin-left: 10px;" />
+  What are my plans for my free schedule?
+</h2>
 
 In the future, I really want to work in "AI modeling." I love learning about different machine learning techniques, and I believe that these techniques going to be crucial for the job market. That's why I want to learn more about machine learning technique **Computer vision**. Because I love the concept behind computer vision. It's like teaching computers to recognize objects, understand scenes, and maybe even make decisions based on what they "see."
 

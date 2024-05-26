@@ -1,5 +1,5 @@
 ---
-title: 'Portfolio'
+title: 'Portfolio' 
 author: "Hello there! I'm Jorge Vargas Centeno and this is my portfolio where you can explore and visualize my multiple projects in R, Python and multiple machine learning techniques."
 site: bookdown::bookdown_site
 output: 
@@ -21,6 +21,10 @@ documentclass: book
 link-citations: yes
 new_session: yes
 description: "Welcome to my portfolio"
+params: # Establising parameters
+  country: "Netherlands"
+  year: 2022
+  months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 ---
 ```{r setup index, echo=FALSE, message=FALSE, warning=FALSE}
 library(bookdown)
@@ -29,10 +33,12 @@ library(bookdown)
 
 # Introduction
 
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Findoanalytica.com%2Fstatic%2Fimages%2Fdata-science-4.gif&f=1&nofb=1&ipt=f7b18abb5973fabed1ed93a6202c970c6b4a49f5a71060b06ddf4b19f4377cba&ipo=images)
+
 Since I was a kid, I knew that I was a curious person. I always wanted to learn something new, something interesting, something that really makes me happy. For all this reasons I’ve have various experiences and works where I develop multiples skills and knowledge.  
 
 I am currently studying Life Sciences: Medische en Biologische Onderzoek at Hogeschool Utrecht, during which I’ve found a blend of personal interests and professional goals of mine. I enjoy learning about how the human system works and different research methods and articles, as well as the practice lessons where I learned various techniques and skills that are relevant in the medical research world.
 
-At the start of the current school year, I started the minor “Big Data & Design”. During this minor I learned to programming in python to communicate statistical information over the impact of data in our world. I also learned various Machine Learning techniques such as Computer Vision, Classification algorithms and Generative AI and I develop multiple design skills in programs such as Figma where I learned the basic concepts of UI/UX design and the importance of design behind the development of applications and start-up ideas. After this minor I choose to specialise in Data Science, where I learn to programming in R and Bash to communicate statistical information about medical and scientific researches. During this specialization I developed skills such as Next Generation Sequencing techniques, RNA-sequencing, and metagenomics. 
+At the start of the current school year, I started the minor “Big Data & Design”. During this minor I learned to programming in python to communicate statistical information over the impact of data in our world. I also learned various Machine Learning techniques such as Classification algorithms and Generative AI and I develop multiple design skills in programs such as Figma where I learned the basic concepts of UI/UX design and the importance of design behind the development of applications and start-up ideas. After this minor I choose to specialise in Data Science, where I learn to programming in R and Bash to communicate statistical information about medical and scientific researches. During this specialization I developed skills such as Next Generation Sequencing techniques, RNA-sequencing, and metagenomics. 
 
 Besides my academic journey I’ve made some experience as Volunteer Social Worker by The Mall Jongerenwerk Gorinchem, where I mastered skills such as communication and presentation of  obtain results to parents and schools, organization of multiple activities, projects and events. I also have learned how to solve complex problems and situations. I also learn how to react to complex emotional situations.

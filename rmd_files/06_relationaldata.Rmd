@@ -1,0 +1,107 @@
+
+```{r setup 6, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dslabs)
+library(readxl)
+library(ggplot2)
+library(here)
+library(stringr)
+library(RPostgreSQL)
+library(conflicted)
+conflicts_prefer(dplyr::filter)
+```
+
+# Relational databases
+
+## Loading data
+
+```{r loading data, echo=TRUE, message=FALSE}
+
+flu_df <- read.csv(here("projects", "relational_databases", "data", "flu_data_db.csv"), header = TRUE , sep = ",", )
+head(flu_df)
+
+dengue_df <- read.csv(here("projects", "relational_databases", "data", "dengue_data_db.csv"), header = TRUE, sep = ",")
+head(dengue_df)
+
+gapminder_df <- gapminder
+head(gapminder_df)
+
+```
+
+
+The **flu and dengue dataframes** are not tidy. Let's make them tidy.
+
+```{r Tidy df, echo=TRUE, message=FALSE}
+# Making flu data tidy
+
+flu_tidy <- flu_df %>% pivot_longer(cols = c('Argentina':'Uruguay'), names_to = "country", values_to = "cases")
+
+flu_tidy <- separate(flu_tidy, Date, into =  c("year", "month", "day"))
+
+
+
+# Making dengue data tidy
+
+dengue_tidy <- dengue_df %>% pivot_longer(cols = c("Argentina":"Venezuela"), names_to = "country", values_to = "cases")
+
+dengue_tidy <- separate(dengue_tidy, Date, into =  c("year", "month", "day"))
+
+corrections <- c("South.Africa" = "South Africa",
+                  "United.States" = "United States",
+                  "New.Zealand" = "New Zealand")
+
+flu_tidy$country <- str_replace_all(flu_tidy$country, corrections)
+
+dengue_tidy$country <- str_replace_all(dengue_tidy$country, corrections)
+
+knitr::kable(head(flu_tidy))
+
+knitr::kable(head(dengue_tidy))
+
+```
+
+Now that we have made our data tidy, let's export this data to use it and manipulate it with SQL
+
+## Creating a database (SQL) 
+
+Before we start with the data manipulation of our datasets, we have to create a database to store our datasets. We can create a database using the following code in our SQL console
+
+```{r database, echo=TRUE, eval=FALSE}
+CREATE DATABASE workflowsdb;
+```
+
+After creating our database we can export our datasets with the following code:
+
+```{r export, echo=TRUE, eval=FALSE}
+# Insert the tables into the database
+dbWriteTable(con, "dengue_tidy", dengue_tidy, row.names = FALSE, overwrite = TRUE)
+dbWriteTable(con, "flu_tidy", flu_tidy, row.names = FALSE, overwrite = TRUE)
+dbWriteTable(con, "gapminder", gapminder_df, row.names = FALSE, overwrite = TRUE)
+```
+After exporting our datasets we have to read the generated tables in our database. On this way we can manipulate the data to perform some inner joins.
+
+```{r reading, echo=TRUE, eval=FALSE}
+# Reading the tables in the database
+dengue_tidy <- dbReadTable(con, "dengue_tidy")
+flu_tidy <- dbReadTable(con, "flu_tidy")
+gapminder_clean <- dbReadTable(con, "gapminder")
+```
+
+Now that we have read our table we can perform some inner joins to compile our three datasets *(Dengue, Flu, Gapminder)* in one **dataset**. For this we will use the variables *Year* and *Country*.
+
+```{r joining, echo=TRUE, eval=FALSE}
+# Joining datasets by year and country
+
+complete_join <- dengue_tidy %>%
+  inner_join(flu_tidy, by = c("country", "year")) %>%
+  inner_join(gapminder, by = c("country", "year"))
+```
+
+After joining our three datasets *(Dengue, Flu, Gapminder)* in one **dataset**. We have to save the joined table in the dataset.
+
+```{r saving, echo=TRUE, eval=FALSE}
+dbWriteTable(con, "complete_join", complete_join, row.names = FALSE, overwrite = TRUE)
+
+```
+

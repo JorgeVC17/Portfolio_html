@@ -1,5 +1,13 @@
+# Bioinformatics skills
 
-# RNA Sequencing
+<div>
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 170px; float: left; margin-right: 10px;">
+  <p> My journey in bioinformatics has been driven by a passion for understanding the complexities of biological data and translating it into meaningful insights. </p>
+  <p> Throughout my career, I have worked on two projects that have allowed me to apply and test my skills. From analyzing RNA-seq data to explore gene expression patterns in disease models, to studying microbial communities in diverse environments. </p>
+</div>
+
+
+## RNA Sequencing
 
 ```{r setup 2, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -13,7 +21,7 @@ library(gridExtra)
 library(png)
 ```
 
-## Data Structure:
+### Data Structure:
 
 The data structure of this project is the next one:
 
@@ -23,9 +31,9 @@ The data structure of this project is the next one:
 
 **Note 2:** The language used in this is project is **Dutch**
 
-## Onderdeel 1:
+### Onderdeel 1
 
-### Introductie
+#### Introductie
 
 **Autoren:** Carissa Eijking en Jorge Vargas Centeno
 
@@ -35,13 +43,13 @@ Fibroblasten kunnen worden omgezet naar geïnduceerde pluripotente stamcellen (i
 
 Voor deze opdracht maken we gebruik van gepubliceerde data waarin fibroblasten van een proefpersoon werden behandeld met een *controle transcriptiefactor (BCLXL)* of de *transcriptiefactor (ONECUT2)*. Van ONECUT2 wordt vermoed dat het fibroblasten naar hersencellen kan omzetten. Er werden verschillende RNA-seq datasets voor elke fibroblast gegenereerd, waarbij elke conditie *(celtype)* in duplo werd gemeten.
 
-### Experiment
+##### Experiment
 
-#### Onderzoeksvraag
+##### Onderzoeksvraag
 
 **Wat zijn de verschillen in genexpressie tussen BCLXL behandelde fibroblasten en ONECUT2 behandelde fibroblasten?**
 
-#### Informatie over het experiment
+##### Informatie over het experiment
 
 **Cel type:** **Fibroblasten uit de huid van de proef persoon**
 
@@ -51,7 +59,7 @@ Voor deze opdracht maken we gebruik van gepubliceerde data waarin fibroblasten v
 
 **Sequencing machine:** Illumina NextSeq 500
 
-#### Samples
+##### Samples
 
 ```{r Samples tabel, echo=FALSE, message=FALSE, eval=FALSE}
 samples <- read_csv(here::here("projects/rna_sequencing/onecut_sampledata_OC2.csv"))
@@ -59,7 +67,7 @@ samples <- read_csv(here::here("projects/rna_sequencing/onecut_sampledata_OC2.cs
 knitr::kable(head(samples))
 ```
 
-### Resultaten van de fastQC html rapporten
+#### Resultaten van de fastQC html rapporten
 
 ```{r fastQC html rapporten, echo=FALSE, fig.height=3, out.width= '100%', fig.cap="Fig. 1: Kwaliteit distributie: links is de per base quality zichtbaar van de forward read en rechts van de Reverse read. De Phred scores gaan van 0 tot 36." }
 R1_quality <-  rasterGrob(as.raster(readPNG(here::here("projects/rna_sequencing/data/images/SRR7866699_1_fastqc_quality.png"))))
@@ -70,16 +78,16 @@ grid.arrange(R1_quality, R2_quality, ncol=2, top=textGrob("Per base quality dist
 
 **Conclusie:** De forward en reverse reads bevatten gemiddelde Phred scores, blauwe lijn, van >30 en geen sequences van slechte kwaliteit. Dit indiceert dat de kans waarop een verkeerde nucleotide is weergegeven kleiner is dan 99,9%. De reads zijn dus van **voldoende kwaliteit** en een alignment kan worden uitgevoerd.
 
-## Onderdeel 2:
+### Onderdeel 2
 
-### Count table
+#### Count table
 
 De alignment van de dataset met het referentiegenoom is al uitgevoerd. De ontstane bam-bestanden geven voor alle RNA-seq fragmenten de genomische locatie in het referentie genoom weer en bevatten de alignment scores en kunnen hierdoor gebruikt worden om te bepalen welke genen tot expressie zijn gebracht. 
 Door gebruik van de bam-bestanden, willen we tellen voor elk gen hoeveel fragmenten uitlijnen tegenover dat gen in het BCLXL behandelde monster of ONECUT behandelde monster. Dit is belangrijk voor de **differentiële expressieanalyse**, aangezien dit zal dienen als input.
 
 We kunnen deze "count" tabel maken m.b.v het Rsubread-pakket: **featureCounts().**
 
-#### Count tabel
+##### Count tabel
 
 ```{r Count table, eval=FALSE}
 # Maak een object met de directory van bam bestanden
@@ -108,7 +116,7 @@ read_counts <- featureCounts(
 
 Nu dat de count tabel is gemaakt, kan de statistieke analyse worden uitgevoerd.
 
-#### Count tabel (statistieken)
+##### Count tabel (statistieken)
 
 ```{r Count Statistieken, echo=TRUE, message=FALSE, eval=FALSE}
 #Load read counts
@@ -155,9 +163,9 @@ counts_stats_t %>% ggplot(aes(x=bamfile, y=perc_assign_frags,
 
 **Discussie:** Een mogelijk reden voor deze lage percentages gebonden fragmenten, is een mogelijke contaminatie van DNA in de monsters tijdens de uitvoering van dit experiment. Dit zal zorgen dat een redelijke aantal RNA fragmenten aan dit contaminatie DNA binden, waardoor ze niet correct kunnen worden geïnterpreteerd als *toegewezen fragmenten.* Ook kan het zijn dat dit DNA juist gezien wordt als RNA dat zich niet kon uitlijnen tegenover het referentie genoom. Dit verlaagt dan ook het percentage toegewezen fragmenten.
 
-### DESeq2 analyse
+#### DESeq2 analyse
 
-### Omzetten van de "count tabel" naar een DESeq object
+##### Omzetten van de "count tabel" naar een DESeq object
 
 Voordat de functies in het DESeq2-pakket gebruikt kunnen worden, moet eerst de "count tabel" omgezet worden naar een DESeq-object.
 
@@ -169,14 +177,14 @@ Hiervoor zijn de volgende "inputs" nodig:
 
 3.  Een formule die de experimentele opzet gedetailleerd.(Dus welke monsters moeten worden vergeleken om het verschil in genexpressieniveaus te vinden).
 
-#### 1. "Count matrix" verkrijgen
+##### 1. "Count matrix" verkrijgen
 
 ```{r Count matrix, echo=TRUE, message=FALSE, eval=FALSE}
 # Count matrix
 count_matrix <- counts$counts
 ```
 
-#### 2. Creëren van een datafram met metadata
+##### 2. Creëren van een datafram met metadata
 
 ```{r Metadata, echo=TRUE, message=FALSE, eval=FALSE}
 #Import sample data
@@ -196,7 +204,7 @@ colnames(count_matrix) == rownames(metadata)
 
 ```
 
-#### 3. Creëren van een formule met experimentele opzet
+##### 3. Creëren van een formule met experimentele opzet
 
 ```{r Formule, echo=TRUE, message=FALSE, eval=FALSE}
 #Creëert een kolom met de test conditie
@@ -208,7 +216,7 @@ metadata$treatment <- metadata$treatment %>% factor(levels = c("BCLXL", "ONECUT2
 
 Alle "inputs" zijn gegenereerd, waardoor het DESeqDataset object gemaakt kan worden.
 
-#### Maak een DESeq object
+##### Maak een DESeq object
 
 ```{r DESeq object, echo=TRUE, message=FALSE, eval=FALSE}
 #Creëert een DESeqDataset object
@@ -220,7 +228,7 @@ dds <- DESeqDataSetFromMatrix(
 
 ```
 
-### RNASeq data normaliseren
+#### RNASeq data normaliseren
 
 Voordat de kwaliteit van RNA-sequencing data gecontroleerd kan worden, moet de data genormaliseerd worden. Normalisatie van data is belangrijk, omdat het helpt om de variabiliteit in de data te corrigeren en ervoor te zorgen dat de analyses juist zijn. Het maakt het ook makkelijker om te zien welke genen upgereguleerd of downgereguleerd worden na de verschillende behandelingen, in dit geval: *"Fibroblasten behandeld met BCLXL"* en *"Fibroblasten behandeld met ONECUT2"*
 
@@ -228,11 +236,11 @@ Voordat de kwaliteit van RNA-sequencing data gecontroleerd kan worden, moet de d
 dds_normalized <- rlog(dds)
 ```
 
-## Onderdeel 3:
+### Onderdeel 3
 
-### Kwaliteitscontrole
+#### Kwaliteitscontrole
 
-#### Principal component analysis
+##### Principal component analysis
 
 Het aantal genen in deze dataset is 28.395. Dit is vrij lastig weer te geven en te analyseren. Hierdoor wordt principal component analysis *(PCA)* uitgevoerd. Het is een methode die het aantal variabelen, in dit geval de genen, te verkleinen door middel van een aantal lineaire combinaties. De grootste spreiding genen wordt dan gevangen in een eerste variabele, principal component 1 (PC1). Dit gaat dan door tot alle genen zijn samengevat. Zo kan de scheiding van de genen gebaseerd op genexpressie duidelijker weergegeven worden.
 
@@ -257,13 +265,13 @@ pca_summary
 
 -   PC4 representeert afgerond 0% van de variatie.
 
-#### Hypothese 
+##### Hypothese 
 
 1. Er wordt verwacht dat er een verschil is in genexpressie tussen de **fibroblasten behandeld met BCLXL** en de **fibroblasten behandeld met ONECUT2**. Dit zal zorgen voor een grotere afstand op de x-as tussen deze genen.
 
 2. Aangezien de gebruikte cellijn voor elke behandeling hetzelfde is, zullen er geen verschillen zijn genexpressie afkomstig door verschillende cellijnen. De afstand op de y-as zal dan klein zijn.
 
-#### Plot de principal components
+##### Plot de principal components
 
 ```{r PC1 vs PC2, echo=TRUE, eval=FALSE}
 #Maak een data frame met metadata en PCA waardes
@@ -304,7 +312,7 @@ Op basis van de resultaten van *figuur 4* kan geconclueerd worden dat er een gro
 
 Er wordt ook gezien dat er een groot verschil in de genexpressie tussen de **fibroblasten samples** is. Dit is vreemd, aangezien de behandelingen in duplo uitgevoerd zijn met de exact zelfde cellijnen en behandelingen. Hoogst waarschijnlijk is er iets mis gegaan tijdens de behandelingen van de duplo meting, zoals contaminatie. Dit kan ook het lage percentage verklaren van het aantal toegewezen fragmenten.
 
-### Differential gene expression analysis
+#### Differential gene expression analysis
 
 Er moet uiteindelijk bekeken worden wat het verschil is in genexpressie tussen *"Fibroblasten behandeld met BCLXL"* en *"Fibroblasten behandeld met ONECUT2"*. Hiervoor wordt gebruik gemaakt van een "Differential Gene Expression (DGE)" analyse. In een DGE analyse wordt gezocht naar een set genen met een ander expressie profiel ten opzichte van een andere conditie. Deze genen zijn dan "differentially expressed (DE)". Hiertoe wordt gekeken naar significantie en dus p-waarden.
 
@@ -312,7 +320,7 @@ Een p-waarde geeft weer of er een significant verschil aanwezig is tussen twee c
 
 Op basis van p-waarden alleen kan echter niet geconcludeerd worden of de expressie van genen toeneemt ( **upreguleerd** ) of afneemt ( **downreguleerd** ). Hiervoor berekent DESeq2 ook de **fold change**. De fold changes worden gerapporteerd als **log2 fold changes (LFC)**. Dat betekent dat de log2 van de fold change wordt genomen. Stel dat een gen een 4x verhoogde expressie ( **= upregulated** ) heeft in cellen behandeld met BCLXL vergeleken met behandelde cellen met ONECUT2. De LFC zou dan log2(4) = 2 zijn. Op dezelfde manier geeft een LFC van 2 een 4x (2\^2) toename in genexpressie aan in de BCLXL behandelde cellen.
 
-### Uitvoering van DGE analyse
+#### Uitvoering van DGE analyse
 
 ```{r DGE analyse, echo=TRUE, message=FALSE, eval=FALSE}
 # Uitvoer DGE analyse
@@ -334,11 +342,11 @@ summary(fibroblasten_dge_results)
 
 Met deze samenvatting kan gezien worden dat ongeveer 1753 genen upgereguleerd zijn en ongeveer 939 genen downreguleerd zijn als gevolg van de behandeling van fibroblasten met ONECUT2 ten opzichte van BCLXL.
 
-### Visualisatie van de DGE resultaten.
+#### Visualisatie van de DGE resultaten.
 
 Om de resultaten van de DGE analyse te visualiseren, worden gebruik gemaakt van volcano plots en heatmaps.
 
-#### Volcano Plots
+##### Volcano Plots
 
 In deze grafiek worden de significant verschillende genen, met een padj \< 0.01, onderscheiden worden door een donkeroranje kleur. De naam van het meest significante upgereguleerde gen wordt ook toegevoerd.
 
@@ -381,7 +389,7 @@ fibroblasten_dge_plotting %>%
 
 ```
 
-#### Heatmaps
+##### Heatmaps
 
 Een heatmap wordt gebruikt om te zien welke genen zijn *up- en downgereguleerd* tijdens het *transdifferentiatie proces*. Hiervoor worden eerst de **top 5 up- en downgereguleerde genen** geselecteerd en vervolgens geplot in een heatmap.
 
@@ -408,13 +416,13 @@ colnames(count_values) <- colData(dds)$treatment
 pheatmap(count_values, scale = "row", show_rownames = TRUE)
 ```
 
-## Onderdeel 4:
+### Onderdeel 4
 
-### Ontdekt welke genen veranderen
+#### Ontdekt welke genen veranderen
 
 De **top 5 up- en downgereguleerde genen** zijn nu gevonden. Echter zijn alleen de *Entrez-identificatienummers* voor deze genen zichtbaar. Aangezien dit niet veel informatie verschaft, worden de gen symbolen aangegeven door middel van de Entrex-identificatienummers m.b.v de *mapIds() functie*.
 
-#### mapIds(functie)
+##### mapIds(functie)
 
 Deze functie wordt gebruikt om identificatienummers van genen of eiwitten om te zetten naar andere identificatienummers of annotaties, zoals het omzetten van Entrez-genen naar symbolen of omgekeerd.
 
@@ -464,7 +472,7 @@ pheatmap(count_values, scale = "row", show_rownames = TRUE)
 Met de verkregen heatmap is duidelijk zichtbaar welke genen **up- of downgereguleerd* zijn. Echter is hieruit niet duidelijk welke biologische processen geassocieerd met de genen up- of downgereguleerd zijn. Hiertoe wordt een GO enrichment term uitgevoerd op de 10 genen.
 
 
-### Cytogenetische band functie
+#### Cytogenetische band functie
 
 ```{r Cytogenetische band, echo=TRUE, message=FALSE, eval=FALSE}
 
@@ -488,14 +496,19 @@ cytogenbandToEntrex("7p21.2")
 
 ```
 
+<div style="border: 5px dashed #FF0000; padding: 20px;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 120px; float: left; margin-right: 10px;">
+  <p> Are you interested in using this function? Check my R package with this and even more functions! ->  https://github.com/JorgeVC17/myGOterms </p>
+  <p> You can also install my R package typing the following code in your console -> devtools::install_github('https://github.com/JorgeVC17/myGOterms') </p>
+</div>
 
-### Uitvoer GO term enrichment analyse
+#### Uitvoer GO term enrichment analyse
 
 Zoals eerder aangegeven, ligt de interesse niet alleen bij welke genen zijn up- en downgereguleerd na behandeling, maar welke biologische processen deze genen beïnvloeden. Hiertoe wordt een **GO tern enrichment analyse** uitgevoerd. Er wordt hiervoor gebruik gemaakt van de speciale software *GOstats-pakket* in R en functie *hyperGtest()*. Zo wordt een duidelijk beeld geschetst tussen te verschillen in genexpressie in fibroblasten na behandeling met ONECUT2 of BCLXL.
 
 Om herhalende code te voorkomen, is een functie ontworpen om de **GO term enrichment analyse** voor up- en downgereguleerde genen makkelijker en sneller uit te voeren.
 
-#### GO term enrichment analyse functie
+##### GO term enrichment analyse functie
 
 ```{r GO term functie, echo=TRUE, message=FALSE, eval=FALSE}
 # GO term enrichment analysis functie
@@ -538,9 +551,16 @@ goTermAnalysis_fibroblasten <- function(dge_results, upregulated, lfc_value, pad
 
 ```
 
+<div style="border: 5px dashed #FF0000; padding: 20px;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 120px; float: left; margin-right: 10px;">
+  <p> Are you interested in using this function? Check my R package with this and even more functions! ->  https://github.com/JorgeVC17/myGOterms </p>
+  <p> You can also install my R package typing the following code in your console -> devtools::install_github('https://github.com/JorgeVC17/myGOterms') </p>
+</div>
+
+
 Vervolgens wordt de functie uitgevoerd voor upgereguleerde genen en downgereguleerde genen met een LFC van 1 en -1 en een padj van <0.01.
 
-#### Top 20 Upgereguleerde genen
+##### Top 20 Upgereguleerde genen
 
 ```{r Upgereguleerde genen, echo=TRUE, eval=FALSE}
 #Upregulated
@@ -574,7 +594,7 @@ goterm_analysis_up_summary_top20 %>% ggplot(aes(x = Term, y = -log10(padj))) +
 
 Na het uitvoeren van de *GO term enrichment analyse* voor upgereguleerde genen, is zichtbaar in *figuur 5* dat na behandeling met transcriptiefactor *ONECUT2* genen worden upgereguleerd die betrokken zijn bij onder andere de volgende biologische processen: Ontwikkeling van zenuwstelsel en organen (Development), chemische signalering (Signaling), DNA- en RNA-transcriptie (Transcription) en **cel apoptose**.
 
-#### Top 20 Downgereguleerde genen
+##### Top 20 Downgereguleerde genen
 
 ```{r Downgereguleerde genen, echo=TRUE, eval=FALSE}
 #Downregulated
@@ -607,7 +627,7 @@ goterm_analysis_down_summary_top20 %>% ggplot(aes(x = Term, y = -log10(padj))) +
 
 Na het uitvoeren van de *GO term enrichment analyse* voor downgereguleerde genen, is zichtbaar in *figuur 6* dat na behandeling met transcriptiefactor *ONECUT2* genen worden downgereguleerd die betrokken zijn bij onder andere de volgende biologische processen: Het ontwikkelen van structuur van weefsels en cellen (Development),  morfogenese van de cel-structuur (Morphogenesis), cel beweging en motiliteit.
 
-### Conclusie
+#### Conclusie
 
 Op basis van de verkregen resultaten van de RNA-sequencing analyse kan er geconcludeerd worden dat **er een significant verschil is in genexpressie en biologische functies tussen fibroblasten behandeld met *BCLXL* en *ONECUT2* **. Dit wordt aangetoond door de resultaten van de **"Differential Gene Expression" analyse ** en de **"GO term enrichment" analyse**.
 
@@ -620,7 +640,311 @@ Met behulp van *figuur 7* is zichtbaar dat de biologische functies die downgereg
 Op basis van de verkregen resultaten van de **"GO term enrichment"** analyse kan ook geconcludeerd worden dat fibroblasten behandeld met ONECUT2 van structuur veranderen en dus ook van functie. Dus **fibroblasten behandeld met ONECUT2 maken zich klaar om hersencellen te worden, echter is er ook een risico dat fibroblasten een apoptotisch proces ondergaan door complicaties tijdens het transdifferentiatie proces**.
 
 
-### Discussie
+#### Discussie
 
 Het is belangrijk op te merken dat de betrouwbaarheid van de resultaten van deze RNA sequencing analyse verminderd wordt door de resultaten van *figuren 1 en 3*. In figuur 1 blijkt het aantal toegewezen fragmenten laag en uit figuur 3 blijkt dat er een verschil aanwezig is tussen de duplo metingen van de behandelingen. Dit kan mogelijk ontstaan zijn door contaminatie tijdens het onderzoek. Dit kan invloed hebben gehad op de interpretatie van de up- en downregulatie van de biologische processen. Het wordt aangeraden om hierdoor het experiment te herhalen.
+
+## Metagenomics
+
+```{r setup 3, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(grid)
+library(ggplot2)
+library(here)
+library(gridExtra)
+```
+
+
+### Data Structure:
+
+The data structure of this project is the next one:
+
+![Datatree of the "Metagenomics" project](~/R/html_portfolio/rmd_files/data_trees/metagenomics.png)
+
+**Note 1:** The data need it for this project is property of **"Hogeschool Utrecht**, thus due copyright and privacy laws I'm not avaible to share most of data used for this experiment.But you can still read the documentation and code of this experiment.
+
+**Note 2:** The language used in this is project is **Dutch**
+
+### Onderdeel 1
+
+#### FastQC genereren
+
+```{bash, engine.opts='-i', warning = FALSE, eval =FALSE}
+# activate environment
+conda activate meta
+
+# perform FastQC analysis
+fastqc -o ~/metagenomics/data/fastqc_output
+/home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R1_001.fastq.gz
+fastqc -o ~/metagenomics/data/fastqc_output
+/home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R2_001.fastq.gz
+
+# deactivate conda virtual environment
+conda deactivate
+```
+
+#### Per base sequencing quality
+
+```{r, echo=FALSE, message = FALSE, eval=FALSE, fig.height=3, out.width= '100%', fig.cap="Fig. 1: Quality distribution: Right-side) Foward read quality scores range from 0 to 40 on the Phred scale. All bases for all reads have very high quality (>30), indicating that our reads have an accuracy of >99,9%. Left-side)" }
+
+library(png)
+library(grid)
+library(gridExtra)
+
+img1 <-  rasterGrob(as.raster(readPNG(here::here("~/metagenomics/data/images/fastqc_MOCK2_R1_per_base_quality.png"))))
+img2 <-  rasterGrob(as.raster(readPNG(here::here("~/metagenomics/data/images/fastqc_MOCK2_R2_per_base_quality.png"))))
+grid.arrange(img1, img2, ncol=2, top=textGrob("Per base quality distribution of forward (right) and reverse (left) reads", gp=gpar(fontsize=10,font=8)))
+```
+
+### Onderdeel 2
+
+#### Kraken2 uitvoeren
+
+```{bash, engine.opts='-i', eval=FALSE}
+# activate environment
+conda activate meta
+
+kraken2 --db /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE/ --threads 2 --paired --gzip-compressed --output ~/metagenomics/mock2/mock2.kraken --report ~/metagenomics/data/mock2/mock2.report --use-names /home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R1_001.fastq.gz /home/daur2/metagenomics/formative_data/HU2_MOCK2_L001_R2_001.fastq.gz
+
+conda deactivate
+```
+
+Er zijn 65915836 sequences verwerkt, waarvan 59541308 zijn geklassificeerd en 6374528 niet zijn geklassificeerd. De procedure heeft 963.827 seconden, 16,06 minuten, geduurd (4103.4 Kseq/m, 1210.17 Mbp/m). 
+
+#### Bracken uitvoeren
+
+```{bash, engine.opts='-i', eval=FALSE}
+# activate environment
+conda activate meta
+
+bracken -d /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE/ -i ~/metagenomics/data/mock2/mock2.report -o ~/metagenomics/data/bracken/mock2.bracken
+
+conda deactivate
+```
+
+#### Kraken-biom uitvoeren
+
+```{bash, engine.opts='-i', eval=FALSE}
+# activate environment
+conda activate meta
+
+kraken-biom ~/metagenomics/data/mock2/mock2_bracken_species.report --fmt json -o ~/metagenomics/data/mock2/mock2_bracken_species.biom
+
+conda deactivate
+```
+
+### Onderdeel 3
+
+```{r, include=TRUE, message=FALSE, warning=FALSE}
+# load nessecary packages 
+library("phyloseq")
+```
+
+```{r, include=TRUE}
+library("ggplot2")
+```
+
+#### Read count visualisatie per kingdom
+
+```{r, echo=TRUE, warning = FALSE,}
+data_mock2 <- here::here("projects/metagenomics/data/mock2/mock2_bracken_species.biom")
+merged_metagenomes_mock2 <- import_biom(data_mock2)
+```
+
+
+```{r, echo=TRUE, warning = FALSE}
+# Verwijder taxonomische informatie uit waarden/ verwijder eerste vier tekens
+merged_metagenomes_mock2@tax_table@.Data <-
+  substring(merged_metagenomes_mock2@tax_table@.Data, 4)
+
+# Hernoem kolomkoppen naar informatieve indeling
+colnames(merged_metagenomes_mock2@tax_table@.Data) <- 
+  c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+
+# Haal de aanwezige taxonomische rijken uit onze data op
+unique(merged_metagenomes_mock2@tax_table@.Data[,"Kingdom"])
+
+```
+
+Er zitten bacteriën, eukaryoten, archaea en virus genomen in de dataset. Het kan zijn dat de virus genomen in de dataset zijn gekomen door contaminatie.
+
+```{r, echo=TRUE, warning = FALSE}
+# Subset rijken (Kingdoms)
+merged_metagenomes_mock2_b <- subset_taxa(merged_metagenomes_mock2, Kingdom == "Bacteria")
+merged_metagenomes_mock2_e <- subset_taxa(merged_metagenomes_mock2, Kingdom == "Eukaryota")
+merged_metagenomes_mock2_a <- subset_taxa(merged_metagenomes_mock2, Kingdom == "Archaea")
+merged_metagenomes_mock2_v <- subset_taxa(merged_metagenomes_mock2, Kingdom == "Viruses")
+
+# Hernoemd samples
+sample_names(merged_metagenomes_mock2_b) <- "bacteria"
+sample_names(merged_metagenomes_mock2_e) <- "eukaryote"
+sample_names(merged_metagenomes_mock2_a) <- "archea"
+sample_names(merged_metagenomes_mock2_v) <- "virus"
+
+# Telt het aantal reads in totaal
+sample_sums(merged_metagenomes_mock2)
+
+# Telt het aantal reads per rijk (kingdom)
+c(sample_sums(merged_metagenomes_mock2_b), sample_sums(merged_metagenomes_mock2_e), sample_sums(merged_metagenomes_mock2_a), sample_sums(merged_metagenomes_mock2_v))
+```
+
+```{r, echo=TRUE, warning = FALSE}
+# Verzamel de rijken (kingdoms)in data frames
+data_mock2_b <- data.frame(Samples = sample_names(merged_metagenomes_mock2_b),
+                   Reads = sample_sums(merged_metagenomes_mock2_b))
+
+data_mock2_e <- data.frame(Samples = sample_names(merged_metagenomes_mock2_e),
+                   Reads = sample_sums(merged_metagenomes_mock2_e))
+
+data_mock2_a <- data.frame(Samples = sample_names(merged_metagenomes_mock2_a),
+                   Reads = sample_sums(merged_metagenomes_mock2_a))
+
+data_mock2_v <- data.frame(Samples = sample_names(merged_metagenomes_mock2_v),
+                   Reads = sample_sums(merged_metagenomes_mock2_v))
+
+# Voeg kingdom data in een dataframe
+data_mock2_t <- rbind(data_mock2_b, data_mock2_e, data_mock2_a, data_mock2_v)
+
+# Plot het aantal reads per rijk
+ggplot(data = data_mock2_t, mapping = aes(x = Samples, y = Reads, fill = Samples )) +
+  geom_col() +
+  theme_classic() +
+  ggtitle("Read count per kingdom") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  theme(axis.text.x=element_text(angle=45, hjust=1))
+```
+
+#### Visualiseren van geïdentificeerde soorten
+
+```{r, echo=TRUE, warning = FALSE}
+# Herlaad de biom-gegevens, bewerk kolomkoppen en sample name
+merged_metagenomes_mock2 <- import_biom(data_mock2)
+merged_metagenomes_mock2@tax_table@.Data <- substring(merged_metagenomes_mock2@tax_table@.Data, 4)
+colnames(merged_metagenomes_mock2@tax_table@.Data)<- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+colnames(merged_metagenomes_mock2@otu_table) <- c("mock2")
+
+# check lege labels (empty = TRUE)
+summary(merged_metagenomes_mock2@tax_table@.Data== "")
+```
+
+```{r, echo=TRUE, warning = FALSE}
+# transformeer data frame voor plotten
+glom_mock2 <- tax_glom(merged_metagenomes_mock2, taxrank = "Species")
+mock2_metagenome_species <- psmelt(glom_mock2)
+
+# Combineer genus- en soortlabels voor wetenschappelijke benaming in de plot
+mock2_metagenome_species$Species <- as.character(mock2_metagenome_species$Species)
+mock2_metagenome_species$Species <- paste(mock2_metagenome_species[,]$Genus,mock2_metagenome_species[,]$Species,  sep=" ", collapse=NULL)
+
+# Controleer labelmanipulatie
+#unique(mock2_metagenome_species$Species)
+
+id_species_mock2 <- ggplot(data=mock2_metagenome_species, aes(x=Sample, y=Abundance, fill=Species))+ 
+  geom_bar(aes(), stat="identity", position="stack")
+id_species_mock2
+```
+
+#### Optimalisatie door verwijdering van soorten met lage read counts
+
+```{r, echo=TRUE, warning = FALSE}
+mock2_metagenome_species$Species[mock2_metagenome_species$Abundance < 160000] <- "Species < 160.000 abund."
+
+id_species_mock2 <- ggplot(data=mock2_metagenome_species, aes(x=Sample, y=Abundance, fill=Species))+ 
+  geom_bar(aes(), stat="identity", position="stack")
+id_species_mock2
+```
+
+#### Normalisatie
+
+```{r, echo=TRUE, warning = FALSE}
+# Normaliseren van de read counts
+
+# transformeer read counts naar percentages
+glom_mock2 <- tax_glom(merged_metagenomes_mock2, taxrank = "Species")
+mock2_metagenome_species_percent <- psmelt(glom_mock2)
+
+# Normaliseert read counts percentages
+mock2_metagenome_species_percent$Abundance <- (mock2_metagenome_species_percent$Abundance*100)/sum(mock2_metagenome_species_percent$Abundance)
+
+# Combineert genus and species label for scientific noemen in het plot
+mock2_metagenome_species_percent$Species <- as.character(mock2_metagenome_species_percent$Species)
+mock2_metagenome_species_percent$Species <- paste(mock2_metagenome_species_percent[,]$Genus,mock2_metagenome_species_percent[,]$Species,  sep=" ", collapse=NULL)
+mock2_metagenome_species_percent$Species[mock2_metagenome_species_percent$Abundance < 0.5] <- "Species < 0.5% abund."
+#unique(mock2_metagenome_species_percent$Species)
+```
+
+```{r, echo=TRUE, warning = FALSE}
+id_species_mock2_percent <- ggplot(data=mock2_metagenome_species_percent, aes(x=Sample, y=Abundance, fill=Species))+ 
+  geom_bar(aes(), stat="identity", position="stack")
+
+# plot species identificatie
+grid.arrange(id_species_mock2, id_species_mock2_percent, ncol=2, top=textGrob("Identified species and their corresponding abundance\nread count (right) and percentage (left)\n", gp=gpar(fontsize=12,font=8)))
+```
+
+### Onderdeel 4
+
+#### Verkrijgen van compositie data
+
+```{r, echo=TRUE, warning = FALSE, eval=FALSE}
+# Verkrijgen van compositie data
+mock2_composition <- as.data.frame(read.csv('/home/daur2/metagenomics/formative_data/HU_waternet_MOCK2_composition.csv', row.names=1, sep = ";"))
+
+mock2_composition$amount <- as.numeric(gsub(",", ".", mock2_composition$amount))
+mock2_composition <- mock2_composition %>% mutate(amountP = (amount / total_volume) * 100)
+colnames(mock2_composition) <- c( "name","amount","sample_name","total_volume","amountP")
+
+# Intersect databases to collect overlap between composition and `kraken2` results
+mock2_and_composition_intersect <- mock2_metagenome_species_percent[mock2_metagenome_species_percent$Species %in% mock2_composition$name,]
+
+# collect species that are in composition and not in `kraken2` results
+`%!in%` <- Negate(`%in%`) # allow not in = !in
+comp_not_in_mock2 <- mock2_composition[mock2_composition$name %!in% mock2_metagenome_species_percent$Species,]
+
+# generate a list of species overlap between mock1 and composition
+unique(mock2_and_composition_intersect$Species)
+
+# generate a list of species that are from composition and not in mock1
+unique(comp_not_in_mock2$name)
+```
+
+#### Vergelijking van resultaten met compositie
+
+```{r, echo=TRUE, warning = FALSE, eval=FALSE}
+# compare labels between `kraken2` subset and composition and store percent values when labels are identical
+mock2_and_composition_intersect$amountP <- NA
+for (m2_label in mock2_and_composition_intersect$Species){
+  for (m2c_label in mock2_composition$name){
+    if(m2_label == m2c_label){
+      mock2_and_composition_intersect$amountP[mock2_and_composition_intersect$Species == m2_label] <- mock2_composition$amountP[mock2_composition$name == m2c_label]
+    }
+  }
+}
+```
+
+```{r, echo=TRUE, warning = FALSE, eval=FALSE}
+# load library for melting data frame
+library(reshape2)
+
+# collect plotting info and pretify layout format
+#colnames(mock1_and_composition_intersect)
+mock2_and_comp_plotting_data           <- mock2_and_composition_intersect[,c(10,3,11)]
+colnames(mock2_and_comp_plotting_data) <- c("species", "k_abundance", "c_abundance")
+
+mock2_and_comp_plotting_data       <- melt(mock2_and_comp_plotting_data, id.var = "species")
+mock2_and_comp_plotting_data$value <- as.numeric(mock2_and_comp_plotting_data$value)
+
+ggplot(mock2_and_comp_plotting_data, aes(x = species, y = value, fill = variable)) + 
+  geom_bar(aes(), stat="identity", position="dodge") +
+  theme_classic() +
+  ylab("Abundance (%)") +
+  xlab("") +
+  ggtitle("Abundance comparison between Kraken2 results and composition") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ylim(0,25) +
+  theme(axis.text.x = element_text(angle = -45, hjust = 0, vjust = 1)) +
+  scale_fill_manual(values=c("skyblue", "orangered"))
+```
+
+We hebben bracken gebruikt om de waardes in te schatten. Het kan daardoor zijn dat de compositie file niet overeenkomt.
 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Portfolio</title>
+  <title>Parameritizing reports | Portfolio</title>
   <meta name="description" content="Welcome to my portfolio" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Portfolio" />
+  <meta property="og:title" content="Parameritizing reports | Portfolio" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Welcome to my portfolio" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Portfolio" />
+  <meta name="twitter:title" content="Parameritizing reports | Portfolio" />
   
   <meta name="twitter:description" content="Welcome to my portfolio" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="my-vision-of-the-future.html"/>
+<link rel="prev" href="relational-databases.html"/>
+<link rel="next" href="contact.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -224,26 +224,109 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Portfolio</h1>
-<p class="author"><em>Hello there! I’m Jorge Vargas Centeno and this is my portfolio where you can explore and visualize my multiple projects in R, Python and multiple machine learning techniques.</em></p>
+<div id="parameritizing-reports" class="section level1 hasAnchor">
+<h1>Parameritizing reports<a href="parameritizing-reports.html#parameritizing-reports" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div>
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 125px; float: left; margin-right: 10px;">
+<p>
+The last couple of months, I have developed some skill in parameterizing reports. This skills allows me to generate dynamic, customizable reports which improves the flexibility and usability of data insights.
+</p>
+<br>
+<p>
+To demonstrate my skills in parameterizing reports, I have developed a project that focuses on the analysis of COVID-19 data. This project involves creating a parameterized report that displays the number of cases and deaths generated over the year for a specific country.
+</p>
 </div>
-<div id="introduction" class="section level1 hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Findoanalytica.com%2Fstatic%2Fimages%2Fdata-science-4.gif&amp;f=1&amp;nofb=1&amp;ipt=f7b18abb5973fabed1ed93a6202c970c6b4a49f5a71060b06ddf4b19f4377cba&amp;ipo=images" /></p>
-<p>Since I was a kid, I knew that I was a curious person. I always wanted to learn something new, something interesting, something that really makes me happy. For all this reasons I’ve have various experiences and works where I develop multiples skills and knowledge.</p>
-<p>I am currently studying Life Sciences: Medische en Biologische Onderzoek at Hogeschool Utrecht, during which I’ve found a blend of personal interests and professional goals of mine. I enjoy learning about how the human system works and different research methods and articles, as well as the practice lessons where I learned various techniques and skills that are relevant in the medical research world.</p>
-<p>At the start of the current school year, I started the minor “Big Data &amp; Design”. During this minor I learned to programming in python to communicate statistical information over the impact of data in our world. I also learned various Machine Learning techniques such as Classification algorithms and Generative AI and I develop multiple design skills in programs such as Figma where I learned the basic concepts of UI/UX design and the importance of design behind the development of applications and start-up ideas. After this minor I choose to specialise in Data Science, where I learn to programming in R and Bash to communicate statistical information about medical and scientific researches. During this specialization I developed skills such as Next Generation Sequencing techniques, RNA-sequencing, and metagenomics.</p>
-<p>Besides my academic journey I’ve made some experience as Volunteer Social Worker by The Mall Jongerenwerk Gorinchem, where I mastered skills such as communication and presentation of obtain results to parents and schools, organization of multiple activities, projects and events. I also have learned how to solve complex problems and situations. I also learn how to react to complex emotional situations.</p>
+<div id="establishing-parameters" class="section level2 hasAnchor">
+<h2>Establishing parameters<a href="parameritizing-reports.html#establishing-parameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before we start with the data wrangling and visualization of this report. We have to establish the needed parameters <em>(Country, Year, Months)</em> for this we have to write the following code in the <strong>YAML Header</strong> of the report:</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="parameritizing-reports.html#cb77-1" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">&quot;COVID-19 report for `r params$country` in `r params$year`&quot;</span></span>
+<span id="cb77-2"><a href="parameritizing-reports.html#cb77-2" tabindex="-1"></a>output<span class="sc">:</span></span>
+<span id="cb77-3"><a href="parameritizing-reports.html#cb77-3" tabindex="-1"></a>  html_document<span class="sc">:</span></span>
+<span id="cb77-4"><a href="parameritizing-reports.html#cb77-4" tabindex="-1"></a>    theme<span class="sc">:</span> journal</span>
+<span id="cb77-5"><a href="parameritizing-reports.html#cb77-5" tabindex="-1"></a>    highlight<span class="sc">:</span> tango</span>
+<span id="cb77-6"><a href="parameritizing-reports.html#cb77-6" tabindex="-1"></a>params<span class="sc">:</span> <span class="co"># Establising parameters</span></span>
+<span id="cb77-7"><a href="parameritizing-reports.html#cb77-7" tabindex="-1"></a>  country<span class="sc">:</span> <span class="st">&quot;Netherlands&quot;</span></span>
+<span id="cb77-8"><a href="parameritizing-reports.html#cb77-8" tabindex="-1"></a>  year<span class="sc">:</span> <span class="dv">2022</span></span>
+<span id="cb77-9"><a href="parameritizing-reports.html#cb77-9" tabindex="-1"></a>  months<span class="sc">:</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]</span></code></pre></div>
+<p>After this step we can start with the importing and the wrangling of the COVID data using the given parameters</p>
+</div>
+<div id="data-import" class="section level2 hasAnchor">
+<h2>Data Import<a href="parameritizing-reports.html#data-import" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First, we need to import the COVID-19 data from the European Centre for Disease Prevention and Control (ECDC) dataset. This dataset contains daily reports of COVID-19 cases and deaths across various countries.</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="parameritizing-reports.html#cb78-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv&quot;</span>, <span class="at">na.strings =</span> <span class="st">&quot;&quot;</span>, <span class="at">fileEncoding=</span><span class="st">&quot;UTF-8-BOM&quot;</span>)</span></code></pre></div>
+</div>
+<div id="data-wrangling" class="section level2 hasAnchor">
+<h2>Data Wrangling<a href="parameritizing-reports.html#data-wrangling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Next, we will process the imported data to filter it based on the parameters provided by the user. The parameters will include the country, year, and months of interest. This allows us to focus on the specific data needed for our analysis and visualizations.</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="parameritizing-reports.html#cb79-1" tabindex="-1"></a><span class="co"># Process data</span></span>
+<span id="cb79-2"><a href="parameritizing-reports.html#cb79-2" tabindex="-1"></a>covid_data <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(countriesAndTerritories <span class="sc">==</span> params<span class="sc">$</span>country,</span>
+<span id="cb79-3"><a href="parameritizing-reports.html#cb79-3" tabindex="-1"></a>                            year <span class="sc">==</span> params<span class="sc">$</span>year,</span>
+<span id="cb79-4"><a href="parameritizing-reports.html#cb79-4" tabindex="-1"></a>                            month <span class="sc">%in%</span> params<span class="sc">$</span>months)</span></code></pre></div>
+<p>In this step, we use the provided parameters to filter the data. This involves:</p>
+<ul>
+<li><p><strong>Country: Selecting data for the specified country.</strong></p></li>
+<li><p><strong>Year: Filtering data for the given year.</strong></p></li>
+<li><p><strong>Months: Including only the data for the specified months.</strong></p></li>
+</ul>
+<p>For this project we are generating a COVID-19 report for <strong>Netherlands</strong> for the year <strong>2022</strong> and for the months <strong>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12</strong>.</p>
+<div id="summary-statistics" class="section level3 hasAnchor">
+<h3>Summary statistics<a href="parameritizing-reports.html#summary-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For this step we will included the next summary statistics in your report for a easier overview of the COVID-19 situation for the selected parameters:</p>
+<p>We will use this statistics later in our report. After we have processed our data we can start with the plotting of the COVID cases and deaths in the given parameters</p>
+</div>
+</div>
+<div id="covid-19-cases" class="section level2 hasAnchor">
+<h2>COVID-19 Cases<a href="parameritizing-reports.html#covid-19-cases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="parameritizing-reports.html#cb80-1" tabindex="-1"></a>covid_data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> <span class="fu">log10</span>(cases <span class="sc">+</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
+<span id="cb80-2"><a href="parameritizing-reports.html#cb80-2" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">na.rm =</span> T) <span class="sc">+</span></span>
+<span id="cb80-3"><a href="parameritizing-reports.html#cb80-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="fu">max</span>(<span class="dv">12</span>), <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb80-4"><a href="parameritizing-reports.html#cb80-4" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> scales<span class="sc">::</span><span class="fu">pretty_breaks</span>(<span class="at">n =</span> <span class="dv">6</span>)) <span class="sc">+</span></span>
+<span id="cb80-5"><a href="parameritizing-reports.html#cb80-5" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;COVID-19 Cases in&quot;</span>, params<span class="sc">$</span>country, <span class="st">&quot;in&quot;</span>, params<span class="sc">$</span>year),</span>
+<span id="cb80-6"><a href="parameritizing-reports.html#cb80-6" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Months&quot;</span>,</span>
+<span id="cb80-7"><a href="parameritizing-reports.html#cb80-7" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of Cases (Log 10 Scale)&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/cases-1.png" width="672" /></p>
+<div id="summary-statistics-1" class="section level3 hasAnchor">
+<h3>Summary Statistics<a href="parameritizing-reports.html#summary-statistics-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Total COVID-19 cases = 5363131</strong></p></li>
+<li><p><strong>Average COVID-19 cases per day = 1.8241942^{4}</strong></p></li>
+</ul>
+</div>
+</div>
+<div id="covid-19-deaths" class="section level2 hasAnchor">
+<h2>COVID-19 Deaths<a href="parameritizing-reports.html#covid-19-deaths" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="parameritizing-reports.html#cb81-1" tabindex="-1"></a>covid_data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, deaths)) <span class="sc">+</span></span>
+<span id="cb81-2"><a href="parameritizing-reports.html#cb81-2" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">na.rm =</span> T) <span class="sc">+</span></span>
+<span id="cb81-3"><a href="parameritizing-reports.html#cb81-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="fu">max</span>(<span class="dv">12</span>), <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb81-4"><a href="parameritizing-reports.html#cb81-4" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> scales<span class="sc">::</span><span class="fu">pretty_breaks</span>(<span class="at">n =</span> <span class="dv">6</span>)) <span class="sc">+</span></span>
+<span id="cb81-5"><a href="parameritizing-reports.html#cb81-5" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;COVID-19 Deaths in&quot;</span>, params<span class="sc">$</span>country, <span class="st">&quot;in&quot;</span>, params<span class="sc">$</span>year),</span>
+<span id="cb81-6"><a href="parameritizing-reports.html#cb81-6" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Months&quot;</span>,</span>
+<span id="cb81-7"><a href="parameritizing-reports.html#cb81-7" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of Deaths&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/Deaths-1.png" width="672" /></p>
+<div id="summary-statistics-2" class="section level3 hasAnchor">
+<h3>Summary Statistics<a href="parameritizing-reports.html#summary-statistics-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Total COVID-19 deaths = 1854</strong></p></li>
+<li><p><strong>Average COVID-19 deaths per day = 6.3061224</strong></p></li>
+</ul>
+<p>Now our report is ready to visualize COVID-19 cases and deaths for the specified parameters, along with their summary statistics. This structured approach ensures that our report is comprehensive and effectively communicates the insights from the data analysis.</p>
+<div style="border: 5px dashed #FF0000; padding: 20px;">
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 120px; float: left; margin-right: 10px;">
+<p>
+Are you interested to see the original report? Check my projects folder and search the folder “parameterized reports”. You can play with this report using other parameters which will result in different plots, so feel you free to try new parameters!
+</p>
+</div>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="my-vision-of-the-future.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="relational-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="contact.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

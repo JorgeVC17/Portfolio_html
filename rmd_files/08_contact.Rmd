@@ -1,0 +1,22 @@
+# Contact
+
+<h3 style="display: flex; align-items: center;">
+  Are you interested in working together? Or do you have recomendations to improve my portfolio? Feel free to contact me! 
+</h3>
+
+<h3 style="display: flex; align-items: center;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F0f%2Fc4%2F1a%2F0fc41afaa7243b43cc64d086b60851db.jpg&f=1&nofb=1&ipt=328a66c25b8d94da2e293d60c061e068718fc7c6d98a1d5e6d65285d5a8f8dae&ipo=images" style="width: 150px; margin-right: 10px;" />
+  [Linkedin](https://www.linkedin.com/in/jorge-vargas-centeno/)
+</h3>
+
+<h3 style="display: flex; align-items: center;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fac%2Fe3%2F48%2Face348fd29444ac6de6ffcab3782f3f9.jpg&f=1&nofb=1&ipt=db9a8640c3c1d25bd1b62599a7fb616eec6a2b56b48506eb5a887f23ab90a4ce&ipo=images" style="width: 150px; margin-right: 10px;" />
+  [GitHub](https://github.com/JorgeVC17)
+</h3>
+
+<h3 style="display: flex; align-items: center;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fb0%2Fe4%2F02%2Fb0e4021b85ac0ce216432869a4982fb8.png&f=1&nofb=1&ipt=cb9550eea5d6f3da0f65fb4675ebd3d6c2e230a48b2ffbcee1a1005dd5d8475a&ipo=images" style="width: 150px; margin-right: 10px;" />
+  <a href="mailto:jorge-vargas2000@hotmail.com.com?subject=Inquiry">Email</a>
+</h3>
+
+

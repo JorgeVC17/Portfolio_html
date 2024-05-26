@@ -1,9 +1,18 @@
 
 # Python projects 
 
-Before I started my journey in R. I made some experience and projects in Python. During this journey I develop  the next projects
 
-## App development (Medipredict)
+<div>
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 125px; float: left; margin-right: 10px;">
+  <p> Alongside my journey in R, I gained some experience with Python and completed a few projects. Here's what I worked on: </p>
+  <br>
+</div>
+
+<h2 style="display: flex; align-items: center;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pinclipart.com%2Fpicdir%2Fbig%2F545-5450322_web-application-development-icon-web-and-app-development.png&f=1&nofb=1&ipt=bc1254e4a45c29e080d7881a27534dcbc9deac111900de978c2a175c8ea0740d&ipo=images" style="width: 75px; margin-left: 20px;" />
+  App development (Medipredict)
+</h2>
+
 
 In the past year, I developed my startup idea with two classmates: [*Pim Theunisse*](https://www.linkedin.com/in/pim-theunisse-6b7898208/) and [*Marloes Ettikhoven*](https://www.linkedin.com/in/marloes-v-7a620a135/). For this startup idea, we developed the design and algorithm for an app with the main purpose of predicting various diseases. The name of this app was **Medipredict**. For this project I had the leadership of this project group and collaborated on the training and testing of the algorithm model that this app should use. Finally I also contributed to the UI/UX design for this app. Here are the links to both the **Jupyter Notebook** and the **Figma website** where the entire development process of this app is documented:
 
@@ -11,8 +20,61 @@ In the past year, I developed my startup idea with two classmates: [*Pim Theunis
 
 -   [**Figma Website**](https://www.figma.com/proto/aohuwbCtuwOTu6i4mDiiCQ/Healthcare-Dashboard?type=design&scaling=scale-down&page-id=0%3A1&node-id=161-255&starting-point-node-id=161%3A255&show-proto-sidebar=1)
 
-## Data Story
+<h3 style="display: flex; align-items: center;">
+  <img src="https://www.freecodecamp.org/news/content/images/2022/08/giphy-2.gif" style="width: 50px; margin-left: 20px;" />
+  Skills that I developed:
+</h3>
+
+- matplotlib==3.8.1
+
+- numpy==1.26.4
+
+- pandas==2.2.2
+
+- plotly==5.18.0
+
+- scikit_learn==1.3.2
+
+- seaborn==0.13.2
+
+<h2 style="display: flex; align-items: center;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets-global.website-files.com%2F5c19100c2b50073e6ee69da1%2F60d34f3b422c048fb72cb925_Analyze.gif&f=1&nofb=1&ipt=72c4005298ff0b729d01602acab91ee0adb6b4e0785078287954b9762cdb0179&ipo=images" style="width: 75px; margin-left: 20px;" />
+  App development (Medipredict)
+</h2>
 
 To test the Python skills I learned during my minor, I challenged myself to develop a Streamlit app where I tell a story using public data. I chose to focus on how climate change affects the increasing prevalence of diseases such as **malaria**. Developing this data story marked my initial step in my data analysis career. Here is the link to the Streamlit app containing this data story.
 
 -   [**Data Story**](https://malariadatastory.streamlit.app/)
+
+<h3 style="display: flex; align-items: center;">
+  <img src="https://www.freecodecamp.org/news/content/images/2022/08/giphy-2.gif" style="width: 50px; margin-left: 20px;" />
+  Skills that I developed:
+</h3>
+
+- pandas==2.2.2
+
+- Pillow==10.1.0
+
+- plotly==5.18.0
+
+- streamlit==1.28.2
+
+<h2 style="display: flex; align-items: center;">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fusagif.com%2Fwp-content%2Fuploads%2Fgifs%2Frat-9.gif&f=1&nofb=1&ipt=56318202bdc7b1f8027938d1e29bca3dbd6ad56be196173d3459641261d46036&ipo=images" style="width: 75px; margin-left: 20px;" />
+  Rat detector (Free Schedule Project)
+</h2>
+
+I love learning about different machine learning techniques. That's why I develop a **Computer vision model** that reconigze rats. Because I love the concept behind computer vision. It's like teaching computers to recognize objects, understand scenes, and maybe even make decisions based on what they "see". Rats are super important in Life Sciences for testing medicines, so being able to track them accurately is a big deal. Plus, understanding how they act is crucial for figuring out how medicines might affect us.
+
+-   [**Rat detector**](https://github.com/JorgeVC17/Rat_detector)
+
+<h3 style="display: flex; align-items: center;">
+  <img src="https://www.freecodecamp.org/news/content/images/2022/08/giphy-2.gif" style="width: 50px; margin-left: 20px;" />
+  Skills that I developed:
+</h3>
+
+-   opencv_python==4.8.1.78
+
+-   opencv_python_headless==4.8.0.74
+
+-   ultralytics==8.0.196

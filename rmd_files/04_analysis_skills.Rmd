@@ -5,9 +5,17 @@ library(readxl)
 library(here)
 library(ggplot2)
 library(conflicted)
+conflicts_prefer(dplyr::filter)
 ```
 
-# C. elegans plate analysis
+# Analytical skills
+
+<div>
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fae%2F38%2Fd8%2Fae38d86aed80887181d9d572041c4fc6.png&f=1&nofb=1&ipt=fea15f75189791247da7f564cc5044725d677e2c7f1c732117331821eb90b145&ipo=images" alt="Image" style="width: 170px; float: left; margin-right: 5px;">
+  <p> Throughout my career, I have worked on various data science projects that demonstrate my analytical skills and problem-solving abilities. From predictive modeling to detect if a patient has diabetes or not, to storytelling with data through analysis and visualization, each project has provided valuable experience and contributed to my growth as a data scientist.</p>
+  <br>
+ <p> However, I understand that these projects alone might not fully showcase my analytical skills. For this reason, I have created this project where I demonstrate step by step how I would analyze fresh data. This project will walk you through my thought process, methodologies, and tools I use to tackle new datasets and the view of my approach to data analysis.</p>
+</div>
 
 ## Metadata
 
