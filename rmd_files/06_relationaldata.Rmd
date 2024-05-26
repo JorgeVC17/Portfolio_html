@@ -70,7 +70,7 @@ Before we start with the data manipulation of our datasets, we have to create a 
 ```{r database, echo=TRUE, eval=FALSE}
 CREATE DATABASE workflowsdb;
 ```
-
+## Exporting data
 After creating our database we can export our datasets with the following code:
 
 ```{r export, echo=TRUE, eval=FALSE}
@@ -81,6 +81,8 @@ dbWriteTable(con, "gapminder", gapminder_df, row.names = FALSE, overwrite = TRUE
 ```
 After exporting our datasets we have to read the generated tables in our database. On this way we can manipulate the data to perform some inner joins.
 
+## Reading tables/data
+
 ```{r reading, echo=TRUE, eval=FALSE}
 # Reading the tables in the database
 dengue_tidy <- dbReadTable(con, "dengue_tidy")
@@ -89,6 +91,8 @@ gapminder_clean <- dbReadTable(con, "gapminder")
 ```
 
 Now that we have read our table we can perform some inner joins to compile our three datasets *(Dengue, Flu, Gapminder)* in one **dataset**. For this we will use the variables *Year* and *Country*.
+
+## Joining datasets
 
 ```{r joining, echo=TRUE, eval=FALSE}
 # Joining datasets by year and country
@@ -99,6 +103,8 @@ complete_join <- dengue_tidy %>%
 ```
 
 After joining our three datasets *(Dengue, Flu, Gapminder)* in one **dataset**. We have to save the joined table in the dataset.
+
+## Exporting new table
 
 ```{r saving, echo=TRUE, eval=FALSE}
 dbWriteTable(con, "complete_join", complete_join, row.names = FALSE, overwrite = TRUE)

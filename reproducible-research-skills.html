@@ -188,6 +188,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html#loading-data"><i class="fa fa-check"></i>Loading data</a></li>
 <li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html#creating-a-database-sql"><i class="fa fa-check"></i>Creating a database (SQL)</a></li>
+<li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html#exporting-data"><i class="fa fa-check"></i>Exporting data</a></li>
+<li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html#reading-tablesdata"><i class="fa fa-check"></i>Reading tables/data</a></li>
+<li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html#joining-datasets"><i class="fa fa-check"></i>Joining datasets</a></li>
+<li class="chapter" data-level="" data-path="relational-databases.html"><a href="relational-databases.html#exporting-new-table"><i class="fa fa-check"></i>Exporting new table</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="parameritizing-reports.html"><a href="parameritizing-reports.html"><i class="fa fa-check"></i>Parameritizing reports</a>
 <ul>
@@ -500,9 +504,12 @@ For this project I’ll be testing my reproducible research skills reviewing the
 <span id="cb63-32"><a href="reproducible-research-skills.html#cb63-32" tabindex="-1"></a>        <span class="fu">facet_grid</span>(<span class="sc">~</span>country) <span class="sc">+</span> </span>
 <span id="cb63-33"><a href="reproducible-research-skills.html#cb63-33" tabindex="-1"></a>        <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, .<span class="dv">2</span>)) <span class="sc">+</span> </span>
 <span id="cb63-34"><a href="reproducible-research-skills.html#cb63-34" tabindex="-1"></a>        <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb63-35"><a href="reproducible-research-skills.html#cb63-35" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb63-36"><a href="reproducible-research-skills.html#cb63-36" tabindex="-1"></a></span>
-<span id="cb63-37"><a href="reproducible-research-skills.html#cb63-37" tabindex="-1"></a>system_facet</span></code></pre></div>
+<span id="cb63-35"><a href="reproducible-research-skills.html#cb63-35" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="reproducible-research-skills.html#cb65-1" tabindex="-1"></a>system_facet</span></code></pre></div>
 <p><img src="_main_files/figure-html/plot-1.png" width="672" /></p>
 </div>
 <div id="reproducibility-score" class="section level4 hasAnchor">
